@@ -1,5 +1,5 @@
 :root {
-    /* Colors */
+    /* Colors, warm tint */
     --black: 18 18 17;
     --white: 239 236 228;
 
@@ -14,7 +14,7 @@
     --alpha-8: .8;
     --alpha-9: .9;
 
-    /* Scale */
+    /* Scale, augmented fourth */
     --scale-1: 5.653rem;
     --scale-2: 3.998rem;
     --scale-3: 2.827rem;
@@ -25,6 +25,15 @@
     --scale-8: 0.5rem;
     --scale-9: 0.354rem;
     --scale-10: 0.25rem;
+
+    /* Responsive font-sizes: min, base, max */
+    --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
+    --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
+    --type-lg: clamp(var(--scale-4), 6vw, var(--scale-3));
+    --type-md: clamp(var(--scale-5), 4.5vw, var(--scale-4));
+    --type-sm: clamp(var(--scale-6), 3.75vw, var(--scale-5));
+    --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
+    --type-xxs: clamp(var(--scale-8), 2.75vw, var(--scale-7));
 }
 
 html,
@@ -64,9 +73,25 @@ h1, h2, h3, h4, h5 {
 }
 
 p:not(:last-child) {
-    margin-block: var(--scale-5);
+    margin-block: var(--scale-4);
 }
 
 p:last-child {
     margin-bottom: 0;
+}
+
+.bleed-left {
+    margin-left: calc(0rem - var(--scale-7));
+    width: calc(100% + var(--scale-7));
+}
+
+.bleed-right {
+    margin-right: calc(0rem - var(--scale-7));
+    width: calc(100% + var(--scale-7));
+}
+
+.bleed-both {
+    margin-left: calc(0rem - var(--scale-7));
+    margin-right: calc(0rem - var(--scale-7));
+    width: calc(100% + var(--scale-7) + var(--scale-7));
 }

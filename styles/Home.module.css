@@ -12,13 +12,20 @@
 }
 
 .title {
-  font-weight: 300;
-  font-size: 5rem;
-  margin: 0;
+    font-size: 5rem;
+    font-size: var(--type-xxl);
+
+    line-height: .95;
+    font-weight: 225;
+    letter-spacing: -.0325em;
+    color: rgb(var(--white) / var(--alpha-9));
+
+    max-width: 12em;
+    margin: var(--scale-5) 0 var(--scale-3);
 }
 
 .lead {
-    font-size: clamp(var(--scale-4), 6vw, var(--scale-3));
+    font-size: var(--type-lg);
     line-height: 1.1;
 
     font-weight: 300;
@@ -29,5 +36,5 @@
 }
 
 .lead span {
-    color: rgb(var(--white) / var(--alpha-8));
+    color: rgb(var(--white) / var(--alpha-9));
 }

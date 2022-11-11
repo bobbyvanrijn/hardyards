@@ -3,10 +3,20 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: var(--scale-5);
+    margin-bottom: var(--scale-4);
 }
 
 .header__logo {
     width: clamp(12.5rem, 50vw, 18.75rem);
     height: auto;
+
+    margin-right: 38px;
+}
+
+.header__button {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid rgb(var(--white) / var(--alpha-5));
 }

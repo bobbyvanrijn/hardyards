@@ -37,10 +37,16 @@ export default function Home() {
                 alt='Geranium rozanne'
             />
 
-            <Marquee />
+            <h1 className={styles.title}>
+                Considered outdoor spaces.
+            </h1>
 
             <p className={styles.lead}>
                 <span>Geranium &lsquo;Rozanne&rsquo;.</span> Hybrid of Geranium himalayense and Geranium wallichianum &lsquo;Buxton&apos;s variety&rsquo;.
+            </p>
+
+            <p>
+                Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
             </p>
 
             <List items={plants} />
@@ -50,6 +56,10 @@ export default function Home() {
 
                 <div>Test 2</div>
             </Grid>
+
+            <div className={'bleed-both'}>
+                <Marquee />
+            </div>
 
             <Carousel />
             
