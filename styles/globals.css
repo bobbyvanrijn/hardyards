@@ -1,26 +1,72 @@
+:root {
+    /* Colors */
+    --black: 18 18 17;
+    --white: 239 236 228;
+
+    --alpha-05: .05;
+    --alpha-1: .1;
+    --alpha-2: .2;
+    --alpha-3: .3;
+    --alpha-4: .4;
+    --alpha-5: .5;
+    --alpha-6: .6;
+    --alpha-7: .7;
+    --alpha-8: .8;
+    --alpha-9: .9;
+
+    /* Scale */
+    --scale-1: 5.653rem;
+    --scale-2: 3.998rem;
+    --scale-3: 2.827rem;
+    --scale-4: 1.999rem;
+    --scale-5: 1.414rem;
+    --scale-6: 1rem;
+    --scale-7: 0.707rem;
+    --scale-8: 0.5rem;
+    --scale-9: 0.354rem;
+    --scale-10: 0.25rem;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: rgb(var(--white));
+        background: rgb(var(--black));
+    } 
+}
+
+h1, h2, h3, h4, h5 {
+    margin-block: 0;
+    font-weight: 500;
+}
+
+p:not(:last-child) {
+    margin-block: var(--scale-5);
+}
+
+p:last-child {
+    margin-bottom: 0;
 }

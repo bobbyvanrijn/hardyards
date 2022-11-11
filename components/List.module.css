@@ -1,0 +1,32 @@
+.list {
+    list-style: none;
+    margin-block: var(--scale-4);
+    padding: 0;
+    line-height: 1.125;
+}
+
+.list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--scale-6);
+
+    font-size: var(--scale-5);
+    font-weight: 300;
+
+    padding-block: var(--scale-5);
+    border-bottom: 1px solid rgb(var(--white) / var(--alpha-2))
+}
+
+.list__itemTitle {
+    flex: 1 1 50%;
+    font-size: var(--scale-4);
+}
+
+.list__itemIcon {
+    align-self: center;
+}
+
+.list__itemIcon svg {
+    display: block;
+}
