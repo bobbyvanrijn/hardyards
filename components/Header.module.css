@@ -1,6 +1,12 @@
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
     margin-bottom: var(--scale-5);
+}
+
+.header__logo {
+    width: clamp(12.5rem, 50vw, 18.75rem);
+    height: auto;
 }

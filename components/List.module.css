@@ -11,7 +11,7 @@
     align-items: baseline;
     gap: var(--scale-6);
 
-    font-size: var(--scale-5);
+    font-size: var(--type-md);
     font-weight: 300;
 
     padding-block: var(--scale-5);
@@ -20,7 +20,7 @@
 
 .list__itemTitle {
     flex: 1 1 50%;
-    font-size: var(--scale-4);
+    font-size: var(--type-md);
 }
 
 .list__itemIcon {

@@ -14,6 +14,6 @@
     backface-visibility: hidden;
     z-index: inherit;
 
-    font-size: var(--scale-5);
+    font-size: var(--type-sm);
     padding-left: var(--scale-5);
 }
