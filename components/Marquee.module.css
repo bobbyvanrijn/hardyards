@@ -1,0 +1,19 @@
+@keyframes pan-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquee {
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee__text {
+    animation: pan-rtl 10s linear infinite;
+    backface-visibility: hidden;
+    z-index: inherit;
+
+    font-size: var(--scale-5);
+    padding-left: var(--scale-5);
+}
