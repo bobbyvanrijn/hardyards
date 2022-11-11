@@ -5,7 +5,9 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Grid from '../components/Grid';
 import Card from '../components/Card';
+import Carousel from '../components/Carousel';
 import List from '../components/List';
+import Marquee from '../components/Marquee';
 
 import styles from '../styles/Home.module.css'
 
@@ -34,6 +36,8 @@ export default function Home() {
                 alt='Geranium rozanne'
             />
 
+            <Marquee />
+
             <p className={styles.lead}>
                 <span>Geranium &lsquo;Rozanne&rsquo;.</span> Hybrid of Geranium himalayense and Geranium wallichianum &lsquo;Buxton&apos;s variety&rsquo;.
             </p>
@@ -45,6 +49,8 @@ export default function Home() {
 
                 <div>Test 2</div>
             </Grid>
+
+            <Carousel />
             
             <Grid columns={4} columnsSm={2}>
                 <Card>

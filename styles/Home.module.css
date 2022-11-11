@@ -18,8 +18,8 @@
 }
 
 .lead {
-    font-size: clamp(var(--scale-4), 7vw, var(--scale-3));
-    line-height: 1.2;
+    font-size: clamp(var(--scale-4), 6vw, var(--scale-3));
+    line-height: 1.1;
 
     font-weight: 300;
     color: rgb(var(--white) / var(--alpha-4));
