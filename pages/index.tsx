@@ -24,6 +24,7 @@ export default function Home() {
                 <meta name="description" content="Gardening tool." />
                 <meta property="og:image" content="/api/og?title=Hardyards" />
 
+                <link rel="manifest" href="/manifest.json" />
                 <link rel="icon" href="/api/icon" />
                 <link rel="apple-touch-icon" href="api/icon" />
             </Head>

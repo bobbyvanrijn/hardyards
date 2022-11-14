@@ -1,0 +1,9 @@
+{
+    "name": "Hardyards Gardening Club",
+    "short_name": "Hardyards",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#121211",
+    "background_color": "#121211",
+    "prefer_related_applications": false
+}
