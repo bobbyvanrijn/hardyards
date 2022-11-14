@@ -80,6 +80,10 @@ p:last-child {
     margin-bottom: 0;
 }
 
+.container {
+    padding: var(--scale-7);
+}
+
 .bleed-left {
     margin-left: calc(0rem - var(--scale-7));
     width: calc(100% + var(--scale-7));

@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <>
             <div className={styles.header}>
-                <div className={styles.header__button} />
+                <div />
                 <Image
                     className={styles.header__logo} 
                     src='/hardyards.svg'
