@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -6,13 +7,15 @@ export default function Header() {
         <>
             <div className={styles.header}>
                 <div />
-                <Image
-                    className={styles.header__logo} 
-                    src='/hardyards.svg'
-                    width='300'
-                    height='40'
-                    alt='Hardyards logo'
-                />
+                <Link href='/'>
+                    <Image
+                        className={styles.header__logo} 
+                        src='/logo.svg'
+                        width='200'
+                        height='30'
+                        alt='Hardyards logo'
+                    />
+                </Link>
                 <div />
             </div>
         </>

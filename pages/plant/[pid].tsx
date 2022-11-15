@@ -28,6 +28,14 @@ export default function Plant() {
 
     const blocks = [
         {
+            _uid: '1',
+            component: 'lead',
+            children: [
+                <span key='1'>{ data.plant.title }.</span>,
+                <>{ data.plant.description }</>
+            ]
+        },
+        {
             _uid: '0',
             component: 'image',
             attributes: {
@@ -36,14 +44,6 @@ export default function Plant() {
                 width: 1200,
                 height: 800
             }
-        },
-        {
-            _uid: '1',
-            component: 'lead',
-            children: [
-                <span key='1'>{ data.title }.</span>,
-                <>{ data.description }</>
-            ]
         },
         {
             _uid: '2',
@@ -55,8 +55,8 @@ export default function Plant() {
     return (
         <div className={'container'}>
             <Head>
-                <title>Hardyards | { data.title }</title>
-                <meta name="description" content={data.description} />
+                <title>Hardyards | { data.plant.title }</title>
+                <meta name="description" content={data.plant.description} />
             </Head>
 
             <Content blocks={blocks} />

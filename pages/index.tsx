@@ -4,6 +4,8 @@ import Grid from '../components/Grid';
 import Card from '../components/Card';
 import Carousel from '../components/Carousel';
 import Marquee from '../components/Marquee';
+
+import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '../styles/Home.module.css';
@@ -12,17 +14,37 @@ import { plants } from '../content/plants';
 
 const blocks = [
     {
-        _uid: '2',
-        component: 'list',
-        children: plants.map(
-            plant => <Link href={`/plant/${plant.slug}`} key={`plant-${plant.slug}`}>{plant.title}</Link>
-        )
-    },
-    {
         _uid: '3',
         component: 'carousel',
         children: plants.map(
-            plant => <Link href={`/plant/${plant.slug}`} key={`plant-${plant.slug}`}>{plant.title}</Link>
+            plant =>
+                <Link
+                    href={`/plant/${plant.slug}`}
+                    key={`plant-${plant.slug}`}
+                >
+                    <Image
+                        src={`/images/${ plant.slug }.webp`}
+                        fill
+                        alt=''
+                    />
+                    { plant.title }
+                </Link>
+        )
+    },
+    {
+        _uid: '2',
+        component: 'list',
+        attributes: {
+            title: 'Plants'
+        },
+        children: plants.map(
+            plant =>
+                <Link
+                    href={`/plant/${plant.slug}`}
+                    key={`plant-${plant.slug}`}
+                >
+                    { plant.title }
+                </Link>
         )
     }
 ];

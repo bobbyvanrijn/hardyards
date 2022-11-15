@@ -29,7 +29,7 @@
     /* Responsive font-sizes: min, base, max */
     --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
     --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
-    --type-lg: clamp(var(--scale-4), 6vw, var(--scale-3));
+    --type-lg: clamp(var(--scale-5), 7vw, var(--scale-3));
     --type-md: clamp(var(--scale-5), 4.5vw, var(--scale-4));
     --type-sm: clamp(var(--scale-6), 3.75vw, var(--scale-5));
     --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
@@ -81,7 +81,7 @@ p:last-child {
 }
 
 .container {
-    padding: var(--scale-7);
+    padding: 0 var(--scale-7);
 }
 
 .bleed-left {

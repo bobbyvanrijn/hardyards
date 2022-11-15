@@ -18,8 +18,11 @@ export default function List(props) {
     );
 
     return (
-        <ul className={styles.list}>
-            { items }
-        </ul>
+        <>
+            <h4>{ props.title }</h4>
+            <ul className={ styles.list }>
+                { items }
+            </ul>
+        </>
     );
 }

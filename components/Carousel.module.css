@@ -23,7 +23,15 @@
     flex: 0 0 auto;
     width: clamp(10rem, 40vw, 20rem);
     aspect-ratio: 3/4;
+    position: relative;
     background-color: rgb(var(--white) / var(--alpha-05));
+    overflow: hidden;
+    border-radius: var(--scale-5);
+}
+
+.carousel__item img {
+    object-fit: cover;
+    object-position: center center;
 }
 
 .carousel__indicator {

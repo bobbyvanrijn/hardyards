@@ -2,16 +2,14 @@
     padding: var(--scale-7);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 
-    margin-bottom: var(--scale-4);
+    margin-bottom: var(--scale-8);
 }
 
 .header__logo {
-    width: clamp(12.5rem, 50vw, 18.75rem);
+    width: clamp(10rem, 30vw, 15rem);
     height: auto;
-
-    margin-right: 38px;
 }
 
 .header__button {

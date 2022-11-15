@@ -1,7 +1,7 @@
 const plants = [
     {
-        slug: 'achillea',
-        title: 'Achillea',
+        slug: 'achillea-moonshine',
+        title: 'Achillea \'Moonshine\'',
         description: 'Lorem ipsum'
     },
 
@@ -9,9 +9,7 @@ const plants = [
         slug: 'alchemilla-mollis',
         title: 'Alchemilla mollis',
         description: 'Lorem ipsum',
-        images: [{
-            src: 'images/alchemilla-mollis.webp'
-        }]
+        images: ['images/alchemilla-mollis.webp']
     },
 
     {
