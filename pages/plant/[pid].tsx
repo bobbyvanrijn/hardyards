@@ -3,6 +3,7 @@ import useSWR from 'swr';
 
 import Head from 'next/head'
 import Content from '../../components/Content';
+import { plants } from '../../content/plants';
 
 const fetcher = async (url: string) => {
     const res = await fetch(url)
@@ -48,7 +49,9 @@ export default function Plant() {
         {
             _uid: '2',
             component: 'cards',
-            children: {}
+            attributes: {
+                items: data.plant.meta
+            }
         }
     ];
 

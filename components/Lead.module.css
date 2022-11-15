@@ -1,6 +1,6 @@
 .lead {
     font-size: var(--type-lg);
-    line-height: 1.1;
+    line-height: 1.15;
 
     font-weight: 300;
     color: rgb(var(--white) / var(--alpha-4));
