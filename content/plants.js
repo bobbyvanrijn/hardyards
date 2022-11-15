@@ -16,7 +16,7 @@ const plants = [
 
     {
         slug: 'geranium-rozanne',
-        title: 'Geranium \'Rozanne\'',
+        title: 'Geranium \‘Rozanne\’',
         description: 'Hybrid of Geranium himalayense and Geranium wallichianum \'Buxton\'s variety\'.'
     },
 
