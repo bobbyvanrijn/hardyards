@@ -1,21 +1,4 @@
-const plants = [
-    {
-        slug: 'achillea',
-        title: 'Achillea',
-        description: 'Lorem ipsum'
-    },
-
-    {
-        slug: 'alchemilla-mollis',
-        title: 'Alchemilla mollis',
-        description: 'Lorem ipsum'
-    },
-    {
-        slug: 'geranium-rozanne',
-        title: 'Geranium \'Rozanne\'',
-        description: 'Hybrid of Geranium himalayense and Geranium wallichianum \'Buxton\'s variety\'.'
-    },
-]
+import plants from '../../../content/plants';
 
 export default function handler(req, res) {
     const { query } = req

@@ -16,6 +16,16 @@ const blocks = [
             <Link href='/plant/geranium-rozanne' key='1'>Geranium &lsquo;Rozanne&rsquo;</Link>,
             <Link href='/plant/alchemilla-mollis' key='1'>Alchemilla mollis</Link>,
         ]
+    },
+    {
+        _uid: '3',
+        component: 'carousel',
+        children: [
+            <Link href='/plant/geranium-rozanne' key='1'>Geranium &lsquo;Rozanne&rsquo;</Link>,
+            <Link href='/plant/alchemilla-mollis' key='2'>Alchemilla mollis</Link>,
+            <Link href='/plant/echinacea-purpurea' key='3'>Echinacea purpurea</Link>,
+            <Link href='/plant/achillea' key='4'>Achillea</Link>,
+        ]
     }
 ];
 
@@ -37,8 +47,6 @@ export default function Home() {
             <div className={'bleed-both'}>
                 <Marquee />
             </div>
-
-            <Carousel />
             
             <Grid columns={4} columnsSm={2}>
                 <Card>

@@ -1,15 +1,18 @@
 import styles from './Carousel.module.css';
 
 export default function Carousel(props) {
+    const items = props.children.map((item, index) =>
+        <li
+            key={index}
+            className={styles.carousel__item}
+        >
+            { item }
+        </li>
+    );
+
     return (
-        <div className={styles.carousel}>
-            <div className={styles.carousel__item}>
-            </div>
-            <div className={styles.carousel__item}>
-            </div>
-            <div className={styles.carousel__item}>
-            </div>
-            <div className={styles.carousel__indicator} />
-        </div>
+        <ul className={styles.carousel}>
+            { items }
+        </ul>
     );
 }
