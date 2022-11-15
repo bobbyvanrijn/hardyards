@@ -6,26 +6,24 @@ import Carousel from '../components/Carousel';
 import Marquee from '../components/Marquee';
 import Link from 'next/link';
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+
+import { plants } from '../content/plants';
 
 const blocks = [
     {
         _uid: '2',
         component: 'list',
-        children: [
-            <Link href='/plant/geranium-rozanne' key='1'>Geranium &lsquo;Rozanne&rsquo;</Link>,
-            <Link href='/plant/alchemilla-mollis' key='1'>Alchemilla mollis</Link>,
-        ]
+        children: plants.map(
+            plant => <Link href={`/plant/${plant.slug}`} key={`plant-${plant.slug}`}>{plant.title}</Link>
+        )
     },
     {
         _uid: '3',
         component: 'carousel',
-        children: [
-            <Link href='/plant/geranium-rozanne' key='1'>Geranium &lsquo;Rozanne&rsquo;</Link>,
-            <Link href='/plant/alchemilla-mollis' key='2'>Alchemilla mollis</Link>,
-            <Link href='/plant/echinacea-purpurea' key='3'>Echinacea purpurea</Link>,
-            <Link href='/plant/achillea' key='4'>Achillea</Link>,
-        ]
+        children: plants.map(
+            plant => <Link href={`/plant/${plant.slug}`} key={`plant-${plant.slug}`}>{plant.title}</Link>
+        )
     }
 ];
 

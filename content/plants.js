@@ -8,7 +8,10 @@ const plants = [
     {
         slug: 'alchemilla-mollis',
         title: 'Alchemilla mollis',
-        description: 'Lorem ipsum'
+        description: 'Lorem ipsum',
+        images: [{
+            src: 'images/alchemilla-mollis.webp'
+        }]
     },
 
     {
