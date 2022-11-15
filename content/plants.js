@@ -1,4 +1,4 @@
-export default plants = [
+const plants = [
     {
         slug: 'achillea',
         title: 'Achillea',
@@ -22,4 +22,6 @@ export default plants = [
         title: 'Echinacea purpurea',
         description: 'Lorem ipsum.'
     }
-]
+];
+
+export { plants };
