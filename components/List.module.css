@@ -1,6 +1,9 @@
 .list {
-    list-style: none;
     margin-block: var(--scale-4);
+}
+
+.list ul {
+    list-style: none;
     padding: 0;
     line-height: 1.125;
 }
@@ -15,7 +18,7 @@
     font-size: var(--type-md);
     font-weight: 300;
 
-    padding-block: var(--scale-5);
+    padding-block: var(--type-sm);
     border-bottom: 1px solid rgb(var(--white) / var(--alpha-2))
 }
 

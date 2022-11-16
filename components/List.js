@@ -18,11 +18,12 @@ export default function List(props) {
     );
 
     return (
-        <>
-            <h4>{ props.title }</h4>
-            <ul className={ styles.list }>
+        <div className={styles.list}>
+            <h5>{ props.title }</h5>
+
+            <ul>
                 { items }
             </ul>
-        </>
+        </div>
     );
 }

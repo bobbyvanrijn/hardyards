@@ -31,7 +31,7 @@
     --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
     --type-lg: clamp(var(--scale-5), 7vw, var(--scale-3));
     --type-md: clamp(var(--scale-5), 4.5vw, var(--scale-4));
-    --type-sm: clamp(var(--scale-6), 3.75vw, var(--scale-5));
+    --type-sm: clamp(var(--scale-6), 3.5vw, var(--scale-5));
     --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
     --type-xxs: clamp(var(--scale-8), 2.75vw, var(--scale-7));
 }
@@ -70,6 +70,29 @@ a {
 h1, h2, h3, h4, h5 {
     margin-block: 0;
     font-weight: 500;
+}
+
+h1 {
+    font-size: var(--type-xxl);
+    font-weight: 250;
+}
+
+h2 {
+    font-size: var(--type-xl);
+}
+
+h3 {
+    font-size: var(--type-lg);
+}
+
+h4 {
+    font-size: var(--type-md);
+}
+
+h5 {
+    font-size: var(--type-sm);
+    text-transform: uppercase;
+    letter-spacing: .125em;
 }
 
 p:not(:last-child) {
