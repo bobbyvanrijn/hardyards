@@ -1,8 +1,5 @@
 import Content from '../components/Content';
 
-import Grid from '../components/Grid';
-import Card from '../components/Card';
-import Carousel from '../components/Carousel';
 import Marquee from '../components/Marquee';
 import Navigation from '../components/Navigation';
 

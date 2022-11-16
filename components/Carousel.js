@@ -1,4 +1,5 @@
 import styles from './Carousel.module.css';
+import { shuffle } from '../helpers/shuffle';
 
 export default function Carousel(props) {
     const items = props.children.map((item, index) =>
@@ -12,7 +13,7 @@ export default function Carousel(props) {
 
     return (
         <ul className={styles.carousel}>
-            { items }
+            { shuffle(items) }
         </ul>
     );
 }
