@@ -12,8 +12,10 @@ export default function Carousel(props) {
     );
 
     return (
-        <ul className={styles.carousel}>
-            { shuffle(items) }
-        </ul>
+        <div className='bleed-both'>
+            <ul className={styles.carousel}>
+                { shuffle(items) }
+            </ul>
+        </div>
     );
 }
