@@ -28,6 +28,14 @@
     border-radius: var(--scale-5);
 }
 
+.carousel__item:first-child {
+    margin-left: var(--scale-8);
+}
+
+.carousel__item:last-child {
+    margin-right: var(--scale-8);
+}
+
 .carousel__item img {
     object-fit: cover;
     object-position: center center;
