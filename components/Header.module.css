@@ -8,7 +8,7 @@
 }
 
 .header__logo {
-    width: clamp(6rem, 30vw, 15rem);
+    width: clamp(8rem, 30vw, 15rem);
     height: auto;
 }
 
