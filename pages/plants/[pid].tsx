@@ -20,7 +20,7 @@ export default function Plant() {
     const { pid } = router.query;
 
     const { data, error } = useSWR(
-        () => pid && `/api/plant/${pid}`,
+        () => pid && `/api/plants/${pid}`,
         fetcher
     )
 
@@ -40,8 +40,10 @@ export default function Plant() {
             _uid: '0',
             component: 'image',
             attributes: {
-                src: `/images/${pid}.webp`,
+                src: `/images/${ pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+                placeholder: 'blur',
+                blurDataURL: `/images/${ pid }-small.webp`,
                 width: 1200,
                 height: 800
             }

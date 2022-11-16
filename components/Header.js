@@ -10,10 +10,10 @@ export default function Header() {
                 <Link href='/'>
                     <Image
                         className={styles.header__logo} 
-                        src='/logo.svg'
+                        src='/hardyards-light-lg.svg'
                         width='200'
                         height='30'
-                        alt='Hardyards logo'
+                        alt='Hardyards'
                     />
                 </Link>
                 <div />

@@ -34,3 +34,93 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/document.wflow
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Info.plist
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/MacOS/Automator Application Stub
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ApplicationStub.icns
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/Assets.car
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ar.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ca.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/cs.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/da.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/de.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/el.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/en.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/en_AU.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/en_GB.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/es.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/es_419.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/fi.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/fr.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/fr_CA.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/he.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/hi.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/hr.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/hu.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/id.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/it.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ja.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ko.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ms.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/nl.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/no.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/pl.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/pt.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/pt_PT.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ro.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/ru.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/sk.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/sv.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/th.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/tr.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/uk.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/vi.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/zh_CN.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/zh_HK.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/Resources/zh_TW.lproj/InfoPlist.strings
+public/images/[Drop to convert .png or .jpg to .webp].app/Contents/_CodeSignature/CodeResources
+public/images/[Resize to thumbnail].app/Contents/document.wflow
+public/images/[Resize to thumbnail].app/Contents/Info.plist
+public/images/[Resize to thumbnail].app/Contents/MacOS/Automator Application Stub
+public/images/[Resize to thumbnail].app/Contents/Resources/ApplicationStub.icns
+public/images/[Resize to thumbnail].app/Contents/Resources/Assets.car
+public/images/[Resize to thumbnail].app/Contents/Resources/ar.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/ca.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/cs.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/da.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/de.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/el.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/en.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/en_AU.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/en_GB.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/es.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/es_419.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/fi.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/fr.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/fr_CA.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/he.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/hi.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/hr.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/hu.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/id.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/it.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/ja.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/ko.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/ms.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/nl.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/no.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/pl.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/pt.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/pt_PT.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/ro.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/ru.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/sk.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/sv.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/th.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/tr.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/uk.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/vi.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/zh_CN.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/zh_HK.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/Resources/zh_TW.lproj/InfoPlist.strings
+public/images/[Resize to thumbnail].app/Contents/_CodeSignature/CodeResources

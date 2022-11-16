@@ -5,9 +5,7 @@ const plants = [
         species: null,
         cultivar: '\‘Moonshine\’',
         description: 'Matte silver foliage, sulphur yellow umbels.',
-        meta: [
-            'foo'
-        ]
+        meta: []
     },
 
     {
@@ -17,9 +15,7 @@ const plants = [
         cultivar: null,
         description: 'Velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
         images: ['images/alchemilla-mollis.webp'],
-        meta: [
-            'foo'
-        ]
+        meta: []
     },
 
     {
@@ -49,15 +45,66 @@ const plants = [
     },
 
     {
-        slug: 'echinacea-purpurea',
+        slug: 'echinacea-pallida',
+        genus: 'Echinacea',
+        species: 'pallida',
+        culticvar: '\‘Hulda Dancer\’',
+        description: 'Spiky seedheads. Droopy pale pink petals.',
+        meta: []
+    },
+
+    {
+        slug: 'echinacea-white-swan',
         genus: 'Echinacea',
         species: 'purpurea',
-        culticvar: null,
-        description: 'Spiky seedheads. Pink petals.',
-        meta: [
-            'foo'
-        ]
-    }
+        culticvar: '\‘White Swan\’',
+        description: 'Loads of flowers. Spiky seedheads and white petals.',
+        meta: []
+    },
+
+    {
+        slug: 'sedum-matrona',
+        genus: 'Sedum',
+        species: null,
+        cultivar: '\‘Matrona\’',
+        description: 'Meaty grey-purple leaves. Faded pink flowers.',
+        meta: []
+    },
+
+    {
+        slug: 'symphyotrichum-little-carlow',
+        genus: 'Symphyotrichum',
+        species: null,
+        cultivar: '\‘Little Carlow\’',
+        description: 'Hybrid of A. cordifolius and A. novi-belgii. Mounds of fine petalled violet blue flowers.',
+        meta: []
+    },
+
+    // {
+    //     slug: 'geranium-rozanne',
+    //     genus: 'Geranium',
+    //     species: null,
+    //     cultivar: '\‘Rozanne\’',
+    //     description: 'Hybrid of Geranium himalayense and Geranium wallichianum \‘Buxton\'s variety\’.',
+    //     meta: [
+    //         {
+    //             value: '90cm',
+    //             label: 'Spread'
+    //         },
+    //         {
+    //             value: '40cm',
+    //             label: 'Height'
+    //         },
+    //         {
+    //             value: 'Violet blue',
+    //             label: 'Color'
+    //         },
+    //         {
+    //             value: 'VI-X',
+    //             label: 'Seasons of interest'
+    //         },
+    //     ]
+    // },
 ];
 
 export { plants };
