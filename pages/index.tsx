@@ -53,47 +53,9 @@ export default function Home() {
     return (
         <div className='container'>
             <Content blocks={blocks} />
-
-            <p>
-                Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-            </p>
-
-            <Grid columns={2}>
-                <div>Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.</div>
-
-                <div>Test 2</div>
-            </Grid>
-
             <div className={'bleed-both'}>
                 <Marquee />
             </div>
-            
-            <Grid columns={4} columnsSm={2}>
-                <Card>
-                    <h2>
-                        90cm
-                    </h2>
-                    Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-                </Card>
-                <Card>
-                    <h2>
-                        90cm
-                    </h2>
-                    Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-                </Card>
-                <Card>
-                    <h2>
-                        90cm
-                    </h2>
-                    Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-                </Card>
-                <Card>
-                    <h2>
-                        90cm
-                    </h2>
-                    Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-                </Card>
-            </Grid>
         </div>
     )
 }
