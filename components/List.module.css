@@ -8,7 +8,8 @@
 .list__item {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+
     gap: var(--scale-6);
 
     font-size: var(--type-md);
@@ -24,7 +25,7 @@
 }
 
 .list__itemIcon {
-    align-self: center;
+    align-self: baseline;
 }
 
 .list__itemIcon svg {
