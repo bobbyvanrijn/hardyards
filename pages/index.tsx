@@ -12,7 +12,7 @@ import { plants } from '../content/plants';
 
 const blocks = [
     {
-        _uid: '3',
+        _uid: '61f5c21d-93c6-4112-8040-29db5a9839a3',
         component: 'carousel',
         children: plants.map(
             plant =>
@@ -22,8 +22,8 @@ const blocks = [
                 >
                     <Image
                         src={`/images/${ plant.slug }.webp`}
-                        width={350}
-                        height={450}
+                        width={480}
+                        height={640}
                         alt={`${ plant.genus } ${ plant.species } ${ plant.cultivar }`}
                         placeholder='blur'
                         blurDataURL={`/images/${ plant.slug}-small.webp`}

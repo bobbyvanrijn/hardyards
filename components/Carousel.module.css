@@ -20,7 +20,7 @@
 
 .carousel__item {
     flex: 0 0 auto;
-    width: clamp(15rem, 60vw, 20rem);
+    width: clamp(15rem, 60vw, 30rem);
     aspect-ratio: 3/4;
     position: relative;
     background-color: rgb(var(--white) / var(--alpha-05));

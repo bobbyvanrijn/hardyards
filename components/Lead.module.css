@@ -10,7 +10,6 @@
 }
 
 .lead__strong {
-    display: inline-block;
     margin-right: .25em;
     color: rgb(var(--white) / var(--alpha-9));
 }
