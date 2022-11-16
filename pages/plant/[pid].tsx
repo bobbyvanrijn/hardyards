@@ -32,7 +32,7 @@ export default function Plant() {
             _uid: '1',
             component: 'lead',
             children: [
-                <span key='1'>{ data.plant.title }.</span>,
+                <span key='1'>{ data.plant.genus } { data.plant.species } { data.plant.cultivar }.</span>,
                 <>{ data.plant.description }</>
             ]
         },

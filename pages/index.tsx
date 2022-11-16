@@ -27,7 +27,7 @@ const blocks = [
                         fill
                         alt=''
                     />
-                    { plant.title }
+                    { plant.genus } { plant.species } { plant.cultivar }
                 </Link>
         )
     },
@@ -43,7 +43,7 @@ const blocks = [
                     href={`/plant/${plant.slug}`}
                     key={`plant-${plant.slug}`}
                 >
-                    { plant.title }
+                    { plant.genus } { plant.species } { plant.cultivar }
                 </Link>
         )
     }

@@ -1,7 +1,9 @@
 const plants = [
     {
         slug: 'achillea-moonshine',
-        title: 'Achillea \‘Moonshine\’',
+        genus: 'Achillea',
+        species: null,
+        cultivar: '\‘Moonshine\’',
         description: 'Matte silver foliage, sulphur yellow umbels.',
         meta: [
             'foo'
@@ -10,7 +12,9 @@ const plants = [
 
     {
         slug: 'alchemilla-mollis',
-        title: 'Alchemilla mollis',
+        genus: 'Alchemilla',
+        species: 'mollis',
+        cultivar: null,
         description: 'Velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
         images: ['images/alchemilla-mollis.webp'],
         meta: [
@@ -20,7 +24,9 @@ const plants = [
 
     {
         slug: 'geranium-rozanne',
-        title: 'Geranium \‘Rozanne\’',
+        genus: 'Geranium',
+        species: null,
+        cultivar: '\‘Rozanne\’',
         description: 'Hybrid of Geranium himalayense and Geranium wallichianum \‘Buxton\'s variety\’.',
         meta: [
             {
@@ -44,7 +50,9 @@ const plants = [
 
     {
         slug: 'echinacea-purpurea',
-        title: 'Echinacea purpurea',
+        genus: 'Echinacea',
+        species: 'purpurea',
+        culticvar: null,
         description: 'Spiky seedheads. Pink petals.',
         meta: [
             'foo'
