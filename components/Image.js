@@ -4,7 +4,9 @@ import styles from './Image.module.css';
 export default function Image(props) {
     return (
         <NextImage
-            class={styles.image}
+            className={styles.image}
+            placeholder='blur'
+            blurDataURL={`/images/${ props.src }-small.webp`}
             src={props.src}
             sizes={props.sizes}
             height={props.height}

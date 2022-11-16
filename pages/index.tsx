@@ -25,12 +25,13 @@ const blocks = [
                 >
                     <Image
                         src={`/images/${ plant.slug }.webp`}
-                        fill
-                        alt=''
+                        width={350}
+                        height={450}
+                        alt={`${ plant.genus } ${ plant.species } ${ plant.cultivar }`}
                         placeholder='blur'
                         blurDataURL={`/images/${ plant.slug}-small.webp`}
                     />
-                    { plant.genus } { plant.species } { plant.cultivar }
+                    
                 </Link>
         )
     }

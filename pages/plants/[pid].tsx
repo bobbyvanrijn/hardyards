@@ -29,7 +29,7 @@ export default function Plant() {
 
     const blocks = [
         {
-            _uid: '1',
+            _uid: '100',
             component: 'lead',
             children: [
                 <span key='1'>{ data.plant.genus } { data.plant.species } { data.plant.cultivar }.</span>,
@@ -37,7 +37,7 @@ export default function Plant() {
             ]
         },
         {
-            _uid: '0',
+            _uid: '123',
             component: 'image',
             attributes: {
                 src: `/images/${ pid }.webp`,
@@ -49,7 +49,7 @@ export default function Plant() {
             }
         },
         {
-            _uid: '2',
+            _uid: '252',
             component: 'cards',
             attributes: {
                 items: data.plant.meta
