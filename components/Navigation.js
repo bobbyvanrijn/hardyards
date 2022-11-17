@@ -11,9 +11,15 @@ export default function Navigation() {
                     <Link href='/plants'>
                         Plants<sup>{ plants.length }</sup>
                     </Link>
-                    <Link>Inspiration</Link>
-                    <Link>Collections</Link>
-                    <Link>Guides<sup>1</sup></Link>
+                </li>
+                <li>
+                    <Link href='/'>Inspiration</Link>
+                </li>
+                <li>
+                    <Link href='/'>Collections</Link>
+                </li>
+                <li>
+                    <Link href='/'>Guides<sup>1</sup></Link>
                 </li>
             </ul>
         </nav>

@@ -28,7 +28,6 @@ const blocks = [
                         placeholder='blur'
                         blurDataURL={`/images/${ plant.slug}-small.webp`}
                     />
-                    
                 </Link>
         )
     }

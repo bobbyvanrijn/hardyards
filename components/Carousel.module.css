@@ -29,11 +29,11 @@
 }
 
 .carousel__item:first-child {
-    margin-left: var(--scale-8);
+    margin-left: var(--scale-7);
 }
 
 .carousel__item:last-child {
-    margin-right: var(--scale-8);
+    margin-right: var(--scale-7);
 }
 
 .carousel__item img {
