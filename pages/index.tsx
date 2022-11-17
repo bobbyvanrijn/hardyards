@@ -1,10 +1,8 @@
-import Content from '../components/Content';
-
-import Marquee from '../components/Marquee';
-import Navigation from '../components/Navigation';
-
 import Image from 'next/image';
 import Link from 'next/link';
+
+import Content from '../components/Content';
+import Marquee from '../components/Marquee';
 
 import styles from '../styles/Home.module.css';
 
@@ -37,8 +35,6 @@ export default function Home() {
     return (
         <div className='container'>
             <Content blocks={blocks} />
-
-            <Navigation />
 
             <div className={'bleed-both'}>
                 <Marquee />

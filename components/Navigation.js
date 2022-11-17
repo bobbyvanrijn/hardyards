@@ -19,7 +19,7 @@ export default function Navigation() {
                     <Link href='/'>Collections</Link>
                 </li>
                 <li>
-                    <Link href='/'>Guides<sup>1</sup></Link>
+                    <Link href='/guides'>Guides<sup>1</sup></Link>
                 </li>
             </ul>
         </nav>

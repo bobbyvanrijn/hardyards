@@ -1,8 +1,8 @@
 .navigation {
     font-size: var(--type-xxl);
-    font-weight: 250;
+    font-weight: 200;
     line-height: 1.15;
-    margin-block: var(--scale-3);
+    margin-block: var(--scale-1);
 }
 
 .navigation ul {
