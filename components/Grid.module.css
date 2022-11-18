@@ -1,7 +1,12 @@
+ul.grid {
+    list-style: none;
+    padding: unset;
+}
+
 .grid {
     display: grid;
     grid-gap: var(--scale-8);
-    margin-block: var(--scale-3);
+    margin-block: var(--scale-6);
 }
 
 .grid[data-columns='2'] {

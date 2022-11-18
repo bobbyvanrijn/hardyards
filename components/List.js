@@ -10,6 +10,10 @@ export default function List(props) {
             <div className={styles.list__itemTitle}>
                 { item }
             </div>
+
+            <div className={styles.list__itemDescription}>
+                { item }
+            </div>
            
             <div className={styles.list__itemIcon}>
                 <ArrowUpRight size='32' />

@@ -51,7 +51,8 @@ export default function Plant() {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
             component: 'cards',
             attributes: {
-                items: data.plant.meta
+                items: data.plant.meta,
+                title: 'Plant properties'
             }
         }
     ];
@@ -62,8 +63,9 @@ export default function Plant() {
                 <title>Hardyards | { data.plant.title }</title>
                 <meta name="description" content={data.plant.description} />
             </Head>
-
-            <Content blocks={blocks} />
+            <article>
+                <Content blocks={blocks} />
+            </article>
         </div>
     )
 }

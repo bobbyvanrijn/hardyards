@@ -24,14 +24,15 @@ export default function Header() {
     }, [router.query])
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.header__wrapper}>
-                <Link href='/'>
+                <Link href='/' title='Back to homepage'>
                     <Image
                         className={styles.header__logo} 
                         src='/hardyards-light-lg.svg'
                         width='200'
                         height='30'
+                        role='presentation'
                         alt='Hardyards'
                     />
                 </Link>
@@ -46,6 +47,6 @@ export default function Header() {
 
                 { menuActive ? <Menu handleClose={toggleMenu}></Menu> : null }
             </div>
-        </div>
+        </header>
     );
 }
