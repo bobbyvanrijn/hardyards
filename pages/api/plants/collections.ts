@@ -25,11 +25,11 @@ export default function handler(
     return filtered.length > 0
         ? res.status(200).json({ 
             message: 'Ok',
-            collections: filtered
+            plant: filtered
         })
         : res.status(404).json({ 
             message: `Plants with meta not found.`,
-            collections: null
+            plant: null
         })
 }
 
