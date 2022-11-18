@@ -31,47 +31,39 @@ export default function Collections() {
     const plants = data.collections;
 
     const blocks = [
-        {
-            _uid: '1',
-            component: 'list',
-            attributes: {
-                title: 'Prime collection'
-            },
-            children: plants.map(
-                (plant: Object) =>
-                    <Link
-                        href={`/plants/${plant.slug}`}
-                        key={`plant-${plant.slug}`}
-                    >
-                        { plant.genus } { plant.species } { plant.cultivar }
-                    </Link>
-            )
-        },
-        {
-            _uid: '61f5c21d-93c6-4112-8040-29db5a9839a3',
-            component: 'carousel',
-            children: plants.map(
-                plant =>
-                    <Link
-                        href={`/plants/${plant.slug}`}
-                        key={`plant-${plant.slug}`}
-                    >
-                        <Image
-                            src={`/images/${ plant.slug }.webp`}
-                            width={480}
-                            height={640}
-                            alt={`${ plant.genus } ${ plant.species } ${ plant.cultivar }`}
-                            placeholder='blur'
-                            blurDataURL={`/images/${ plant.slug}-small.webp`}
-                        />
-                    </Link>
-            )
-        }
+        // {
+        //     _uid: '1',
+        //     component: 'list',
+        //     attributes: {
+        //         title: 'Prime collection'
+        //     },
+        //     children: {},
+        // },
+        // {
+        //     _uid: '61f5c21d-93c6-4112-8040-29db5a9839a3',
+        //     component: 'carousel',
+        //     children: plants.map(
+        //         plant =>
+        //             <Link
+        //                 href={`/plants/${plant.slug}`}
+        //                 key={`plant-${plant.slug}`}
+        //             >
+        //                 <Image
+        //                     src={`/images/${ plant.slug }.webp`}
+        //                     width={480}
+        //                     height={640}
+        //                     alt={`${ plant.genus } ${ plant.species } ${ plant.cultivar }`}
+        //                     placeholder='blur'
+        //                     blurDataURL={`/images/${ plant.slug}-small.webp`}
+        //                 />
+        //             </Link>
+        //     )
+        // }
     ];
 
     return (
         <div className={'container'}>
-            <Content blocks={blocks} />
+            {/* <Content blocks={blocks} /> */}
         </div>
     )
 }
