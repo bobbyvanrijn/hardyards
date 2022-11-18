@@ -15,11 +15,11 @@ export default function handler(
     const { slug } = query
 
     const filtered = plants.filter((plant) => {
-        if (plant.collection.length > 0) {
-            return plant.collection.includes('prime');
-        }
+        // if (plant.collection.length > 0) {
+        //     return plant.collection.includes('prime');
+        // }
 
-        return false;
+        return plant;
     });
 
     return filtered.length > 0
