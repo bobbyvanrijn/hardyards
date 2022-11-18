@@ -16,7 +16,7 @@ export default function Navigation() {
                     <Link href='/'>Inspiration</Link>
                 </li>
                 <li>
-                    <Link href='/'>Collections</Link>
+                    <Link href='/plants/collections'>Collections</Link>
                 </li>
                 <li>
                     <Link href='/guides'>Guides<sup>1</sup></Link>

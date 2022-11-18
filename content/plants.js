@@ -5,7 +5,8 @@ const plants = [
         species: null,
         cultivar: '\‘Moonshine\’',
         description: 'Matte silver foliage, sulphur yellow umbels.',
-        meta: []
+        meta: [],
+        collection: []
     },
 
     {
@@ -15,7 +16,8 @@ const plants = [
         cultivar: null,
         description: 'Velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
         images: ['images/alchemilla-mollis.webp'],
-        meta: []
+        meta: [],
+        collection: []
     },
 
     {
@@ -41,6 +43,9 @@ const plants = [
                 value: 'VI-X',
                 label: 'Seasons of interest'
             },
+        ],
+        collection: [
+            'prime'
         ]
     },
 
@@ -50,7 +55,15 @@ const plants = [
         species: 'pallida',
         culticvar: '\‘Hulda Dancer\’',
         description: 'Spiky seedheads. Droopy pale pink petals.',
-        meta: []
+        meta: [
+            {
+                value: '40cm',
+                label: 'Height'
+            },
+        ],
+        collection: [
+            'prime'
+        ]
     },
 
     {
@@ -59,7 +72,8 @@ const plants = [
         species: 'purpurea',
         culticvar: '\‘White Swan\’',
         description: 'Loads of flowers. Spiky seedheads and white petals.',
-        meta: []
+        meta: [],
+        collection: []
     },
 
     {
@@ -68,7 +82,10 @@ const plants = [
         species: null,
         cultivar: '\‘Matrona\’',
         description: 'Meaty grey-purple leaves. Faded pink flowers.',
-        meta: []
+        meta: [],
+        collection: [
+            'prime'
+        ]
     },
 
     {
@@ -77,7 +94,10 @@ const plants = [
         species: null,
         cultivar: '\‘Little Carlow\’',
         description: 'Hybrid of A. cordifolius and A. novi-belgii. Mounds of fine petalled violet blue flowers.',
-        meta: []
+        meta: [],
+        collection: [
+            'prime'
+        ]
     },
 
     // {
