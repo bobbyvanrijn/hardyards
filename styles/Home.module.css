@@ -5,7 +5,7 @@
     line-height: .95;
     font-weight: 225;
     letter-spacing: -.0325em;
-    color: rgb(var(--white) / var(--alpha-9));
+    color: rgb(var(--foreground) / var(--alpha-9));
 
     max-width: 12em;
     margin: var(--scale-5) 0 var(--scale-3);

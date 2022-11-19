@@ -3,6 +3,9 @@
     --black: 18 18 17;
     --white: 239 236 228;
 
+    --foreground: var(--black);
+    --background: var(--white);
+
     --alpha-05: .05;
     --alpha-1: .1;
     --alpha-2: .2;
@@ -46,6 +49,9 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    color: rgb(var(--foreground));
+    background: rgb(var(--background));
 }
 
 main {
@@ -66,8 +72,6 @@ a {
         color-scheme: dark;
     }
     body {
-        color: rgb(var(--white));
-        background: rgb(var(--black));
     } 
 }
 
