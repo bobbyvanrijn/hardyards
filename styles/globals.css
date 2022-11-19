@@ -115,6 +115,11 @@ p:last-child {
     padding: 0 var(--scale-7);
 }
 
+.body-text {
+    font-family: var(--font-libertine);
+    font-size: var(--type-md);
+}
+
 .bleed-left {
     margin-left: calc(0rem - var(--scale-7));
     width: calc(100% + var(--scale-7));

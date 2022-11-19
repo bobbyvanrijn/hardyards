@@ -3,7 +3,7 @@
     line-height: 1.15;
 
     font-weight: 300;
-    color: rgb(var(--foreground) / var(--alpha-4));
+    color: rgb(var(--foreground) / var(--alpha-5));
     hanging-punctuation: first last;
 
     max-width: 25em;
@@ -11,5 +11,5 @@
 
 .lead__strong {
     margin-right: .25em;
-    color: rgb(var(--foreground) / var(--alpha-9));
+    color: rgb(var(--foreground));
 }

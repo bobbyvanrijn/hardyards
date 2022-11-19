@@ -6,12 +6,21 @@ import Cards from './Cards';
 import List from './List';
 import Lead from './Lead';
 
+function Text({ children }) {
+    return (
+        <section className='body-text'>
+            { children }
+        </section>
+    );
+}
+
 const Components = {
   image: Image,
   carousel: Carousel,
   cards: Cards,
   list: List,
   lead: Lead,
+  text: Text
 };
 
 export function Block(block) {
