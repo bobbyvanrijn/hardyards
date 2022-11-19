@@ -6,10 +6,6 @@ export default function Menu(props) {
         <div className={styles.menu}>
             <div className='container'>
                 <Navigation />
-
-                <footer>
-                    Test
-                </footer>
             </div>
         </div>
     )

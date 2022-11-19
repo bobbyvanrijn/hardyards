@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
     
     padding: var(--scale-7);
     display: flex;
@@ -60,4 +60,23 @@
 .header__button:before {
     transform-origin: 50% 50%;
     transform: rotate(90deg);
+}
+
+.header__menuWrapper {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+
+    height: 0;
+    transition: height .5s ease, padding .5s ease;
+    
+    background: rgb(var(--black));
+    color: rgb(var(--white));
+}
+
+.header__menuWrapper[data-active='true'] {
+    height: 100vh;
+    padding-top: var(--header-height);
 }

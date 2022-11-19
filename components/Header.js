@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Add } from '@carbon/icons-react';
-import MenuTransition from './MenuTransition';
-
 import { useEffect } from 'react';
 import { useRouter} from 'next/router'
 import { useState } from 'react';
@@ -47,9 +44,14 @@ export default function Header() {
                 />
             </div>
 
-            <MenuTransition menuActive={menuActive}>
-                { menuActive ? <Menu handleClose={toggleMenu}></Menu> : null }
-            </MenuTransition>
+            <div
+                className={styles.header__menuWrapper}
+                data-active={menuActive}
+            >
+                <Menu
+                    handleClose={toggleMenu}
+                />
+            </div>
         </header>
     );
 }
