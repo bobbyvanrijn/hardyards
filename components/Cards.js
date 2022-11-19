@@ -4,7 +4,7 @@ import Card from './Card';
 export default function Cards(props) {
     function Title() {
         return (
-            props.title !== undefined ?
+            props.items.length > 0 ?
             <h3 id='card-title'>{ props.title }</h3> :
             null
         );
@@ -20,7 +20,6 @@ export default function Cards(props) {
                 columnsSm={2}
                 element='ul'
             >
-
                 { props.items.map((item, index) =>
                     {
                         if (item.value !== undefined) {
@@ -29,6 +28,7 @@ export default function Cards(props) {
                                     <h4 id={`card-${index}`}>
                                         { item.label }
                                     </h4>
+
                                     <span aria-describedby={`card-${index}`}>
                                         { item.value }
                                     </span>

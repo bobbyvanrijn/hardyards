@@ -3,10 +3,11 @@
     gap: var(--scale-8);
 
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin-block: 0;
+    padding: 0 var(--scale-7) 0 0;
 
     position: relative;
+    z-index: 1;
 
     overflow-x: auto;
 
@@ -22,18 +23,17 @@
     flex: 0 0 auto;
     width: clamp(15rem, 60vw, 30rem);
     aspect-ratio: 3/4;
+
     position: relative;
-    background-color: rgb(var(--white) / var(--alpha-05));
+    z-index: 1;
+
+    background-color: rgb(var(--foreground) / var(--alpha-05));
     overflow: hidden;
     border-radius: var(--scale-5);
 }
 
 .carousel__item:first-child {
     margin-left: var(--scale-7);
-}
-
-.carousel__item:last-child {
-    margin-right: var(--scale-7);
 }
 
 .carousel__item img {
@@ -51,5 +51,5 @@
 
     height: 3px;
     width: 10rem;
-    background: rgb(var(--white) / var(--alpha-5));
+    background: rgb(var(--foreground) / var(--alpha-5));
 }

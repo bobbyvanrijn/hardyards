@@ -1,6 +1,6 @@
 .card {
     padding: var(--scale-5);
     border-radius: var(--scale-6);
-    color: rgb(var(--white));
-    background-color: rgb(var(--white) / var(--alpha-05));
+    color: rgb(var(--foreground));
+    background-color: rgb(var(--foreground) / var(--alpha-05));
 }

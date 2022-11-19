@@ -19,7 +19,7 @@
     font-weight: 300;
 
     padding-block: var(--type-sm);
-    border-bottom: 1px solid rgb(var(--white) / var(--alpha-2))
+    border-bottom: 1px solid rgb(var(--foreground) / var(--alpha-2))
 }
 
 .list__itemTitle {

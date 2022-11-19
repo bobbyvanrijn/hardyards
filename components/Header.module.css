@@ -1,6 +1,7 @@
 .header {
     --header-height: 86px;
     padding-top: var(--header-height);
+
 }
 
 .header__wrapper {
@@ -8,12 +9,12 @@
     top: 0;
     width: 100%;
     z-index: 99;
-
-    background: rgb(var(--black));
-
+    
     padding: var(--scale-7);
     display: flex;
     justify-content: space-between;
+
+    mix-blend-mode: difference;
 }
 
 .header__logo {
@@ -53,7 +54,7 @@
     top: 0;
     width: 2px;
     height: var(--button-scale);
-    background: currentColor;
+    background: rgb(var(--background));
 }
 
 .header__button:before {

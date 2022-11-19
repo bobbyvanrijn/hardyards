@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Add } from '@carbon/icons-react';
+import MenuTransition from './MenuTransition';
 
 import { useEffect } from 'react';
 import { useRouter} from 'next/router'
@@ -29,7 +30,7 @@ export default function Header() {
                 <Link href='/' title='Back to homepage'>
                     <Image
                         className={styles.header__logo} 
-                        src='/hardyards-light-lg.svg'
+                        src='/hardyards-light-sm.svg'
                         width='200'
                         height='30'
                         role='presentation'
@@ -44,9 +45,11 @@ export default function Header() {
                     ]}
                     data-active={menuActive}
                 />
-
-                { menuActive ? <Menu handleClose={toggleMenu}></Menu> : null }
             </div>
+
+            <MenuTransition menuActive={menuActive}>
+                { menuActive ? <Menu handleClose={toggleMenu}></Menu> : null }
+            </MenuTransition>
         </header>
     );
 }
