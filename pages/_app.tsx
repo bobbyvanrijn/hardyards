@@ -18,28 +18,6 @@ const inter = Inter({
         variable: '--font-inter'
     });
 
-
-const libertine = localFont({
-    variable: '--font-libertine',
-    src: [
-        {
-            path: '../public/fonts/Libertine_Regular.woff2',
-            weight: '400',
-            style: 'normal',
-        },
-        {
-            path: '../public/fonts/Libertine_Bold.woff2',
-            weight: '600',
-            style: 'normal',
-        },
-        {
-            path: '../public/fonts/Libertine_Italic.woff2',
-            weight: '400',
-            style: 'italic',
-        },
-    ]
-});
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${inter.variable} ${sourceSerif.variable}`}>
