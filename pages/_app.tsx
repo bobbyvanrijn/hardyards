@@ -5,14 +5,19 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Transition from '../components/Transition';
 
-import { Inter } from '@next/font/google';
+import { Inter, Source_Serif_4 } from '@next/font/google';
 import localFont from '@next/font/local';
 import '../styles/transitions.css';
 
 const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter'
-});
+        subsets: ['latin'],
+        variable: '--font-inter'
+    }),
+    sourceSerif = Source_Serif_4({
+        subsets: ['latin'],
+        variable: '--font-inter'
+    });
+
 
 const libertine = localFont({
     variable: '--font-libertine',
@@ -37,7 +42,7 @@ const libertine = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} ${libertine.variable}`}>
+    <main className={`${inter.variable} ${sourceSerif.variable}`}>
         <Head>
             <title>Hardyards</title>
             <meta name="description" content="Gardening tool." />

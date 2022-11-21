@@ -116,7 +116,7 @@ p:last-child {
 }
 
 .body-text {
-    font-family: var(--font-libertine);
+    font-family: var(--font-sourceSerif);
     font-size: var(--type-md);
 }
 
