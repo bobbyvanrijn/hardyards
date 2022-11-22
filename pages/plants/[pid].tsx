@@ -63,7 +63,7 @@ export default function Plant() {
                 title: 'Plant properties',
             },
             children: data.plant.meta.map(
-                (item: Object, index) =>
+                (item: Object, index: Number) =>
                     <div key={index}>
                         <>
                             {item.label}
