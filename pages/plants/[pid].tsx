@@ -28,14 +28,6 @@ export default function Plant() {
 
     const blocks = [
         {
-            _uid: '4397c42f-f205-49cb-a875-1cac86f512ca',
-            component: 'lead',
-            children: [
-                <>{ data.plant.genus } { data.plant.species } { data.plant.cultivar }.</>,
-                <>{ data.plant.description }</>
-            ]
-        },
-        {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
             component: 'image',
             attributes: {
@@ -44,8 +36,16 @@ export default function Plant() {
                 placeholder: 'blur',
                 blurDataURL: `/images/${ pid }-small.webp`,
                 width: 1200,
-                height: 800
+                height: 800,
             }
+        },
+        {
+            _uid: '4397c42f-f205-49cb-a875-1cac86f512ca',
+            component: 'lead',
+            children: [
+                <>{ data.plant.genus } { data.plant.species } { data.plant.cultivar }.</>,
+                <>{ data.plant.description }</>
+            ]
         },
         {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',

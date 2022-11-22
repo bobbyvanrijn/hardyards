@@ -37,6 +37,9 @@
     --type-sm: clamp(var(--scale-6), 3.5vw, var(--scale-5));
     --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
     --type-xxs: clamp(var(--scale-8), 2.75vw, var(--scale-7));
+
+    --font-weight-normal: 350;
+    --font-weight-bold: 450;
 }
 
 html,
@@ -103,8 +106,8 @@ h5 {
     letter-spacing: .125em;
 }
 
-p:not(:last-child) {
-    margin-block: var(--scale-4);
+p {
+    margin-block: var(--scale-6);
 }
 
 p:last-child {
@@ -116,7 +119,10 @@ p:last-child {
 }
 
 .body-text {
-    font-family: var(--font-sourceSerif);
+    font-family: var(--font-source);
+    font-weight: 350;
+    line-height: 1.15;
+    font-variation-settings: 'opsz' 45;
     font-size: var(--type-md);
 }
 

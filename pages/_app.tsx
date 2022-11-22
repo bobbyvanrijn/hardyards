@@ -12,10 +12,10 @@ import '../styles/transitions.css';
 const inter = Inter({
         subsets: ['latin'],
         variable: '--font-inter'
-    }),
-    sourceSerif = Source_Serif_4({
+    });
+const sourceSerif = Source_Serif_4({
         subsets: ['latin'],
-        variable: '--font-inter'
+        variable: '--font-source'
     });
 
 export default function App({ Component, pageProps }: AppProps) {

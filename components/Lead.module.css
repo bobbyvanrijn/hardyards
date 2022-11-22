@@ -2,11 +2,15 @@
     font-size: var(--type-lg);
     line-height: 1.15;
 
-    font-weight: 300;
+    font-weight: 350;
+    letter-spacing: -.025em;
+
     color: rgb(var(--foreground) / var(--alpha-5));
     hanging-punctuation: first last;
 
     max-width: 25em;
+    margin-top: var(--scale-8);
+    margin-bottom: var(--scale-5);
 }
 
 .lead__strong {

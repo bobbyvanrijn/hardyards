@@ -13,7 +13,7 @@ export default function Navigation() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='/'>Inspiration</Link>
+                    <Link href='/calendar'>Calendar</Link>
                 </li>
                 <li>
                     <Link href='/plants/collections'>Collections</Link>

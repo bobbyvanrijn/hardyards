@@ -7,11 +7,13 @@ specifiers:
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   '@vercel/og': ^0.0.20
+  date-fns: ^2.29.3
   eslint: 8.27.0
   eslint-config-next: 13.0.2
   framer-motion: ^7.6.7
   google: link:@next/font/google
   next: 13.0.2
+  pnpm: ^7.17.0
   react: 18.2.0
   react-dom: 18.2.0
   swr: ^1.3.0
@@ -24,11 +26,13 @@ dependencies:
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   '@vercel/og': 0.0.20
+  date-fns: 2.29.3
   eslint: 8.27.0
   eslint-config-next: 13.0.2_rmayb2veg2btbq6mbmnyivgasy
   framer-motion: 7.6.7_biqbaboplfbrettd7655fr4n2y
   google: link:@next/font/google
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
+  pnpm: 7.17.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   swr: 1.3.0_react@18.2.0
@@ -652,6 +656,11 @@ packages:
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
+    dev: false
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/2.6.9:
@@ -1722,6 +1731,12 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+    dev: false
+
+  /pnpm/7.17.0:
+    resolution: {integrity: sha512-0oy+VI/6r248MzFrr3jBTQ5qxC1wM+wP3YoGcoohPEMk+5LfQBYHsazdu8QDtuigr2jjaDi0hfg/c8k89jxiEA==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: false
 
   /popmotion/11.0.5:
