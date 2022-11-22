@@ -18,7 +18,7 @@
     font-size: var(--type-md);
     font-weight: 300;
 
-    padding-block: var(--type-sm);
+    padding-block: var(--type-xs);
     border-bottom: 1px solid rgb(var(--foreground) / var(--alpha-2))
 }
 

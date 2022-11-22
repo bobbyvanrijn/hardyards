@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 
 import Head from 'next/head'
+import Link from 'next/link'
 import Content from '../../components/Content';
 
 const fetcher = async (url: string) => {
@@ -33,10 +34,9 @@ export default function Plant() {
             attributes: {
                 src: `/images/${ pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-                placeholder: 'blur',
                 blurDataURL: `/images/${ pid }-small.webp`,
-                width: 1200,
-                height: 800,
+                width: 800,
+                height: 1416,
             }
         },
         {
@@ -51,18 +51,28 @@ export default function Plant() {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
             component: 'text',
             children: [
-                <p key='text-1'>
+                <>
                     Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-                </p>
+                </>
             ]
         },
         {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
-            component: 'cards',
+            component: 'list',
             attributes: {
-                items: data.plant.meta,
-                title: 'Plant properties'
-            }
+                title: 'Plant properties',
+            },
+            children: data.plant.meta.map(
+                (item: Object) =>
+                    <div key={item.label}>
+                        <>
+                            {item.label}
+                        </>
+                        <>
+                            {item.value}
+                        </>
+                    </div>
+            )
         }
     ];
 

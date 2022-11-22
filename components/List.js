@@ -23,10 +23,26 @@ export default function List(props) {
 
     return (
         <div className={styles.list}>
-            <h5>{ props.title }</h5>
+            { props.children.length ? <h5>{ props.title }</h5> : null }
 
             <ul>
-                { items }
+                { 
+                    props.children.map(
+                        (item, index) =>
+                            <li
+                                key={index}
+                                className={styles.list__item}
+                            >
+                                <div className={styles.list__itemTitle}>
+                                    { item }
+                                </div>
+                
+                                <div className={styles.list__itemIcon}>
+                                    {/* <ArrowUpRight size='24' /> */}
+                                </div>
+                            </li>
+                    )
+                }
             </ul>
         </div>
     );

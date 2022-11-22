@@ -6,17 +6,18 @@ import Header from '../components/Header';
 import Transition from '../components/Transition';
 
 import { Inter, Source_Serif_4 } from '@next/font/google';
-import localFont from '@next/font/local';
 import '../styles/transitions.css';
 
-const inter = Inter({
-        subsets: ['latin'],
-        variable: '--font-inter'
-    });
 const sourceSerif = Source_Serif_4({
-        subsets: ['latin'],
-        variable: '--font-source'
-    });
+    subsets: ['latin'],
+    variable: '--font-source-serif',
+    axes: ['opsz']
+});
+
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter'
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -30,7 +31,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="icon" href="/api/icon" />
             <link rel="apple-touch-icon" href="api/icon" />
         </Head>
-
         <Header />
 
         <Transition>
