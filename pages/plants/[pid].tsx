@@ -24,9 +24,6 @@ export default function Plant() {
         fetcher
     )
 
-    if (error) return <div>{error.message}</div>
-    if (!data) return <div>Loading...</div>
-
     const blocks = [
         {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
@@ -75,11 +72,6 @@ export default function Plant() {
 
     return (
         <div className={'container'}>
-            <Head>
-                <title>Hardyards | { data.plant.title }</title>
-                <meta name="description" content={data.plant.description} />
-            </Head>
-
             <style jsx global>{`
                 :root {
                     --background: var(--black);
@@ -89,9 +81,22 @@ export default function Plant() {
                 }
             `}</style>
 
-            <article>
-                <Content blocks={blocks} />
-            </article>
+            { error &&
+                <>{error.message</>
+            }
+            { loading &&
+                <>loading...</>
+            }
+            { !error && !loading &&
+                <Head>
+                    <title>Hardyards | { data.plant.title }</title>
+                    <meta name="description" content={data.plant.description} />
+                </Head>
+    
+                <article>
+                    <Content blocks={blocks} />
+                </article>
+            }
         </div>
     )
 }
