@@ -125,7 +125,7 @@ p:last-child {
 
 .body-text {
     font-family: var(--font-source-serif);
-    font-weight: 300;
+    font-weight: var(--font-weight-normal);
     font-size: var(--type-sm);
     line-height: 1.25;
 
