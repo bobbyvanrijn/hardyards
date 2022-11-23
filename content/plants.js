@@ -28,20 +28,24 @@ const plants = [
         description: 'Hybrid of Geranium himalayense and Geranium wallichianum \‘Buxton\'s variety\’.',
         meta: [
             {
+                label: 'Spread',
                 value: '90cm',
-                label: 'Spread'
+                description: ''
             },
             {
+                label: 'Height',
                 value: '40cm',
-                label: 'Height'
+                description: ''
             },
             {
+                label: 'Color',
                 value: 'Violet blue',
-                label: 'Color'
+                description: ''
             },
             {
+                label: 'Seasons of interest',
                 value: 'VI-X',
-                label: 'Seasons of interest'
+                description: ''
             },
         ],
         collection: [
@@ -57,8 +61,9 @@ const plants = [
         description: 'Spiky seedheads. Droopy pale pink petals.',
         meta: [
             {
+                label: 'Height',
                 value: '40cm',
-                label: 'Height'
+                description: ''
             },
         ],
         collection: [

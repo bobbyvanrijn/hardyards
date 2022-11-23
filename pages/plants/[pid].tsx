@@ -61,13 +61,15 @@ export default function Plant() {
             component: 'list',
             attributes: {
                 title: 'Plant properties',
-            },
-            children: data.plant.meta.map(
-                (item: Object) =>
-                    <>
-                        {item}
-                    </>
-            )
+                items: data.plant.meta.map(
+                    (meta: Object) => {
+                        return {
+                            title: meta.label,
+                            description: meta.value,
+                        }
+                    }
+                )
+            }
         }
     ];
 

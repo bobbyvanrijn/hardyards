@@ -8,17 +8,17 @@ const blocks = [
         _uid: '1',
         component: 'list',
         attributes: {
-            title: 'Plants'
-        },
-        children: plants.map(
-            plant =>
-                <Link
-                    href={`/plants/${plant.slug}`}
-                    key={`plant-${plant.slug}`}
-                >
-                    { plant.genus } { plant.species } { plant.cultivar }
-                </Link>
-        )
+            title: 'Plants',
+            items: plants.map(
+                plant => {
+                    return {
+                        title: `${plant.genus} ${plant.species} ${plant.cultivar}`,
+                        description: null,
+                        link: `/plants/${plant.slug}`
+                    }
+                }
+            )
+        }
     }
 ];
 
