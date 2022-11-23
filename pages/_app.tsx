@@ -30,6 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="manifest" href="/manifest.json" />
             <link rel="icon" href="/api/icon" />
             <link rel="apple-touch-icon" href="api/icon" />
+            <link rel="apple-touch-startup-image" href="api/splash" />
         </Head>
 
         <Header />
