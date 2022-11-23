@@ -87,7 +87,7 @@ export default function Plant() {
             { !data &&
                 <>loading...</>
             }
-            { !error && !loading &&
+            { !error && !data &&
                 <>
                     <Head>
                         <title>Hardyards | { data.plant.title }</title>
