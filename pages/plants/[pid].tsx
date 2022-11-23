@@ -84,7 +84,7 @@ export default function Plant() {
                 :root {
                     --background: var(--black);
                     --foreground: var(--white);
-                    --font-weight-normal: 300;
+                    --font-weight-normal: 350;
                     --font-weight-bold: 400;
                 }
             `}</style>
