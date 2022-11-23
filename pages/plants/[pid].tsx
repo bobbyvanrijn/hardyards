@@ -84,7 +84,7 @@ export default function Plant() {
             { error &&
                 <>{error.message}</>
             }
-            { loading &&
+            { !data &&
                 <>loading...</>
             }
             { !error && !loading &&
