@@ -62,13 +62,13 @@ export default function Plant() {
             attributes: {
                 title: 'Plant properties',
                 items: data.plant.meta.map(
-                    (meta: Object) => {
+                    (meta: { label: any; value: any; }) => {
                         return {
                             title: meta.label,
                             description: meta.value,
-                        }
+                        };
                     }
-                )
+                ),
             }
         }
     ];
