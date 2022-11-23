@@ -10,6 +10,7 @@
 
 .list__item {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -28,7 +29,7 @@
 }
 
 .list__itemDescription {
-    flex-wrap: wrap;
+    font-family: var(--font-source-serif);
 }
 
 .list__itemIcon {
