@@ -2,12 +2,6 @@
     --logo-scale: clamp(var(--scale-4), 7vw, var(--scale-3));
 }
 
-.header:before {
-    display: block;
-    content: '';
-    height: calc(var(--logo-scale) + var(--scale-7) + var(--scale-7));
-}
-
 .header__wrapper {
     position: fixed;
 
@@ -24,12 +18,12 @@
 
 .header__logo {
     display: block;
-    height: var(--logo-scale);
+    height: var(--logo-height);
     width: auto;
 }
 
 .header__button {
-    --button-scale: var(--logo-scale);
+    --button-scale: var(--logo-height);
     position: relative;
     z-index: 99;
 

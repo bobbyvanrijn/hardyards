@@ -5,6 +5,7 @@ import Carousel from './Carousel';
 import Cards from './Cards';
 import List from './List';
 import Lead from './Lead';
+import HeaderSpacer from './HeaderSpacer';
 
 function Text({ children }) {
     return (
@@ -40,6 +41,7 @@ export function Block(block) {
 export default function Content(props) {
     return (
         <>
+            <HeaderSpacer />
             { props.blocks.map(block => Block(block)) }
         </>
     );

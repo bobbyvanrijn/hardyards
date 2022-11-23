@@ -40,6 +40,9 @@
 
     --font-weight-normal: 350;
     --font-weight-bold: 450;
+
+    --logo-height: clamp(var(--scale-4), 7vw, var(--scale-3));
+    --header-height: calc(var(--logo-height) + var(--scale-7) + var(--scale-7));
 }
 
 html,

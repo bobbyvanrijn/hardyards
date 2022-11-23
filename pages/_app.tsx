@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="icon" href="/api/icon" />
             <link rel="apple-touch-icon" href="api/icon" />
         </Head>
+
         <Header />
 
         <Transition>
