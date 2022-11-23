@@ -82,7 +82,7 @@ export default function Plant() {
             `}</style>
 
             { error &&
-                <>{error.message</>
+                <>{error.message}</>
             }
             { loading &&
                 <>loading...</>
