@@ -88,14 +88,16 @@ export default function Plant() {
                 <>loading...</>
             }
             { !error && !loading &&
-                <Head>
-                    <title>Hardyards | { data.plant.title }</title>
-                    <meta name="description" content={data.plant.description} />
-                </Head>
-    
-                <article>
-                    <Content blocks={blocks} />
-                </article>
+                <>
+                    <Head>
+                        <title>Hardyards | { data.plant.title }</title>
+                        <meta name="description" content={data.plant.description} />
+                    </Head>
+        
+                    <article>
+                        <Content blocks={blocks} />
+                    </article>
+                </>
             }
         </div>
     )
