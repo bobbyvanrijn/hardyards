@@ -1,8 +1,16 @@
 .header {
+    --logo-scale: clamp(var(--scale-4), 7vw, var(--scale-3));
+}
+
+.header:before {
+    display: block;
+    content: '';
+    height: calc(var(--logo-scale) + var(--scale-7) + var(--scale-7));
 }
 
 .header__wrapper {
-    position: sticky;
+    position: fixed;
+
     top: 0;
     width: 100%;
     z-index: 9999;
@@ -16,12 +24,12 @@
 
 .header__logo {
     display: block;
-    width: clamp(12rem, 35vw, 17.125rem);
-    height: auto;
+    height: var(--logo-scale);
+    width: auto;
 }
 
 .header__button {
-    --button-scale: clamp(var(--scale-4), 5vw, var(--scale-3));
+    --button-scale: var(--logo-scale);
     position: relative;
     z-index: 99;
 
@@ -51,7 +59,7 @@
     top: 0;
     width: 2px;
     height: var(--button-scale);
-    background: rgb(var(--background));
+    background: rgb(var(--white));
 }
 
 .header__button:before {

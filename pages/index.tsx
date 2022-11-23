@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Hero from '../components/Hero';
 import Content from '../components/Content';
 import Marquee from '../components/Marquee';
 
@@ -21,7 +22,9 @@ const blocks = [
 export default function Home() {
     return (
         <div className='container'>
-            <Content blocks={blocks} />
+            <Hero>
+                <Content blocks={blocks} />
+            </Hero>
 
             <div className={'bleed-both'}>
                 <Marquee />

@@ -55,6 +55,8 @@ body {
 
     color: rgb(var(--foreground));
     background: rgb(var(--background));
+
+    transition: background .125s ease-in-out;
 }
 
 main {

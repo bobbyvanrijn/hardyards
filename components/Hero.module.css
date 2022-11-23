@@ -1,0 +1,7 @@
+.hero {
+    display: block;
+    margin-inline: calc(0px - var(--scale-7));
+    padding: var(--scale-7);
+    background: rgb(var(--black));
+    color: rgb(var(--white));
+}

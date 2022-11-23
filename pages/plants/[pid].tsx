@@ -79,6 +79,16 @@ export default function Plant() {
                 <title>Hardyards | { data.plant.title }</title>
                 <meta name="description" content={data.plant.description} />
             </Head>
+
+            <style jsx global>{`
+                :root {
+                    --background: var(--black);
+                    --foreground: var(--white);
+                    --font-weight-normal: 300;
+                    --font-weight-bold: 400;
+                }
+            `}</style>
+
             <article>
                 <Content blocks={blocks} />
             </article>
