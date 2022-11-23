@@ -1,46 +1,52 @@
+import Link from 'next/link';
+
 import { ArrowUpRight, AddAlt } from '@carbon/icons-react';
 import styles from './List.module.css';
 
-export default function List(props) {
-    const items = props.children.map((item, index) =>
-        <li
-            key={index}
-            className={styles.list__item}
-        >
-            <div className={styles.list__itemTitle}>
-                { item }
-            </div>
+export default function List({ title, items, children}) {
+    const listItems = items;
 
-            <div className={styles.list__itemDescription}>
-                { item }
-            </div>
-           
-            <div className={styles.list__itemIcon}>
-                <ArrowUpRight size='32' />
-            </div>
-        </li>
-    );
+    function ListItem({ item, children }) {
+        return (
+            <li className={styles.list__item}>
+                {item.link &&
+                    <Link href={item.link}>
+                        {children}
+
+                        <div className={styles.list__itemIcon}>
+                            <ArrowUpRight size='32' />
+                        </div>
+                    </Link>
+                }
+
+                {!item.link && children}
+            </li>
+        )
+    }
 
     return (
         <div className={styles.list}>
-            { props.children.length ? <h5>{ props.title }</h5> : null }
+            { items.length ? <h5>{ title }</h5> : null }
 
             <ul>
                 { 
-                    props.children.map(
-                        (item, index) =>
-                            <li
-                                key={index}
-                                className={styles.list__item}
-                            >
+                    items.map((item, index) =>
+                        <ListItem
+                            key={index}
+                            item={item}
+                        >
+                            {item.label !== undefined &&
                                 <div className={styles.list__itemTitle}>
-                                    { item }
+                                    { item.label }
                                 </div>
-                
-                                <div className={styles.list__itemIcon}>
-                                    {/* <ArrowUpRight size='24' /> */}
+                            }
+
+                            {item.title !== undefined &&
+                                <div className={styles.list__itemTitle}>
+                                    { item.title }
                                 </div>
-                            </li>
+                            }
+                        </ListItem>
                     )
                 }
             </ul>
