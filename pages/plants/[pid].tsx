@@ -3,6 +3,7 @@ import useSWR from 'swr';
 import Head from 'next/head';
 
 import Content from '../../components/Content';
+import Loader from '../../components/Loader';
 
 const fetcher = async (url: string) => {
     const res = await fetch(url)
@@ -24,7 +25,7 @@ export default function Plant() {
     )
 
     if (error) return <div>{error.message}</div>
-    if (!data) return <div>Loading...</div>
+    if (!data) return <Loader background={'dark'} />
 
     const blocks = [
         {
@@ -75,7 +76,7 @@ export default function Plant() {
     return (
         <div className={'container'}>
             <Head>
-                <title>Hardyards | { data.plant.title }</title>
+                <title>Hard Yards | { data.plant.title }</title>
                 <meta name="description" content={data.plant.description} />
             </Head>
 

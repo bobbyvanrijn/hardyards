@@ -1,0 +1,28 @@
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg) }
+}
+
+.loader {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    margin-top: -10vh;
+    height: 120vh;
+    width: 100vw;
+
+    backface-visibility: hidden;
+    z-index: inherit;
+}
+
+.loader[data-background='dark'] {
+    background: rgb(var(--black));
+    color: rgb(var(--white));
+}
+
+.loaderIcon {
+    animation: spin 3s linear infinite;
+    margin: auto;
+}

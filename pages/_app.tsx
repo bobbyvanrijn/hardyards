@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${inter.variable} ${sourceSerif.variable}`}>
         <Head>
-            <title>Hardyards</title>
+            <title>Hard Yards</title>
             <meta name="description" content="Gardening tool." />
             <meta property="og:image" content="/api/og?title=Hardyards" />
 
