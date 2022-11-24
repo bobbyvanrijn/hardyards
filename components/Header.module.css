@@ -1,5 +1,4 @@
 .header {
-    --logo-scale: clamp(var(--scale-4), 7vw, var(--scale-3));
 }
 
 .header__wrapper {
