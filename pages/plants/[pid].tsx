@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
+import Head from 'next/head';
 
-import Head from 'next/head'
-import Link from 'next/link'
 import Content from '../../components/Content';
 
 const fetcher = async (url: string) => {
@@ -23,6 +22,9 @@ export default function Plant() {
         () => pid && `/api/plants/${pid}`,
         fetcher
     )
+
+    if (error) return <div>{error.message}</div>
+    if (!data) return <div>Loading...</div>
 
     const blocks = [
         {
@@ -72,33 +74,23 @@ export default function Plant() {
 
     return (
         <div className={'container'}>
+            <Head>
+                <title>Hardyards | { data.plant.title }</title>
+                <meta name="description" content={data.plant.description} />
+            </Head>
+
             <style jsx global>{`
                 :root {
                     --background: var(--black);
                     --foreground: var(--white);
-                    --font-weight-normal: 350;
+                    --font-weight-normal: 300;
                     --font-weight-bold: 400;
                 }
             `}</style>
 
-            { error &&
-                <>{error.message}</>
-            }
-            { !data &&
-                <>loading...</>
-            }
-            { !error && !data &&
-                <>
-                    <Head>
-                        <title>Hardyards | { data.plant.title }</title>
-                        <meta name="description" content={data.plant.description} />
-                    </Head>
-        
-                    <article>
-                        <Content blocks={blocks} />
-                    </article>
-                </>
-            }
+            <article>
+                <Content blocks={blocks} />
+            </article>
         </div>
     )
 }
