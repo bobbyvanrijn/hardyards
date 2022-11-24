@@ -22,7 +22,7 @@
 .carousel__item {
     flex: 0 0 auto;
     width: clamp(18rem, 75vw, 30rem);
-    aspect-ratio: 3/4;
+    aspect-ratio: 3/5;
 
     position: relative;
     z-index: 1;
