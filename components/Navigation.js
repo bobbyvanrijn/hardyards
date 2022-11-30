@@ -1,4 +1,6 @@
 import { plants } from '../content/plants';
+import { guides } from '../content/guides';
+
 import Link from 'next/link';
 
 import styles from './Navigation.module.css';
@@ -8,20 +10,35 @@ export default function Navigation() {
         <nav className={styles.navigation}>
             <ul>
                 <li>
-                    <Link href='/plants'>
+                    <Link className='trim-both' href='/plants'>
                         Plants<sup>{ plants.length }</sup>
                     </Link>
                 </li>
                 <li>
-                    <Link href='/calendar'>Calendar</Link>
+                    <Link className='trim-both' href='/calendar'>Calendar</Link>
                 </li>
                 <li>
-                    <Link href='/plants/collections'>Collections</Link>
+                    <Link className='trim-both' href='/plants/collections'>Collections</Link>
                 </li>
                 <li>
-                    <Link href='/guides'>Guides<sup>1</sup></Link>
+                    <Link className='trim-both' href='/guides'>Guides<sup>{guides.length}</sup></Link>
+                </li>
+                <li>
+                    <Link className='trim-both' href='/playground'>Playground</Link>
                 </li>
             </ul>
+
+
+            <div>
+                © 2023. All rights reserved.
+            </div>
+
+            <div>
+                Built with React and Next.js. Source code is available on Github, the latest version is 1.0.0. This app is hosted by Vercel.
+            </div>
+            <div>
+                Typeset in Source Serif 4 by Frank Grießhammer and Inter by Rasmus Andersson.
+            </div>
         </nav>
     )
 }

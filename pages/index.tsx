@@ -25,7 +25,6 @@ export default function Home() {
             <Hero>
                 <Content blocks={blocks} />
             </Hero>
-
             <div className={'bleed-both'}>
                 <Marquee />
             </div>

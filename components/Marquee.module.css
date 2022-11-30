@@ -4,9 +4,11 @@
 }
 
 .marquee {
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     white-space: nowrap;
+    background: rgb(var(--white));
+    color: rgb(var(--black));
 }
 
 .marquee__text {
@@ -16,4 +18,5 @@
 
     font-size: var(--type-sm);
     padding-left: var(--scale-5);
+    padding-block: var(--scale-7);
 }

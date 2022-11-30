@@ -2,11 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './Carousel.module.css';
+
 import { shuffle } from '../helpers/shuffle';
+import { formatPlantName } from '../helpers/formatPlantName';
 
 export default function Carousel(props) {
+    const items = props.items;
     function Items() {
-        const items = shuffle(props.items);
 
         return props.items.map(plant =>
             <Link
@@ -18,10 +20,11 @@ export default function Carousel(props) {
                     src={`/images/${ plant.slug }.webp`}
                     width={480}
                     height={640}
-                    alt={`${ plant.genus } ${ plant.species } ${ plant.cultivar }`}
+                    alt={ formatPlantName(plant) }
                     placeholder='blur'
                     blurDataURL={`/images/${ plant.slug}-small.webp`}
                 />
+                <span className={styles.carousel__title}>{ formatPlantName(plant) }</span>
             </Link>
         );
     }

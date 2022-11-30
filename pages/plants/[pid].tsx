@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Content from '../../components/Content';
 import Loader from '../../components/Loader';
 
+import { formatPlantName } from '../../helpers/formatPlantName';
+
 const fetcher = async (url: string) => {
     const res = await fetch(url)
     const data = await res.json()
@@ -43,7 +45,7 @@ export default function Plant() {
             _uid: '4397c42f-f205-49cb-a875-1cac86f512ca',
             component: 'lead',
             children: [
-                <>{ data.plant.genus } { data.plant.species } { data.plant.cultivar }.</>,
+                <>{ formatPlantName(data.plant) }.</>,
                 <>{ data.plant.description }</>
             ]
         },

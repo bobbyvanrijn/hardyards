@@ -3,8 +3,8 @@
     --black: 18 18 17;
     --white: 239 236 228;
 
-    --foreground: var(--black);
-    --background: var(--white);
+    --foreground: var(--white);
+    --background: var(--black);
 
     --alpha-05: .05;
     --alpha-1: .1;
@@ -29,6 +29,30 @@
     --scale-9: 0.354rem;
     --scale-10: 0.25rem;
 
+    /* Scale, major third */
+    --scale-1: 3.052rem;
+    --scale-2: 2.441rem;
+    --scale-3: 1.953rem;
+    --scale-4: 1.563rem;
+    --scale-5: 1.25rem;
+    --scale-6: 1rem;
+    --scale-7: 0.8rem;
+    --scale-8: 0.64rem;
+    --scale-9: 0.512rem;
+    --scale-10: 0.41rem;
+
+    /* Scale, perfect fourth */
+    --scale-1: 4.209rem;
+    --scale-2: 3.157rem;
+    --scale-3: 2.3693rem;
+    --scale-4: 1.777rem;
+    --scale-5: 1.333rem;
+    --scale-6: 1rem;
+    --scale-7: 0.75rem;
+    --scale-8: 0.563rem;
+    --scale-9: 0.422rem;
+    --scale-10: 0.317rem;
+
     /* Responsive font-sizes: min, base, max */
     --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
     --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
@@ -41,8 +65,10 @@
     --font-weight-normal: 350;
     --font-weight-bold: 450;
 
+    --leading-lineheight: 2rem;
+
     --logo-height: clamp(var(--scale-4), 7vw, var(--scale-3));
-    --header-height: calc(var(--logo-height) + var(--scale-7) + var(--scale-7));
+    --header-height: calc(var(--logo-height) + var(--scale-5) + var(--scale-5));
 }
 
 html,
@@ -58,8 +84,7 @@ body {
 
     color: rgb(var(--foreground));
     background: rgb(var(--background));
-
-    transition: background .125s ease-in-out;
+    font-size: 22px;
 }
 
 main {
@@ -114,11 +139,16 @@ h5 {
 }
 
 p {
-    margin-block: var(--scale-6);
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-p:last-child {
-    margin-bottom: 0;
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: var(--type-sm);
 }
 
 .container {
@@ -127,13 +157,13 @@ p:last-child {
 
 .body-text {
     font-family: var(--font-source-serif);
-    font-weight: var(--font-weight-normal);
-    font-size: var(--type-sm);
-    line-height: 1.25;
+    font-weight: 375;
 
     font-optical-sizing: auto;
-    font-variation-settings: 'opsz' 35;
+    font-variation-settings: 'opsz' 30;
 }
+
+/* Utilities */
 
 .bleed-left {
     margin-left: calc(0rem - var(--scale-7));
@@ -149,4 +179,85 @@ p:last-child {
     margin-left: calc(0rem - var(--scale-7));
     margin-right: calc(0rem - var(--scale-7));
     width: calc(100% + var(--scale-7) + var(--scale-7));
+}
+
+/*
+ Trim leading
+
+ {
+    "familyName": "Inter",
+    "subfamilyName": "Regular",
+    "capHeight": 2048,
+    "ascent": 2728,
+    "descent": -680,
+    "lineGap": 0,
+    "unitsPerEm": 2816,
+    "xHeight": 1536
+},
+{
+    "familyName": "Source Serif Pro",
+    "subfamilyName": "Regular",
+    "capHeight": 670,
+    "ascent": 918,
+    "descent": -335,
+    "lineGap": 0,
+    "unitsPerEm": 1000,
+    "xHeight": 475
+}
+
+*/
+
+.trim-start,
+.trim-end,
+.trim-both {
+    /* Inter font metrics */
+    --ascent: 2728;
+    --descent: -680;
+    --unitsPerEm: 2816;
+    --capHeight: 2048;
+
+    --foo: calc((var(--ascent) - var(--descent) - var(--unitsPerEm)) / 2);
+    --offsetStart: calc(1em * ((var(--ascent) - var(--capHeight) - var(--foo)) / var(--unitsPerEm)));
+    --offsetEnd: calc(1em * ((var(--foo) + var(--descent)) / var(--unitsPerEm)));
+
+    --leading-offset: calc((var(--leading-lineheight) - 1em) / -2);
+    --font-offset-start: var(--offsetStart);
+    --font-offset-end: var(--offsetEnd);
+
+    line-height: var(--leading-lineheight);
+    padding: 0.1px;
+}
+
+.trim-start--source,
+.trim-end--source,
+.trim-both--source {
+    /* Source serif 4 font metrics */
+    --ascent: 1018;
+    --descent: -335;
+    --unitsPerEm: 1000;
+    --capHeight: 670;
+}
+
+.trim-start:before,
+.trim-both:before {
+    content: '';
+    display: block;
+
+    margin-top: calc(var(--leading-offset,-.25em) + var(--font-offset-end,0em));
+}
+
+.trim-end:after,
+.trim-both:after {
+    content: '';
+    display: block;
+
+    margin-bottom: calc(var(--leading-offset,-.25em) + var(--font-offset-end,0em));
+}
+
+.pill {
+    display: inline-block;
+    border-radius: var(--scale-5);
+    padding: var(--scale-7) var(--scale-6);
+    border: 1px solid;
+    color: rgb(var(--white));
 }

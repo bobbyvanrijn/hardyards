@@ -21,15 +21,10 @@
 
 .carousel__item {
     flex: 0 0 auto;
-    width: clamp(18rem, 75vw, 30rem);
-    aspect-ratio: 3/5;
+    width: clamp(18rem, 40vw, 30rem);
 
     position: relative;
     z-index: 1;
-
-    background-color: rgb(var(--foreground) / var(--alpha-05));
-    overflow: hidden;
-    border-radius: var(--scale-5);
 }
 
 .carousel__item:first-child {
@@ -39,8 +34,14 @@
 .carousel__item img {
     object-fit: cover;
     object-position: center center;
-    height: 100%;
+    aspect-ratio: 3/4;
     width: 100%;
+    height: auto;
+    border-radius: var(--scale-5);
+}
+
+.carousel__title {
+    font-size: var(--type-md);
 }
 
 .carousel__indicator {

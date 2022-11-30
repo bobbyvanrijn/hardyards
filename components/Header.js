@@ -28,7 +28,7 @@ export default function Header() {
                     <Image
                         className={styles.header__logo} 
                         src='/hardyards-light-sm.svg'
-                        width='200'
+                        width='180'
                         height='30'
                         role='presentation'
                         alt='Hardyards'

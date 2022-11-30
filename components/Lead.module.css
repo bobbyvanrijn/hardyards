@@ -1,6 +1,6 @@
 .lead {
+    --leading-lineheight: 1.15em;
     font-size: var(--type-lg);
-    line-height: 1.15;
 
     font-weight: 350;
     letter-spacing: -.025em;

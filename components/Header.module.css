@@ -8,7 +8,7 @@
     width: 100%;
     z-index: 9999;
 
-    padding: var(--scale-7);
+    padding: var(--scale-5) var(--scale-7);
     display: flex;
     justify-content: space-between;
 

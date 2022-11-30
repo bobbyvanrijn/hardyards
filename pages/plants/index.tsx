@@ -2,6 +2,7 @@ import Content from '../../components/Content';
 import Link from 'next/link';
 
 import { plants } from '../../content/plants';
+import { formatPlantName } from '../../helpers/formatPlantName';
 
 const blocks = [
     {
@@ -12,7 +13,7 @@ const blocks = [
             items: plants.map(
                 plant => {
                     return {
-                        title: `${plant.genus} ${plant.species} ${plant.cultivar}`,
+                        title: formatPlantName(plant),
                         description: null,
                         link: `/plants/${plant.slug}`
                     }
