@@ -32,7 +32,6 @@ export default function Navigation() {
             <div>
                 © 2023. All rights reserved.
             </div>
-
             <div>
                 Built with React and Next.js. Source code is available on Github, the latest version is 1.0.0. This app is hosted by Vercel.
             </div>
