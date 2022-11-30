@@ -258,6 +258,6 @@ figcaption {
     display: inline-block;
     border-radius: var(--scale-5);
     padding: var(--scale-7) var(--scale-6);
-    border: 1px solid;
+    border: 1px solid rgb(var(--white) / .3);
     color: rgb(var(--white));
 }
