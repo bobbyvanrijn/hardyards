@@ -3,6 +3,8 @@
     --black: 18 18 17;
     --white: 239 236 228;
 
+    --red: 226 68 32;
+
     --foreground: var(--white);
     --background: var(--black);
 
@@ -56,19 +58,20 @@
     /* Responsive font-sizes: min, base, max */
     --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
     --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
-    --type-lg: clamp(var(--scale-5), 7vw, var(--scale-3));
-    --type-md: clamp(var(--scale-5), 4.5vw, var(--scale-4));
+    --type-lg: clamp(var(--scale-5), 5vw, var(--scale-3));
+    --type-md: clamp(var(--scale-5), 5vw, var(--scale-4));
     --type-sm: clamp(var(--scale-6), 3.5vw, var(--scale-5));
     --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
     --type-xxs: clamp(var(--scale-8), 2.75vw, var(--scale-7));
+    --type-xxxs: clamp(var(--scale-9), 2vw, var(--scale-8));
 
-    --font-weight-normal: 350;
-    --font-weight-bold: 450;
+    --font-weight-normal: 300;
+    --font-weight-bold: 475;
 
     --leading-lineheight: 2rem;
 
-    --logo-height: clamp(var(--scale-4), 7vw, var(--scale-3));
-    --header-height: calc(var(--logo-height) + var(--scale-5) + var(--scale-5));
+    --logo-height: var(--type-sm);
+    --header-height: calc(var(--logo-height) + var(--scale-7) + var(--scale-7));
 }
 
 html,
@@ -104,38 +107,22 @@ a {
     html {
         color-scheme: dark;
     }
-    body {
-    } 
-}
-
-h1, h2, h3, h4, h5 {
-    margin-block: 0;
-    font-weight: 500;
 }
 
 h1 {
-    font-size: var(--type-xxl);
-    font-weight: 250;
-}
-
-h2 {
-    font-size: var(--type-xl);
-}
-
-h3 {
-    font-size: var(--type-lg);
-}
-
-h4 {
     font-size: var(--type-md);
+    margin-top: 0;
+    margin-bottom: 1.333em;
+
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -.025em;
 }
 
-h5 {
-    font-size: var(--type-xs);
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: .125em;
-    color: rgb(var(--foreground) / var(--alpha-7));
+h2, h3, h4, h5 {
+    font-size: var(--type-sm);
+    margin-top: 0;
+    margin-bottom: 1.333em;
+    font-weight: var(--font-weight-normal);
 }
 
 p {
@@ -155,12 +142,22 @@ figcaption {
     padding: 0 var(--scale-7);
 }
 
+.lead {
+    font-size: var(--type-md);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: -.025em;
+
+    opacity: var(--alpha-9);
+}
+
 .body-text {
     font-family: var(--font-source-serif);
-    font-weight: 375;
+    font-size: var(--type-sm);
+    font-weight: 350;
 
-    font-optical-sizing: auto;
-    font-variation-settings: 'opsz' 30;
+    font-variation-settings: 'opsz' 45;
+    margin-bottom: 0;
+    opacity: var(--alpha-8);
 }
 
 /* Utilities */

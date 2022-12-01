@@ -28,15 +28,16 @@ export default function Navigation() {
                 </li>
             </ul>
 
-
-            <div>
-                © 2023. All rights reserved.
-            </div>
-            <div>
-                Built with React and Next.js. Source code is available on Github, the latest version is 1.0.0. This app is hosted by Vercel.
-            </div>
-            <div>
-                Typeset in Source Serif 4 by Frank Grießhammer and Inter by Rasmus Andersson.
+            <div className='body-text'>
+                <div>
+                    © 2023. All rights reserved.
+                </div>
+                <div>
+                    Built with React and Next.js. Source code is available on Github, the latest version is 1.0.0. This app is hosted by Vercel.
+                </div>
+                <div>
+                    Typeset in Source Serif 4 by Frank Grießhammer and Inter by Rasmus Andersson.
+                </div>
             </div>
         </nav>
     )

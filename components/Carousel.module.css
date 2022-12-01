@@ -1,6 +1,6 @@
 .carousel {
     display: flex;
-    gap: var(--scale-8);
+    gap: var(--scale-9);
 
     list-style: none;
     margin-block: 0;
@@ -21,7 +21,7 @@
 
 .carousel__item {
     flex: 0 0 auto;
-    width: clamp(18rem, 40vw, 30rem);
+    width: clamp(16rem, 40vw, 30rem);
 
     position: relative;
     z-index: 1;
@@ -37,7 +37,7 @@
     aspect-ratio: 3/4;
     width: 100%;
     height: auto;
-    border-radius: var(--scale-5);
+    border-radius: var(--scale-6);
 }
 
 .carousel__title {

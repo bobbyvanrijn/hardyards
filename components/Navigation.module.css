@@ -8,14 +8,15 @@
 
     --leading-lineheight: var(--type-xl);
     font-size: var(--type-xl);
-    font-weight: 300;
+    font-weight: 250;
+    letter-spacing: -.05em;
     line-height: 1.15;
     margin-block: var(--scale-1);
 }
 
 .navigation a {
     display: block;
-    margin-top: var(--scale-5);
+    margin-top: var(--scale-6);
 }
 
 .navigation sup {
@@ -24,6 +25,6 @@
     margin-top: -4rem;
 
     font-size: .5em;
-    font-weight: 500;
-    opacity: var(--alpha-5);
+    font-weight: 400;
+    opacity: var(--alpha-7);
 }
