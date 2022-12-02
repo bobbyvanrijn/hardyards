@@ -1,11 +1,23 @@
 const guides = [
     {
         title: 'Sowing seeds in containers',
-        slug: 'sowing-seeds-in-containers'
+        slug: 'sowing-seeds-in-containers',
+        description: '',
+        body: [
+            <p>Wassup</p>,
+            <p key='1'>Here&apos;s how you do it!</p>,
+            <p key='1'>Foo bar baz bitch</p>
+        ]
     },
     {
         title: 'Sowing seeds on site',
-        slug: ''
+        slug: 'sowing-seeds-on-site',
+        description: '',
+        body: [
+            <p>Wassup</p>,
+            <p key='1'>Here&apos;s how you do it!</p>,
+            <p key='1'>Foo bar baz bitch</p>
+        ]
     },
     {
         title: 'Caring for seedlings',

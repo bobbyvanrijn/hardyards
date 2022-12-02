@@ -2,6 +2,6 @@ import styles from './HeaderSpacer.module.css';
 
 export default function HeaderSpacer() {
     return (
-        <div role='presentation' className={styles.headerSpacer} />
+        <div grid-area='1' role='presentation' className={styles.headerSpacer} />
     );
 }

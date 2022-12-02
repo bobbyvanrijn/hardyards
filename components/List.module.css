@@ -1,8 +1,4 @@
 .list {
-    margin-block: var(--scale-6);
-}
-
-.list ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -17,16 +13,15 @@
 
     gap: var(--scale-6);
 
-    font-size: var(--type-md);
-    font-weight: 300;
-
-    padding-block: var(--type-xs);
+    padding-bottom: var(--type-xs);
+    margin-bottom: var(--type-xs);
     border-bottom: 1px solid rgb(var(--foreground) / var(--alpha-2))
 }
 
 .list__itemTitle {
     flex: 1 1 50%;
-    font-size: var(--type-md);
+    font-size: var(--type-sm);
+    font-weight: var(--font-weight-normal);
 }
 
 .list__itemDescription {

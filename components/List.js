@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowUpRight, AddAlt } from '@carbon/icons-react';
 import styles from './List.module.css';
 
-export default function List({ title, items, children}) {
+export default function List({ title, gridArea, items, children}) {
     const listItems = items;
 
     function ListItem({ item, children }) {
@@ -55,25 +55,21 @@ export default function List({ title, items, children}) {
     }
 
     return (
-        <div className={styles.list}>
-            { items.length ? <h5>{ title }</h5> : null }
-
-            <ul>
-                { 
-                    items.map((item, index) =>
-                        <ListItem
-                            key={index}
-                            item={item}
-                        >
-                            {item.title !== undefined &&
-                                <div className={styles.list__itemTitle}>
-                                    { item.title }
-                                </div>
-                            }
-                        </ListItem>
-                    )
-                }
-            </ul>
-        </div>
+        <ul className={styles.list} grid-area={gridArea}>
+            { 
+                items.map((item, index) =>
+                    <ListItem
+                        key={index}
+                        item={item}
+                    >
+                        {item.title !== undefined &&
+                            <div className={`${styles.list__itemTitle} trim-both`}>
+                                { item.title }
+                            </div>
+                        }
+                    </ListItem>
+                )
+            }
+        </ul>
     );
 }

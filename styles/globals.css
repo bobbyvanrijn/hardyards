@@ -68,9 +68,9 @@
     --font-weight-normal: 300;
     --font-weight-bold: 475;
 
-    --leading-lineheight: 2rem;
+    --leading-lineheight: var(--scale-6);
 
-    --logo-height: var(--type-sm);
+    --logo-height: var(--type-md);
     --header-height: calc(var(--logo-height) + var(--scale-7) + var(--scale-7));
 }
 
@@ -87,7 +87,7 @@ body {
 
     color: rgb(var(--foreground));
     background: rgb(var(--background));
-    font-size: 22px;
+    font-size: 18px;
 }
 
 main {
@@ -110,9 +110,10 @@ a {
 }
 
 h1 {
-    font-size: var(--type-md);
-    margin-top: 0;
-    margin-bottom: 1.333em;
+    font-size: var(--type-lg);
+    line-height: var(--type-lg);
+    --leading-lineheight: var(--type-lg);
+    margin: 0;
 
     font-weight: var(--font-weight-bold);
     letter-spacing: -.025em;
@@ -126,8 +127,11 @@ h2, h3, h4, h5 {
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: 0;
+}
+
+p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {
+    margin-top: 1.3em;
 }
 
 figure {
@@ -143,11 +147,13 @@ figcaption {
 }
 
 .lead {
-    font-size: var(--type-md);
+    font-size: var(--type-sm);
+    --leading-lineheight: var(--type-sm);
+    line-height: var(--type-sm);
+
     font-weight: var(--font-weight-normal);
     letter-spacing: -.025em;
-
-    opacity: var(--alpha-9);
+    /* opacity: var(--alpha-9); */
 }
 
 .body-text {
@@ -157,7 +163,7 @@ figcaption {
 
     font-variation-settings: 'opsz' 45;
     margin-bottom: 0;
-    opacity: var(--alpha-8);
+    opacity: var(--alpha-9);
 }
 
 /* Utilities */

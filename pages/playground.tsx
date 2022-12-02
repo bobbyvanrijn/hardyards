@@ -26,28 +26,28 @@ export default function Playground() {
             <div className={styles.grid}>
                 <HeaderSpacer />
 
-                <div className={styles.grid__field} grid-area='1'>
+                <div grid-area='1'>
                     <h1 className='trim-both'>
                         Geranium ‘Rozanne’
                     </h1>
                 </div>
 
                 <p
-                    className={`${styles.grid__field} lead trim-both`}
+                    className='lead trim-both'
                     grid-area='2/3'
                 >
                     Hybrid of Geranium himalayense and Geranium wallichianum ‘Buxton&apos;s variety’
                 </p>
 
                 <p
-                    className={`${styles.grid__field} body-text trim-both trim-both--source`}
+                    className='body-text trim-both trim-both--source'
                     grid-area='2/3'
                 >
                     Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage. Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage. Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage. Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
                 </p>
 
                 <ol
-                    className={`${styles.grid__field} body-text trim-both trim-both--source`}
+                    className='body-text trim-both trim-both--source'
                     grid-area='2/3'
                 >
                     <li>Drift, group, border, flower meadow.</li>
@@ -56,7 +56,7 @@ export default function Playground() {
                 </ol>
 
                 <ul
-                    className={`${styles.grid__field} body-text trim-both trim-both--source`}
+                    className='body-text trim-both trim-both--source'
                     grid-area='2/3'
                 >
                     <li>Drift, group, border, flower meadow.</li>
@@ -65,7 +65,6 @@ export default function Playground() {
                 </ul>
 
                 <table
-                    className={`${styles.grid__field}`}
                     grid-area='2/3'
                     summary="Meaningless data, but table used to test TFOOT behavior in user agents"
                 >
@@ -127,7 +126,6 @@ export default function Playground() {
                 </table>
 
                 <figure
-                    className={styles.grid__field}
                     grid-area='1'
                 >
                     <Image
@@ -144,7 +142,6 @@ export default function Playground() {
                 </figure>
 
                <Image
-                    className={styles.grid__field}
                     grid-area='2'
                     src={'/images/geranium-rozanne.webp'}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -154,7 +151,6 @@ export default function Playground() {
                 />
 
                 <Image
-                    className={styles.grid__field}
                     grid-area='3'
                     src={'/images/geranium-rozanne.webp'}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

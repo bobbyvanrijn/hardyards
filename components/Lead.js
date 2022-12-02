@@ -1,23 +1,10 @@
-import styles from './Lead.module.css';
-
-export default function Lead(props) {
+export default function Lead({ children, gridArea }) {
     return (
-        <p className={styles.lead}>
-            <div
-                className='trim-both'
-            >
-            {
-                props.children.map(
-                    (item, index) =>
-                        <span
-                            key={index}
-                            className={index === 0 ? styles.lead__strong : null}
-                        >
-                            {item}
-                        </span>
-                ) 
-            }
-            </div>
+        <p
+            className='lead trim-both'
+            grid-area={gridArea}
+        >
+            { children }
         </p>
     );
 }

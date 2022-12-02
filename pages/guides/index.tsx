@@ -5,12 +5,15 @@ import { plants } from '../../content/plants';
 
 import { guides } from '../../content/guides';
 
+import GridLayout from '../../layouts/grid';
+import HeaderSpacer from '../../components/HeaderSpacer';
+
 const blocks = [
     {
         _uid: '1',
         component: 'list',
         attributes: {
-            title: 'Guides',
+            gridArea: '2/3',
             items: guides.map(
                 guide => {
                     return {
@@ -26,8 +29,10 @@ const blocks = [
 
 export default function Guides() {
     return (
-        <div className='container'>
+        <GridLayout>
+            <HeaderSpacer />
+
             <Content blocks={blocks} />
-        </div>
+        </GridLayout>
     )
 }

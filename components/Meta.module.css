@@ -1,0 +1,14 @@
+.meta {
+    font-size: var(--type-xs);
+    grid-auto-rows: max-content;
+    gap: var(--scale-5) !important;
+}
+
+.meta__item {
+    --leading-lineheight: 1em;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--scale-8);
+}

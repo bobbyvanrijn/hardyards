@@ -1,9 +1,13 @@
+import React from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Head from 'next/head';
 
+import GridLayout from '../../layouts/grid';
+
 import Content from '../../components/Content';
-import Loader from '../../components/Loader';
+import Loader from '../../components/Loader'
+import HeaderSpacer from '../../components/HeaderSpacer';;
 
 import { formatPlantName } from '../../helpers/formatPlantName';
 
@@ -34,66 +38,78 @@ export default function Plant() {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
             component: 'image',
             attributes: {
+                gridArea: '2/3',
                 src: `/images/${ pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
                 blurDataURL: `/images/${ pid }-small.webp`,
                 width: 800,
-                height: 1416,
+                height: 200,
             }
         },
         {
+            _uid: 'f1988ac8-721b-11ed-a1eb-0242ac120002',
+            component: 'title',
+            attributes: {
+                gridArea: '1',
+                headingLevel: '1'
+            },
+            children: [
+                <>{ formatPlantName(data.plant) }</>,
+            ]
+        },
+
+        {
             _uid: '4397c42f-f205-49cb-a875-1cac86f512ca',
             component: 'lead',
+            attributes: {
+                gridArea: '2/3'
+            },
             children: [
-                <>{ formatPlantName(data.plant) }.</>,
                 <>{ data.plant.description }</>
             ]
         },
-        {
-            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
-            component: 'text',
-            children: [
-                <>
-                    Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
-                </>
-            ]
-        },
+
         {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
-            component: 'list',
+            component: 'meta',
             attributes: {
-                title: 'Plant properties',
+                gridArea: '1a+1b',
                 items: data.plant.meta.map(
                     (meta: { label: any; value: any; }) => {
                         return {
                             title: meta.label,
-                            description: meta.value,
+                            value: meta.value,
                         };
                     }
                 ),
             }
+        },
+
+        {
+            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
+            component: 'text',
+            attributes: {
+                gridArea: '2/3'
+            },
+            children: data?.plant?.body?.map(
+                (element: {type: string, props: Array<any>}) =>
+                    React.createElement(element.type, element.props, )
+            )
         }
     ];
 
     return (
-        <div className={'container'}>
+        <>
             <Head>
                 <title>Hard Yards | { data.plant.title }</title>
                 <meta name="description" content={data.plant.description} />
             </Head>
 
-            <style jsx global>{`
-                :root {
-                    --background: var(--black);
-                    --foreground: var(--white);
-                    --font-weight-normal: 300;
-                    --font-weight-bold: 400;
-                }
-            `}</style>
+            <GridLayout>
+                <HeaderSpacer />
 
-            <article>
                 <Content blocks={blocks} />
-            </article>
-        </div>
+            </GridLayout>
+        </>
     )
 }

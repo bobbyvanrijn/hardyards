@@ -2,6 +2,10 @@ import Content from '../../components/Content';
 import Link from 'next/link';
 
 import { plants } from '../../content/plants';
+
+import GridLayout from '../../layouts/grid';
+import HeaderSpacer from '../../components/HeaderSpacer';
+
 import { formatPlantName } from '../../helpers/formatPlantName';
 
 const blocks = [
@@ -9,7 +13,7 @@ const blocks = [
         _uid: '1',
         component: 'list',
         attributes: {
-            title: 'Plants',
+            gridArea: '2/3',
             items: plants.map(
                 plant => {
                     return {
@@ -25,8 +29,10 @@ const blocks = [
 
 export default function Plants() {
     return (
-        <div className='container'>
+        <GridLayout>
+            <HeaderSpacer />
+
             <Content blocks={blocks} />
-        </div>
+        </GridLayout>
     )
 }

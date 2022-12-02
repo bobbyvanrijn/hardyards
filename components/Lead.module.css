@@ -1,9 +1,9 @@
 .lead {
-    --leading-lineheight: 1.15em;
-    font-size: var(--type-lg);
+    /* --leading-lineheight: 1.15em; */
+    /* font-size: var(--type-lg); */
 
-    font-weight: 350;
-    letter-spacing: -.025em;
+    /* font-weight: 350; */
+    /* letter-spacing: -.025em; */
 
     color: rgb(var(--foreground) / var(--alpha-5));
     hanging-punctuation: first last;

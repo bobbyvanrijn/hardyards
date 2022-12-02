@@ -8,10 +8,14 @@
 
     --leading-lineheight: var(--type-xl);
     font-size: var(--type-xl);
-    font-weight: 250;
+    font-weight: 300;
     letter-spacing: -.05em;
     line-height: 1.15;
     margin-block: var(--scale-1);
+}
+
+.navigation .body-text {
+    font-weight: var(--font-weight-bold);
 }
 
 .navigation a {
