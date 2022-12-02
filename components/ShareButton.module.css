@@ -1,0 +1,7 @@
+.shareButton {
+    display: inline-block;
+    padding: var(--scale-7);
+    border: 1px solid;
+    border-radius: var(--scale-2);
+    margin-top: var(--scale-3);
+}

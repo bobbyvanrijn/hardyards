@@ -6,8 +6,10 @@ import Head from 'next/head';
 import GridLayout from '../../layouts/grid';
 
 import Content from '../../components/Content';
-import Loader from '../../components/Loader'
-import HeaderSpacer from '../../components/HeaderSpacer';;
+
+import Loader from '../../components/Loader';
+import HeaderSpacer from '../../components/HeaderSpacer';
+import ShareButton from '../../components/ShareButton';
 
 import { formatPlantName } from '../../helpers/formatPlantName';
 
@@ -32,7 +34,6 @@ export default function Plant() {
 
     if (error) return <div>{error.message}</div>
     if (!data) return <Loader background={'dark'} />
-
     const blocks = [
         {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
@@ -65,7 +66,12 @@ export default function Plant() {
                 gridArea: '2/3'
             },
             children: [
-                <>{ data.plant.description }</>
+                <div>{ data.plant.description }</div>,
+                <ShareButton
+                    url={router.asPath}
+                    title={formatPlantName(data.plant)}
+                    text={`${formatPlantName(data.plant)} – ${data.plant.description}`}
+                />
             ]
         },
 
