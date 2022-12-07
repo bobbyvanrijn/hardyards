@@ -7,9 +7,13 @@ import List from './List';
 import Lead from './Lead';
 import Meta from './Meta';
 
-function Text({ children, gridArea }) {
+function Text({ children, gridArea, gridSpan }) {
     return (
-        <section className='body-text' grid-area={gridArea}>
+        <section
+            className='body-text trim-both'
+            grid-area={gridArea}
+            grid-span={gridSpan}
+        >
             { children }
         </section>
     );

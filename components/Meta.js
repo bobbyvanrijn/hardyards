@@ -1,8 +1,12 @@
 import styles from './Meta.module.css';
 
-export default function Meta({ items, gridArea }) {
+export default function Meta({ items, gridArea, gridSpan }) {
     return (
-        <div className={styles.meta} grid-area={gridArea}>
+        <div
+            className={styles.meta}
+            grid-area={gridArea}
+            grid-span={gridSpan}
+        >
             { 
                 items.map((item, index) =>
                     <div

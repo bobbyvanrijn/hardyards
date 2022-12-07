@@ -6,10 +6,7 @@ import Head from 'next/head';
 import GridLayout from '../../layouts/grid';
 
 import Content from '../../components/Content';
-
 import Loader from '../../components/Loader';
-import HeaderSpacer from '../../components/HeaderSpacer';
-import ShareButton from '../../components/ShareButton';
 
 import { formatPlantName } from '../../helpers/formatPlantName';
 
@@ -34,44 +31,30 @@ export default function Plant() {
 
     if (error) return <div>{error.message}</div>
     if (!data) return <Loader background={'dark'} />
-    const blocks = [
+
+    const hero = [
         {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
             component: 'image',
             attributes: {
                 gridArea: '2/3',
+                gridSpan: '4',
                 src: `/images/${ pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
                 blurDataURL: `/images/${ pid }-small.webp`,
                 width: 800,
-                height: 200,
+                height: 800,
             }
-        },
-        {
-            _uid: 'f1988ac8-721b-11ed-a1eb-0242ac120002',
-            component: 'title',
-            attributes: {
-                gridArea: '1',
-                headingLevel: '1'
-            },
-            children: [
-                <>{ formatPlantName(data.plant) }</>,
-            ]
         },
 
         {
-            _uid: '4397c42f-f205-49cb-a875-1cac86f512ca',
-            component: 'lead',
+            _uid: '4397c42f-f205-49cb-a875-1cac86f512cb',
+            component: 'title',
             attributes: {
-                gridArea: '2/3'
+                gridArea: '1'
             },
             children: [
-                <div>{ data.plant.description }</div>,
-                <ShareButton
-                    url={router.asPath}
-                    title={formatPlantName(data.plant)}
-                    text={`${formatPlantName(data.plant)} – ${data.plant.description}`}
-                />
+                <>{formatPlantName(data.plant)}</>
             ]
         },
 
@@ -80,6 +63,7 @@ export default function Plant() {
             component: 'meta',
             attributes: {
                 gridArea: '1a+1b',
+                gridSpan: '2',
                 items: data.plant.meta.map(
                     (meta: { label: any; value: any; }) => {
                         return {
@@ -89,20 +73,40 @@ export default function Plant() {
                     }
                 ),
             }
+        }
+    ];
+    const textImage = [
+        {
+            _uid: '4397c42f-f205-49cb-a875-1cac86f512cb',
+            component: 'lead',
+            attributes: {
+                gridArea: '1'
+            },
+            children: [
+                <>{data.plant.description}</>
+            ]
         },
-
         {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
             component: 'text',
             attributes: {
-                gridArea: '2/3'
+                gridArea: '2/3',
+                gridSpan: data?.plant?.body?.length,
             },
             children: data?.plant?.body?.map(
-                (element: {type: string, props: Array<any>}) =>
-                    React.createElement(element.type, element.props, )
+                (element: {
+                    type: string,
+                    props: Array<any>
+                }) =>
+                    React.createElement(
+                        element.type,
+                        {
+                            ...element.props
+                        }
+                    )
             )
         }
-    ];
+    ]
 
     return (
         <>
@@ -112,9 +116,11 @@ export default function Plant() {
             </Head>
 
             <GridLayout>
-                <HeaderSpacer />
+                <Content blocks={hero} />
+            </GridLayout>
 
-                <Content blocks={blocks} />
+            <GridLayout>
+                <Content blocks={textImage} />
             </GridLayout>
         </>
     )

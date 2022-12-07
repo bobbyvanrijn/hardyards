@@ -5,6 +5,7 @@ export default function Image(props) {
     return (
         <NextImage
             grid-area={props.gridArea}
+            grid-span={props.gridSpan}
             className={styles.image}
             placeholder='blur'
             blurDataURL={`/images/${ props.src }-small.webp`}

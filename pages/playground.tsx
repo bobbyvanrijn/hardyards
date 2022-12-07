@@ -4,6 +4,9 @@ import HeaderSpacer from '../components/HeaderSpacer';
 import Image from 'next/image';
 import styles from './playground.module.css';
 
+import GridLayout from '../layouts/grid';
+import Meta from '../components/Meta';
+
 export default function Playground() {
     const router = useRouter();
 
@@ -22,16 +25,28 @@ export default function Playground() {
     }
 
     return (
-        <>
-            <div className={styles.grid}>
-                <HeaderSpacer />
+        <div className={styles.playgroundHero}>
+            <GridLayout>
+                <h1 grid-area='1' grid-align='bottom' className='trim-both'>
+                    Geranium ‘Rozanne’
+                </h1>
 
-                <div grid-area='1'>
-                    <h1 className='trim-both'>
-                        Geranium ‘Rozanne’
-                    </h1>
+                <Image
+                    grid-area='1.5/3'
+                    className={styles.playgroundHero__Image}
+                    src={'/images/geranium-rozanne.webp'}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    alt="Featured image"
+                    height={1416}
+                    width={1416}
+                />
+
+                <p grid-area='1' className='trim-both'>This hardy and drought-tolerant perennial plant is an easy-to-care-for variety with lacy, silvery-grey foliage and bright yellow flowers that attract pollinators. It can be grown in borders, rock gardens, and containers, and prefers full sun and well-drained soil. It is hardy to zone 4 and can tolerate temperatures down to -34°C.</p>
+
+                <div grid-area='3a' className='trim-both'>
+                    Foo<br />
+                    Bar
                 </div>
-
                 <p
                     className='lead trim-both'
                     grid-area='2/3'
@@ -40,14 +55,14 @@ export default function Playground() {
                 </p>
 
                 <p
-                    className='body-text trim-both trim-both--source'
+                    className='body-text trim-both trim-both--secondary'
                     grid-area='2/3'
                 >
                     Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage. Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage. Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage. Drift, group, border, flower meadow. Praerie. Clump-forming ground cover. Variegated foliage.
                 </p>
 
                 <ol
-                    className='body-text trim-both trim-both--source'
+                    className='body-text trim-both trim-both--secondary'
                     grid-area='2/3'
                 >
                     <li>Drift, group, border, flower meadow.</li>
@@ -56,7 +71,7 @@ export default function Playground() {
                 </ol>
 
                 <ul
-                    className='body-text trim-both trim-both--source'
+                    className='body-text trim-both trim-both--secondary'
                     grid-area='2/3'
                 >
                     <li>Drift, group, border, flower meadow.</li>
@@ -158,7 +173,7 @@ export default function Playground() {
                     height={800}
                     width={1416}
                 />
-            </div>
-        </>
+            </GridLayout>
+        </div>
     )
 }

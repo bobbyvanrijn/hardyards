@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import GridLayout from '../layouts/grid';
+
 import Hero from '../components/Hero';
 import Content from '../components/Content';
+import HeaderSpacer from '../components/HeaderSpacer';
 import Marquee from '../components/Marquee';
 
 import styles from '../styles/Home.module.css';
@@ -14,20 +17,44 @@ const blocks = [
         _uid: '61f5c21d-93c6-4112-8040-29db5a9839a3',
         component: 'carousel',
         attributes: {
+            gridArea: '1/3',
             items: plants
         }
+    },
+    {
+        _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
+        component: 'text',
+        attributes: {
+            gridArea: '2/3',
+            gridSpan: '2',
+        },
+        children: [
+            <p key='paragraph-1'>
+                Hard Yards was created to help gardeners of all levels design, start and maintain a beautiful, sustainable garden. We provide a selection of curated perennial plants, and helpful information throughout the year to help guide you on your gardening journey. Whether you want to spruce up a balcony or patio, or transform your outdoor space into a wildflower meadow, Hard Yards is here to help. 
+            </p>,
+            <p key='paragraph-2'>
+                Our mission is to make gardening more accessible for everyone, and to encourage rewilding of outdoor spaces. We believe that gardens should not just be a place of beauty, but should also provide an essential habitat for our local wildlife. By helping you to create a natural ecosystem, Hard Yards will help you to create a garden that is beautiful, sustainable, and provides a home for our beloved wildlife.
+            </p>
+        ]
     }
 ];
 
 export default function Home() {
     return (
-        <div className='container'>
-            <Hero>
-                <Content blocks={blocks} />
-            </Hero>
-            <div className={'bleed-both'}>
+        <GridLayout>
+            <h1
+                grid-area='1/3'
+                grid-span='3'
+                className='display'
+            >
+                Bring nature home
+            </h1>
+
+            <Content blocks={blocks} />
+
+            {/* <div className={'bleed-both'}>
                 <Marquee />
-            </div>
-        </div>
+            </div> */}
+        </GridLayout>
     )
 }

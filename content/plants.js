@@ -30,11 +30,7 @@ const plants = [
         ],
         collection: [],
         body: [
-            <p>This perennial plant is a hardy, drought-tolerant variety with a mounding growth habit. It grows up to 60 cm in height and has a spread of up to 90 cm. The foliage is silvery-grey, with lacy, fern-like leaves. The flowers are a bright yellow, and are borne in flat-topped clusters.</p>,
-
-            <p>The blooms appear in late spring and last until fall. They are attractive to butterflies and other pollinators. Deadheading spent flowers will encourage more blooms. This variety is suitable for use as a border plant, in rock gardens, or in containers.</p>,
-            
-            <p>It is easy to care for, requiring little maintenance. It prefers full sun and well-drained soil. It is drought-tolerant, but supplemental water in times of extended dry spells will help to keep it looking its best. It is hardy to zone 4, and can tolerate temperatures down to -34°C.</p>
+            <p>This hardy and drought-tolerant perennial plant is an easy-to-care-for variety with lacy, silvery-grey foliage and bright yellow flowers that attract pollinators. It can be grown in borders, rock gardens, and containers, and prefers full sun and well-drained soil. It is hardy to zone 4 and can tolerate temperatures down to -34°C.</p>
         ]
     },
 

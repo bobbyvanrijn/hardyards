@@ -1,7 +1,8 @@
 .meta {
     font-size: var(--type-xs);
+    display: grid;
     grid-auto-rows: max-content;
-    gap: var(--scale-5) !important;
+    gap: var(--scale-5) calc(var(--grid-unit) * 1.5) !important;
 }
 
 .meta__item {
