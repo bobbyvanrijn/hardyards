@@ -4,11 +4,16 @@ import 'styles/transitions.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Header, Footer, Toolbar } from 'components';
+import { Toolbar } from 'components';
 import Transition from 'components/Transition';
 
-import { Inter, Newsreader } from '@next/font/google';
+import localFont from '@next/font/local';
+import { Inter } from '@next/font/google';
 
+const serif = localFont({
+    src: '../public/fonts/serif.otf',
+    variable: '--font-serif'
+});
 const inter = Inter({
     subsets: ['latin'],
     variable: '--font-inter'
@@ -16,7 +21,7 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable}`}>
+    <main className={`${inter.variable} ${serif.variable}`}>
         <Head>
             <title>Hard Yards</title>
             <meta name="description" content="Gardening tool." />
@@ -33,8 +38,6 @@ export default function App({ Component, pageProps }: AppProps) {
         </Transition>
 
         <Toolbar />
-
-        <Footer />
     </main>
   );
 }

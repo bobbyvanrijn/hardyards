@@ -13,10 +13,6 @@ export default function Image(props) {
                 height={props.height}
                 width={props.width}
             />
-
-            <figcaption>
-                Foo
-            </figcaption>
         </figure>
     )
 }

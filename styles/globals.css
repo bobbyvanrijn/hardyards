@@ -107,7 +107,7 @@ body {
 
 main {
     /* font-family: var(--font-inter); */
-    font-family: 'Lector FSL', 'Times', serif;
+    font-family: var(--font-serif), 'Times', serif;
 }
 
 a {

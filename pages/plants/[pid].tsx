@@ -76,19 +76,23 @@ export function Plant(props: any) {
             },
             children: [
                 <h1 className='trim-both' key={1}>
-                    <span className='uppercase'>{formatPlantName(props.plant)}.</span>
+                    <span className='uppercase'>
+                        {formatPlantName(props.plant)}.&nbsp;
+                    </span>
                     {props.plant.common}.
                 </h1>,
-                <p key={2} className='lead'>{props.plant.description}</p>
+                <p key={2} className='lead trim-both'>{props.plant.description}</p>
             ]
-        },
+        }
+    ];
 
+    const textImage = [
         {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
             component: 'meta',
             attributes: {
                 'grid-x': '1/3',
-                'grid-y': '2',
+                'grid-y': '1a',
                 items: props.plant.meta.map(
                     (meta: { label: any; value: any; }) => {
                         return {
@@ -98,19 +102,6 @@ export function Plant(props: any) {
                     }
                 ),
             }
-        }
-    ];
-
-    const textImage = [
-        {
-            _uid: '4397c42f-f205-49cb-a875-1cac86f512cb',
-            component: 'lead',
-            attributes: {
-                'grid-x': '1'
-            },
-            children: [
-                <>{props.plant.description}</>
-            ]
         },
         {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
