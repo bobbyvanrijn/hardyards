@@ -1,18 +1,42 @@
 .toolbar {
-    /* font-family: var(--font-inter); */
-    font-size: var(--type-sm);
+    font-family: var(--font-inter);
+    font-size: var(--type-xs);
+    line-height: var(--type-xs);
+    --leading-lineheight: var(--type-xs);
 
     position: fixed;
     z-index: 99;
-    bottom: var(--scale-8);
+    bottom: var(--scale-6);
+    padding-inline: var(--scale-6);
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
 
-    font-weight: 300;
-    letter-spacing: .025em;;
-    padding-inline: var(--scale-8);
+    font-weight: 280;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+}
+.toolbar__cap {
+    display: block;
+    content: '';
+    height: auto;
+    width: var(--scale-6);
+    background: rgb(var(--black));
+    flex-shrink: 0;
+}
+.toolbar__cap--left {
+    border-top-left-radius: var(--scale-2);
+    border-bottom-left-radius: var(--scale-2);
+
+    margin-right: -.025em;
+}
+
+.toolbar__cap--right {
+    border-top-right-radius: var(--scale-2);
+    border-bottom-right-radius: var(--scale-2);
+
+    margin-left: -.025em;
 }
 
 .toolbar__wrapper {
@@ -20,38 +44,41 @@
     background: rgb(var(--black));
     color: rgb(var(--white));
     mix-blend-mode: difference;
-    border-radius: var(--scale-2);
+    /* border-radius: var(--scale-2); */
 }
 
 .toolbar__inner {
     display: flex;
+    gap: var(--scale-8);
+    /* text-transform: uppercase; */
     align-items: center;
     /* padding: var(--scale-7) var(--scale-6); */
 
-    /* backdrop-filter: blur(5px); */
-}
-
-.toolbar__button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    padding-inline: var(--scale-8);
-    border-left: 1px solid rgb(var(--white) / .5);
-}
-
-*[data-isopen='true'] .toolbar__button {
-    border-left: 0px;
-    border-right: 1px solid rgb(var(--white) / .5);
+    backdrop-filter: blur(5px);
 }
 
 .toolbar a {
     display: inline-block;
-    padding: var(--scale-9) var(--scale-8);
+    padding: var(--scale-8) 0;
+}
+
+a.toolbar__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--scale-8);
+    height: 100%;
+    cursor: pointer;
+}
+
+a.toolbar__button svg {
+    opacity: .5;
+    height: 1em;
 }
 
 .toolbar__menu {
     display: flex;
+    gap: var(--scale-7);
     list-style: none;
     overflow-x: scroll;
     margin: 0;

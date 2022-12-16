@@ -265,25 +265,25 @@ figcaption {
 }
 
 */
-
 .trim-start,
 .trim-end,
 .trim-both {
-
-    --ascent: 2425;
-    --descent: -443;
-    --unitsPerEm: 2048;
-    --capHeight: 1356;
+    /* rotcel metrics*/
+    --ascent: 895;
+    --descent: -350;
+    --unitsPerEm: 1000;
+    --capHeight: 760;
 
     --foo: calc((var(--ascent) - var(--descent) - var(--unitsPerEm)) / 2);
+
     --offsetStart: calc(1em * ((var(--ascent) - var(--capHeight) - var(--foo)) / var(--unitsPerEm)));
     --offsetEnd: calc(1em * ((var(--foo) + var(--descent)) / var(--unitsPerEm)));
 
-    --leading-offset: calc((var(--leading-lineheight) - 1em) / -2);
+    --leading-offset: calc((var(--leading-lineheight, 1em) - 1em) / -2);
     --font-offset-start: var(--offsetStart);
     --font-offset-end: var(--offsetEnd);
 
-    line-height: var(--leading-lineheight);
+    line-height: var(--leading-lineheight, 1em);
     padding: 0.1px;
 }
 
@@ -314,7 +314,7 @@ figcaption {
     content: '';
     display: block;
 
-    margin-top: calc(var(--leading-offset,-.25em) + var(--font-offset-end,0em));
+    margin-top: calc(var(--leading-offset,-.25em) + var(--font-offset-start,0em));
 }
 
 .trim-end:after,

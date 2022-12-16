@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { OverflowMenuHorizontal, Close } from '@carbon/icons-react';
 
 import styles from './Toolbar.module.css';
@@ -7,6 +8,12 @@ import { motion } from 'framer-motion';
 
 export default function Toolbar() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const { asPath } = useRouter();
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [asPath]);
 
     const spring = {
         type: "spring",
@@ -21,38 +28,47 @@ export default function Toolbar() {
             data-isOpen={isOpen}
             layout
         >
+            <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--left']}`} />
             <motion.div layout className={styles.toolbar__wrapper}>
                 <motion.div
                     className={styles.toolbar__inner}
                     layout
                 >
-                    {
-                        !isOpen && <motion.div layout className="trim-both">
-                        <Link href='/'>
-                            Index
-                        </Link>
-                        </motion.div>
+                    { !isOpen && 
+                        <motion.a
+                            layout tabindex={0}
+                            className={styles.toolbar__button}
+                            onClick={() => setIsOpen(!isOpen)}
+                            onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
+                        >
+                            <div className='sr-only'>Open navigation</div>
+                            <motion.div
+                                layout
+                                className="trim-both--secondary"
+                                href={asPath}
+                            >
+                                { asPath }
+                            </motion.div>
+                            <OverflowMenuHorizontal size={24} />
+                        </motion.a>
                     }
 
-                    <motion.a
-                        layout tabindex={0}
-                        className={styles.toolbar__button}
-                        onClick={() => setIsOpen(!isOpen)}
-                        onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
-                    >
-                        <div className='sr-only'>Open navigation</div>
-                        { !isOpen && <OverflowMenuHorizontal size={22} /> }
-                        { isOpen && <Close size={22} /> }
-                    </motion.a>
                     { isOpen && 
                     <motion.menu
                         className={styles.toolbar__menu}
                         layout
                     >
-                        <motion.li
-                            layout
+                        <motion.a
+                            layout tabindex={0}
+                            className={styles.toolbar__button}
+                            onClick={() => setIsOpen(!isOpen)}
+                            onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
                         >
+                            <Close size={24} /> 
+                        </motion.a>
+                        <motion.li layout >
                             <Link
+                                className="trim-both--secondary"
                                 href='/plants'
                             >
                                 Plants
@@ -60,6 +76,7 @@ export default function Toolbar() {
                         </motion.li>
                         <motion.li layout>
                             <Link
+                                className="trim-both--secondary"
                                 href='/calendar'
                             >
                                 Calendar
@@ -67,6 +84,7 @@ export default function Toolbar() {
                         </motion.li>
                         <motion.li layout>
                             <Link
+                                className="trim-both--secondary"
                                 href='/playground'
                             >
                                 Playground
@@ -75,6 +93,7 @@ export default function Toolbar() {
 
                         <motion.li layout>
                             <Link
+                                className="trim-both--secondary"
                                 href='/collections'
                             >
                                 Collections
@@ -84,6 +103,7 @@ export default function Toolbar() {
                     }
                 </motion.div>
             </motion.div>
+            <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} />
         </motion.div>
     );
 }
