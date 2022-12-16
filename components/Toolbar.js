@@ -66,6 +66,15 @@ export default function Toolbar() {
                         >
                             <Close size={24} /> 
                         </motion.a>
+
+                        <motion.li layout >
+                            <Link
+                                className="trim-both--secondary"
+                                href='/'
+                            >
+                                Index
+                            </Link>
+                        </motion.li>
                         <motion.li layout >
                             <Link
                                 className="trim-both--secondary"
@@ -82,15 +91,6 @@ export default function Toolbar() {
                                 Calendar
                             </Link>
                         </motion.li>
-                        <motion.li layout>
-                            <Link
-                                className="trim-both--secondary"
-                                href='/playground'
-                            >
-                                Playground
-                            </Link>
-                        </motion.li>
-
                         <motion.li layout>
                             <Link
                                 className="trim-both--secondary"
