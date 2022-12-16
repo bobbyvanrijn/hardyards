@@ -1,0 +1,289 @@
+/*
+GRID X+Y
+           1a       1b       2a       2b       3a       3b
+       ┏━━━━━━━━┯━━━━━━━━┳━━━━━━━━┯━━━━━━━━┳━━━━━━━━┯━━━━━━━━┓
+    1a ┃        │        ┃        │        ┃        │        ┃
+       ┠────────┼────────╂────────┼────────╂────────┼────────┨
+    1b ┃        │        ┃        │        ┃        │        ┃
+       ┣━━━━━━━━┿━━━━━━━━╋━━━━━━━━┿━━━━━━━━╋━━━━━━━━┿━━━━━━━━┫
+    2a ┃        │        ┃        │        ┃        │        ┃
+       ┠────────┼────────╂────────┼────────╂────────┼────────┨
+    2b ┃        │        ┃        │        ┃        │        ┃
+       ┣━━━━━━━━┿━━━━━━━━╋━━━━━━━━┿━━━━━━━━╋━━━━━━━━┿━━━━━━━━┫
+    3a ┃        │        ┃        │        ┃        │        ┃
+       ┠────────┼────────╂────────┼────────╂────────┼────────┨
+    3b ┃        │        ┃        │        ┃        │        ┃
+       ┣━━━━━━━━┿━━━━━━━━╋━━━━━━━━┿━━━━━━━━╋━━━━━━━━┿━━━━━━━━┫
+    4a ┃        │        ┃        │        ┃        │        ┃
+       ┠────────┼────────╂────────┼────────╂────────┼────────┨
+    4b ┃        │        ┃        │        ┃        │        ┃
+       ┗━━━━━━━━┷━━━━━━━━┻━━━━━━━━┷━━━━━━━━┻━━━━━━━━┷━━━━━━━━┛
+*/
+@use "sass:list";
+
+%grid {
+    display: grid;
+    gap: var(--grid-unit);
+}
+
+.grid {
+    --grid-unit: var(--scale-4);
+    --leading-lineheight: var(--grid-unit);
+
+    @extend %grid;
+    line-height: var(--grid-unit);
+
+    padding: var(--type-xxs);
+    grid-auto-rows: minmax(calc(var(--grid-unit) * 2), auto);
+
+    // background-image: linear-gradient(rgb(0 0 0 / .3) 0%, rgb(0 0 0 / .3) 2.5%, transparent 2.5%, transparent 50%, rgb(0 0 0 / .3) 50%, rgb(0 0 0 / .3) 52.5%, transparent 52.5%, transparent);
+    // background-size: 100% var(--grid-unit);
+    // background-position: 0 calc(0rem - var(--scale-8));
+    // background-repeat: repeat;
+}
+
+.grid > * {
+    --leading-lineheight: var(--grid-unit);
+    line-height: var(--grid-unit);
+}
+
+$main-columns: 1, 2, 3;
+$sub-columns:  1a, 1b, 2a, 2b, 3a, 3b;
+$main-rows:    1, 2, 3, 4;
+$sub-rows:     1a, 1b, 2a, 2b, 3a, 3b, 4a, 4b;
+
+@media screen and (min-width: 50rem) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: calc(var(--grid-unit) * 3);
+    }
+
+    // Grid coordinates:
+    @each $main-column in $main-columns {
+        $first-column: list.index($sub-columns, list.nth($sub-columns, $main-column * 2)) - 1;
+
+        // Main columns
+        .grid > *[grid-x='#{$main-column}'] {
+            grid-column: #{$first-column} / #{$first-column + 2};
+        }
+
+        .grid > *[grid-x='#{$main-column}/#{$main-column + 1}'],
+        .grid > *[grid-x='#{$main-column}+#{$main-column + 1}'] {
+            grid-column: #{$first-column} / #{$first-column + 4};
+        }
+
+        .grid > *[grid-x='#{$main-column}+#{$main-column + 1}'] {
+            display: grid;
+            gap: var(--grid-unit);
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid > *[grid-x='#{$main-column}/#{$main-column + 2}'],
+        .grid > *[grid-x='#{$main-column}+#{$main-column + 2}'] {
+            grid-column: #{$first-column} / #{$first-column + 6};
+        }
+
+        .grid > *[grid-x='#{$main-column}+#{$main-column + 2}'] {
+            display: grid;
+            gap: var(--grid-unit);
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        // Sub columns
+        .grid > *[grid-x='#{$main-column}a'] {
+            grid-column: #{$first-column};
+        }
+
+        .grid > *[grid-x='#{$main-column}b'] {
+            grid-column: #{$first-column + 1};
+        }
+
+        @each $sub-column in $sub-columns {
+            $second-column: list.index($sub-columns, $sub-column) + 1;
+            .grid > *[grid-x='#{$main-column}a/#{$sub-column}'],
+            .grid > *[grid-x='#{$main-column}a+#{$sub-column}'] {
+                grid-column: #{$first-column} / $second-column;
+            }
+    
+            .grid > *[grid-x='#{$main-column}b/#{$sub-column}'],
+            .grid > *[grid-x='#{$main-column}b+#{$sub-column}'] {
+                grid-column: #{$first-column + 1} / $second-column;
+            }
+
+            .grid > *[grid-x='#{$main-column}a+#{$sub-column}'],
+            .grid > *[grid-x='#{$main-column}b+#{$sub-column}'] {
+                display: grid;
+                gap: var(--grid-unit);
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    // @each $sub-row in $sub-rows {
+    //     .grid > *[grid-y='#{$sub-row}'] {
+    //         grid-row: list.index($sub-rows, $sub-row);
+    //     }
+    // }
+    @each $main-row in $main-rows {
+        $first-row: list.index($sub-rows, list.nth($sub-rows, $main-row * 2)) - 1;
+
+        // Main rows
+        .grid > *[grid-y='#{$main-row}'] {
+            grid-row: #{$first-row} / #{$first-row + 2};
+        }
+
+        .grid > *[grid-y='#{$main-row}/#{$main-row + 1}'],
+        .grid > *[grid-y='#{$main-row}+#{$main-row + 1}'] {
+            grid-row: #{$first-row} / #{$first-row + 4};
+        }
+
+        .grid > *[grid-y='#{$main-row}+#{$main-row + 1}'] {
+            display: grid;
+            gap: var(--grid-unit);
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .grid > *[grid-y='#{$main-row}/#{$main-row + 2}'],
+        .grid > *[grid-y='#{$main-row}+#{$main-row + 2}'] {
+            grid-row: #{$first-row} / #{$first-row + 6};
+        }
+
+        .grid > *[grid-y='#{$main-row}/#{$main-row + 3}'],
+        .grid > *[grid-y='#{$main-row}+#{$main-row + 3}'] {
+            grid-row: #{$first-row} / #{$first-row + 8};
+        }
+
+        .grid > *[grid-y='#{$main-row}+#{$main-row + 2}'] {
+            display: grid;
+            gap: var(--grid-unit);
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        // Sub rows
+        .grid > *[grid-y='#{$main-row}a'] {
+            grid-row: #{$first-row};
+        }
+
+        .grid > *[grid-y='#{$main-row}b'] {
+            grid-row: #{$first-row + 1};
+        }
+
+        @each $sub-row in $sub-rows {
+            $second-row: list.index($sub-rows, $sub-row) + 1;
+            .grid > *[grid-y='#{$main-row}/#{$sub-row}'],
+            .grid > *[grid-y='#{$main-row}+#{$sub-row}'] {
+                grid-row: #{$first-row} / $second-row;
+            }
+
+            .grid > *[grid-y='#{$main-row}a/#{$sub-row}'],
+            .grid > *[grid-y='#{$main-row}a+#{$sub-row}'] {
+                grid-row: #{$first-row} / $second-row;
+            }
+
+            .grid > *[grid-y='#{$main-row}b/#{$sub-row}'],
+            .grid > *[grid-y='#{$main-row}b+#{$sub-row}'] {
+                grid-row: #{$first-row + 1} / $second-row;
+            }
+
+            .grid > *[grid-y='#{$main-row}a+#{$sub-row}'],
+            .grid > *[grid-y='#{$main-row}b+#{$sub-row}'] {
+                display: grid;
+                gap: var(--grid-unit);
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+    } 
+}
+
+.grid > *[grid-span='2'] {
+    grid-row: span 2;
+}
+
+.grid > *[grid-span='3'] {
+    grid-row: span 3;
+}
+
+.grid > *[grid-span='4'] {
+    grid-row: span 4;
+}
+
+.grid > *[grid-span='5'] {
+    grid-row: span 5;
+}
+
+.grid > *[grid-area='2+3'],
+.grid > *[grid-area='1a+1b'] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 calc(var(--grid-unit) * 1.5);
+}
+
+.grid > *[grid-area='1+3'] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 calc(var(--grid-unit) * 1.5);
+}
+
+.grid > *[grid-align] {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid > *[grid-align='bottom'] {
+    justify-content: flex-end;
+}
+
+.grid figcaption {
+    font-size: var(--type-xxs);
+    line-height: 1;
+    line-clamp: 2;
+
+    margin-top: .25em;
+
+    opacity: var(--alpha-6);
+}
+
+.grid figcaption:before {
+    display: inline-block;
+    content: '●';
+    vertical-align: middle;
+    font-size: 1.25em;
+    margin-top: -.4em;
+    margin-bottom: -.2em;
+    margin-left: -.05em;
+    margin-right: .05em;
+}
+
+@media screen and (min-width: 50rem) {
+    .grid figcaption {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}
+
+.grid table {
+    font-size: var(--type-xxs);
+    border-collapse: collapse;
+    border-color: rgb(var(--foreground) / var(--alpha-4));
+    font-weight: var(--font-weight-normal);
+    line-height: 1.2em;
+}
+
+.grid th {
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+}
+
+.grid tfoot th {
+    border-top: 1px solid rgb(var(--foreground) / var(--alpha-3));
+}
+
+.grid thead th {
+    border-bottom: 1px solid rgb(var(--foreground) / var(--alpha-3));
+}

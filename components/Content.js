@@ -2,40 +2,36 @@ import React from 'react';
 
 import Image from './Image';
 import Carousel from './Carousel';
-import Cards from './Cards';
 import List from './List';
 import Lead from './Lead';
 import Meta from './Meta';
 
-function Text({ children, gridArea, gridSpan }) {
+function Text(props) {
     return (
-        <section
-            className='body-text trim-both'
-            grid-area={gridArea}
-            grid-span={gridSpan}
-        >
-            { children }
+        <section {...props}>
+            { props.children }
         </section>
     );
 }
 
-function Title({ children, gridArea, headingLevel} ) {
-    switch (headingLevel) {
-        case '1':
-            return <h1 className='trim-both' grid-area={gridArea}>{children}</h1>
-        case '2':
-            return <h2 className='trim-both' grid-area={gridArea}>{children}</h2>
-        case '3':
-            return <h3 className='trim-both' grid-area={gridArea}>{children}</h3>
-        case undefined:
-            return <h3 className='trim-both' grid-area={gridArea}>{children}</h3>
-    };
+function Title(props) {
+    const tag = props.headingLevel ? `h${props.headingLevel}` : 'h3';
+
+    return (
+        React.createElement(
+            tag,
+            {
+                key: props.headingLevel,
+                ...props
+            },
+            props.children
+        )
+    );
 }
 
 const Components = {
   image: Image,
   carousel: Carousel,
-  cards: Cards,
   list: List,
   meta: Meta,
   lead: Lead,
@@ -45,13 +41,15 @@ const Components = {
 
 export function Block(block) {
     if (typeof Components[block.component] !== "undefined") {
-        return React.createElement(
-            Components[block.component],
-            {
-                key: block._uid,
-                ...block.attributes
-            },
-            block.children
+        return (
+            React.createElement(
+                Components[block.component],
+                {
+                    key: block._uid,
+                    ...block.attributes
+                },
+                block.children
+            )
         );
     }
 }

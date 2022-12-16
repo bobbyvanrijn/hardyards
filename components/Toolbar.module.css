@@ -1,0 +1,66 @@
+.toolbar {
+    /* font-family: var(--font-inter); */
+    font-size: var(--type-sm);
+
+    position: fixed;
+    z-index: 99;
+    bottom: var(--scale-8);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+
+    font-weight: 300;
+    letter-spacing: .025em;;
+    padding-inline: var(--scale-8);
+}
+
+.toolbar__wrapper {
+    overflow: hidden;
+    background: rgb(var(--black));
+    color: rgb(var(--white));
+    mix-blend-mode: difference;
+    border-radius: var(--scale-2);
+}
+
+.toolbar__inner {
+    display: flex;
+    align-items: center;
+    /* padding: var(--scale-7) var(--scale-6); */
+
+    /* backdrop-filter: blur(5px); */
+}
+
+.toolbar__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-inline: var(--scale-8);
+    border-left: 1px solid rgb(var(--white) / .5);
+}
+
+*[data-isopen='true'] .toolbar__button {
+    border-left: 0px;
+    border-right: 1px solid rgb(var(--white) / .5);
+}
+
+.toolbar a {
+    display: inline-block;
+    padding: var(--scale-9) var(--scale-8);
+}
+
+.toolbar__menu {
+    display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.toolbar__menu
+.toolbar__menu li {
+    margin: 0;
+    padding: 0;
+}

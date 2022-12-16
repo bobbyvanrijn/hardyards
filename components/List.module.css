@@ -6,16 +6,26 @@
 }
 
 .list__item {
+
+}
+
+.list__itemWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
 
     gap: var(--scale-6);
+    padding-block: var(--type-xs);
+    border-top: .025em solid rgb(var(--foreground) / var(--alpha-5))
+}
 
-    padding-bottom: var(--type-xs);
-    margin-bottom: var(--type-xs);
-    border-bottom: 1px solid rgb(var(--foreground) / var(--alpha-2))
+.list__linkText {
+    font-family: var(--font-inter);
+    font-size: var(--type-xs);
+    font-weight: 300;
+    opacity: var(--alpha-8);
+    text-transform: uppercase;
 }
 
 .list__itemTitle {

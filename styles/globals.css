@@ -1,13 +1,14 @@
 :root {
     /* Colors, warm tint */
     --black: 18 18 17;
-    --white: 239 236 228;
+    --white: 247 245 242;
+    /* --white: 255 255 255; */
     --sunflower: 218 151 19;
 
     --red: 226 68 32;
 
-    --foreground: var(--white);
-    --background: var(--black);
+    --foreground: var(--black);
+    --background: var(--white);
 
     --alpha-05: .05;
     --alpha-1: .1;
@@ -105,7 +106,8 @@ body {
 }
 
 main {
-    font-family: var(--font-inter);
+    /* font-family: var(--font-inter); */
+    font-family: 'Lector FSL', 'Times', serif;
 }
 
 a {
@@ -126,15 +128,33 @@ a {
 h1, h2, h3, h4, h5, .lead {
     font-size: var(--type-md);
     margin-top: 0;
-    margin-bottom: 1.333em;
-    font-weight: var(--font-weight-bold);
+    --leading-lineheight: var(--type-md);
+    margin-bottom: var(--type-md);
+
+    font-weight: var(--font-weight-normal);
 }
 
 .display {
     font-size: var(--type-xxl);
     text-align: center;
     margin: auto;
-    letter-spacing: -.05em;
+    letter-spacing: -.025em;
+}
+.display-prime {
+    text-align: center;
+    font-size: var(--type-xl);
+    line-height: var(--type-xl);
+    margin: 0;
+    letter-spacing: -.025em;
+}
+
+.display-second {
+    text-align: center;
+    font-size: var(--type-xl);
+    line-height: var(--type-xl);
+    margin: 0;
+
+    text-transform: uppercase;
 }
 
 p {
@@ -157,24 +177,27 @@ figcaption {
     padding: 0 var(--scale-7);
 }
 
-.lead {
-    /* font-size: var(--type-md);
-    --leading-lineheight: var(--type-md);
-    line-height: var(--type-md); */
+.body-text {
+    /* font-family: 'Times New Roman', 'Times'; */
+    --leading-lineheight: var(--scale-5);
+    line-height: var(--scale-5);
+    font-size: var(--scale-6);
 
-    font-weight: var(--font-weight-normal);
-    letter-spacing: -.025em;
+    letter-spacing: 0;
+    font-variation-settings: 'opsz' 50;
+
+    margin-bottom: 0;
     opacity: var(--alpha-9);
 }
 
-.body-text {
-    font-family: var(--font-source-serif);
-    font-weight: 350;
-    font-size: var(--type-sm);
+.serif {
+    font-family: 'Lector FSL', 'Times', serif;
+}
 
-    font-variation-settings: 'opsz' 45;
-    margin-bottom: 0;
-    opacity: var(--alpha-9);
+.uppercase {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: -.015em;
 }
 
 .body-text p + p {
@@ -182,21 +205,39 @@ figcaption {
 }
 
 /* Utilities */
-
-.bleed-left {
-    margin-left: calc(0rem - var(--scale-7));
-    width: calc(100% + var(--scale-7));
+.bleed-top,
+*[bleed='top'] {
+    margin-top: calc(0rem - var(--scale-7));
 }
 
-.bleed-right {
+.bleed-right,
+*[bleed='right'] {
     margin-right: calc(0rem - var(--scale-7));
     width: calc(100% + var(--scale-7));
 }
 
-.bleed-both {
+.bleed-bottom,
+*[bleed='bottom'] {
+    margin-bottom: calc(0rem - var(--scale-7));
+}
+
+.bleed-left,
+*[bleed='left'] {
+    margin-left: calc(0rem - var(--scale-7));
+    width: calc(100% + var(--scale-7));
+}
+
+.bleed-inline,
+*[bleed='inline'] {
     margin-left: calc(0rem - var(--scale-7));
     margin-right: calc(0rem - var(--scale-7));
     width: calc(100% + var(--scale-7) + var(--scale-7));
+}
+
+.bleed-block,
+*[bleed='block'] {
+    margin-top: calc(0rem - var(--scale-7));
+    margin-bottom: calc(0rem - var(--scale-7));
 }
 
 /*
@@ -228,11 +269,11 @@ figcaption {
 .trim-start,
 .trim-end,
 .trim-both {
-    /* Inter font metrics */
-    --ascent: 2728;
-    --descent: -680;
-    --unitsPerEm: 2816;
-    --capHeight: 2048;
+
+    --ascent: 2425;
+    --descent: -443;
+    --unitsPerEm: 2048;
+    --capHeight: 1356;
 
     --foo: calc((var(--ascent) - var(--descent) - var(--unitsPerEm)) / 2);
     --offsetStart: calc(1em * ((var(--ascent) - var(--capHeight) - var(--foo)) / var(--unitsPerEm)));
@@ -250,16 +291,22 @@ figcaption {
 .trim-end--secondary,
 .trim-both--secondary {
     /* Source serif 4 font metrics */
-    --ascent: 1018;
+    /* --ascent: 1018;
     --descent: -335;
     --unitsPerEm: 1000;
-    --capHeight: 670;
+    --capHeight: 670; */
 
     /* Times metrics */
     /* --ascent: 1825;
     --descent: -443;
     --unitsPerEm: 2048;
     --capHeight: 1356; */
+
+    /* Inter font metrics */
+    --ascent: 2728;
+    --descent: -680;
+    --unitsPerEm: 2816;
+    --capHeight: 2048;
 }
 
 .trim-start:before,
@@ -284,4 +331,18 @@ figcaption {
     padding: var(--scale-7) var(--scale-6);
     border: 1px solid rgb(var(--white) / .3);
     color: rgb(var(--white));
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
 }

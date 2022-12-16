@@ -1,20 +1,24 @@
 .header {
     font-size: var(--type-xs);
+    font-family: var(--font-inter);
+    font-weight: 350;
 }
 
 .header__wrapper {
     position: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 
     top: 0;
     width: 100%;
     z-index: 9999;
 
     padding: var(--type-xxs);
-    display: flex;
-    gap: var(--scale-8);
-    justify-content: space-between;
+    gap: var(--scale-4);
 
     mix-blend-mode: difference;
+    color: rgb(var(--white));
 }
 
 .header__logo {
@@ -23,16 +27,14 @@
     /* height: var(--logo-height); */
     /* width: auto; */
     font-size: var(--type-xs);
-    font-weight: 400;
-    text-transform: uppercase;
 }
 
 .header__button {
     --button-scale: 1.5rem;
     position: relative;
     z-index: 99;
-    text-transform: uppercase;
 
+    text-align: right;
     flex: 0 0 auto;
     align-self: center;
 
@@ -83,8 +85,8 @@
     height: 0;
     transition: height .5s ease, padding .5s ease;
 
-    background: rgb(var(--white));
-    color: rgb(var(--black));
+    background: rgb(var(--foreground));
+    color: rgb(var(--background));
 }
 
 .header__menuWrapper[data-active='true'] {

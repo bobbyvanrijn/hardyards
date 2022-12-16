@@ -1,10 +1,10 @@
-export default function Lead({ children, gridArea }) {
+export default function Lead(props) {
     return (
         <p
+            { ...props }
             className='lead trim-both'
-            grid-area={gridArea}
         >
-            { children }
+            { props.children }
         </p>
     );
 }

@@ -5,7 +5,7 @@ type Data = {
     plant: object | null
 }
 
-import { plants } from '../../../content/plants.js';
+import { plants } from 'content/plants.js';
 
 export default function handler(
     req: NextApiRequest,

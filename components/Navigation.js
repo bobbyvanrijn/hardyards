@@ -8,7 +8,7 @@ import styles from './Navigation.module.css';
 export default function Navigation() {
     return (
         <nav className={styles.navigation}>
-            <ul>
+            <menu>
                 <li>
                     <Link className='trim-both' href='/plants'>
                         Plants<sup>{ plants.length }</sup>
@@ -26,7 +26,7 @@ export default function Navigation() {
                 <li>
                     <Link className='trim-both' href='/playground'>Playground</Link>
                 </li>
-            </ul>
+            </menu>
 
             <div className='body-text'>
                 <div>

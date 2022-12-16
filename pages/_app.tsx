@@ -1,18 +1,13 @@
-import '../styles/globals.css';
+import 'styles/globals.css';
+import 'styles/transitions.css';
+
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import Header from '../components/Header';
-import Transition from '../components/Transition';
+import { Header, Footer, Toolbar } from 'components';
+import Transition from 'components/Transition';
 
-import { Inter, Source_Serif_4 } from '@next/font/google';
-import '../styles/transitions.css';
-
-const sourceSerif = Source_Serif_4({
-    subsets: ['latin'],
-    variable: '--font-source-serif',
-    axes: ['opsz']
-});
+import { Inter, Newsreader } from '@next/font/google';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -21,7 +16,7 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} ${sourceSerif.variable}`}>
+    <main className={`${inter.variable}`}>
         <Head>
             <title>Hard Yards</title>
             <meta name="description" content="Gardening tool." />
@@ -33,11 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="apple-touch-startup-image" href="api/splash" />
         </Head>
 
-        <Header />
-
         <Transition>
             <Component {...pageProps} />
         </Transition>
+
+        <Toolbar />
+
+        <Footer />
     </main>
   );
 }

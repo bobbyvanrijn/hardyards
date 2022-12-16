@@ -35,8 +35,7 @@ export default function Carousel(props) {
         <div
             role='list'
             aria-label='gallery'
-            grid-area={props.gridArea}
-            grid-span='4'
+            { ...props }
             className={`${styles.carousel} bleed-both`}
         >
             <Items />

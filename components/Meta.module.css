@@ -1,8 +1,10 @@
 .meta {
-    font-size: var(--type-xs);
+    font-family: var(--font-inter);
+    font-size: var(--type-xxs);
+    text-transform: uppercase;;
+    font-weight: 400;
     display: grid;
     grid-auto-rows: max-content;
-    gap: var(--scale-5) calc(var(--grid-unit) * 1.5) !important;
 }
 
 .meta__item {

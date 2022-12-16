@@ -17,7 +17,8 @@ const blocks = [
         _uid: '61f5c21d-93c6-4112-8040-29db5a9839a3',
         component: 'carousel',
         attributes: {
-            gridArea: '1/3',
+            'grid-x': '1/3',
+            'grid-y': '2b',
             items: plants
         }
     },
@@ -25,8 +26,7 @@ const blocks = [
         _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
         component: 'text',
         attributes: {
-            gridArea: '2/3',
-            gridSpan: '2',
+            'grid-x': '2/3'
         },
         children: [
             <p key='paragraph-1'>
@@ -42,13 +42,22 @@ const blocks = [
 export default function Home() {
     return (
         <GridLayout>
-            <h1
-                grid-area='1/3'
-                grid-span='3'
-                className='display'
+            <div
+                grid-x='1/3'
+                grid-y='1b'
             >
-                Bring nature home
-            </h1>
+                <h1
+                    className='display-second'
+                >
+                    Perennial
+                </h1>
+
+                <h2
+                    className='display-prime'
+                >
+                    Geranium Rozanne
+                </h2>
+            </div>
 
             <Content blocks={blocks} />
 

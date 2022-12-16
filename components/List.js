@@ -4,9 +4,7 @@ import Link from 'next/link';
 import { ArrowUpRight, AddAlt } from '@carbon/icons-react';
 import styles from './List.module.css';
 
-export default function List({ title, gridArea, items, children}) {
-    const listItems = items;
-
+export default function List(props) {
     function ListItem({ item, children }) {
         const [itemActive, setActive] = useState(false);
 
@@ -18,58 +16,40 @@ export default function List({ title, gridArea, items, children}) {
             <li className={styles.list__item}>
                 {/* If item is link: */}
                 { item.link &&
-                    <>
-                        <Link href={item.link}>
-                            {children}
-                        </Link>
-
-                        <div className={styles.list__itemIcon}>
-                            <ArrowUpRight size='32' />
+                    <Link
+                        className={styles.list__itemWrapper}
+                        href={item.link}
+                        prefetch={true}
+                    >
+                        <div className={`${styles.list__itemTitle} trim-both`}>
+                            {item.title}
                         </div>
-                    </>
+
+                        <div className={`${styles.list__linkText} trim-both`}>
+                            details
+                        </div>
+                    </Link>
                 }
 
-                {/* If item is accordion item */}
-                { item.description &&
-                    <>
-                        <div onClick={toggleItem}>
-                            {children}
+                { !item.link &&
+                    <div className={styles.list__itemWrapper}>
+                        <div className={`${styles.list__itemTitle} trim-both`}>
+                            {item.title}
                         </div>
-
-
-                        <div className={styles.list__itemIcon}>
-                            <AddAlt size='32' />
-                        </div>
-
-                        {itemActive &&
-                            <div className={styles.list__itemDescription}>
-                                {item.description}
-                            </div>
-                        }
-                    </>
+                    </div>
                 }
-
-                {!item.link && !item.description && children}
             </li>
         )
     }
 
     return (
-        <ul className={styles.list} grid-area={gridArea}>
-            { 
-                items.map((item, index) =>
-                    <ListItem
-                        key={index}
-                        item={item}
-                    >
-                        {item.title !== undefined &&
-                            <div className={`${styles.list__itemTitle} trim-both`}>
-                                { item.title }
-                            </div>
-                        }
-                    </ListItem>
-                )
-            }
+        <ul className={styles.list} {...props}>
+            { props.items.map((item, index) =>
+                <ListItem
+                    key={index}
+                    item={item}
+                />
+            ) }
         </ul>
     );
 }
