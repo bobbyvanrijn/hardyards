@@ -103,6 +103,15 @@ export default function Toolbar() {
                                 Collections
                             </Link>
                         </motion.li>
+
+                        <motion.li layout>
+                            <Link
+                                className="trim-both--secondary"
+                                href='/playground'
+                            >
+                                Demo
+                            </Link>
+                        </motion.li>
                     </motion.menu>
                     }
                 </motion.div>
