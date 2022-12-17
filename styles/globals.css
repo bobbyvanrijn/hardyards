@@ -108,6 +108,7 @@ body {
 main {
     /* font-family: var(--font-inter); */
     font-family: var(--font-serif), 'Times', serif;
+    padding-bottom: var(--scale-1);
 }
 
 a {
@@ -135,23 +136,23 @@ h1, h2, h3, h4, h5, .lead {
 }
 
 .display {
-    font-size: var(--type-xxl);
+    font-size: var(--type-xl);
     text-align: center;
     margin: auto;
     letter-spacing: -.025em;
 }
 .display-prime {
     text-align: center;
-    font-size: var(--type-xl);
-    line-height: var(--type-xl);
+    font-size: var(--type-lg);
+    line-height: var(--type-lg);
     margin: 0;
     letter-spacing: -.025em;
 }
 
 .display-second {
     text-align: center;
-    font-size: var(--type-xl);
-    line-height: var(--type-xl);
+    font-size: var(--type-lg);
+    line-height: var(--type-lg);
     margin: 0;
 
     text-transform: uppercase;

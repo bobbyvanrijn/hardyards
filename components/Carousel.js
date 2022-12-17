@@ -24,9 +24,6 @@ export default function Carousel(props) {
                     placeholder='blur'
                     blurDataURL={`/images/${ plant.slug}-small.webp`}
                 />
-                <div className={`${styles.carousel__title} trim-both`}>
-                    { formatPlantName(plant) }
-                </div>
             </Link>
         );
     }
@@ -36,7 +33,7 @@ export default function Carousel(props) {
             role='list'
             aria-label='gallery'
             { ...props }
-            className={`${styles.carousel} bleed-both`}
+            className={`${styles.carousel} bleed-inline`}
         >
             <Items />
         </div>

@@ -13,7 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: top;
+    align-items: baseline;
 
     gap: var(--scale-6);
     padding-block: var(--type-xs);
@@ -36,12 +36,4 @@
 
 .list__itemDescription {
     font-family: var(--font-source-serif);
-}
-
-.list__itemIcon {
-    align-self: baseline;
-}
-
-.list__itemIcon svg {
-    display: block;
 }

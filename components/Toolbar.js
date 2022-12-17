@@ -36,12 +36,14 @@ export default function Toolbar() {
                 >
                     { !isOpen && 
                         <motion.a
-                            layout tabindex={0}
+                            layout
+                            tabindex={0}
                             className={styles.toolbar__button}
                             onClick={() => setIsOpen(!isOpen)}
                             onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
                         >
                             <div className='sr-only'>Open navigation</div>
+
                             <motion.div
                                 layout
                                 className="trim-both--secondary"
@@ -49,17 +51,19 @@ export default function Toolbar() {
                             >
                                 { asPath }
                             </motion.div>
+
                             <OverflowMenuHorizontal size={24} />
                         </motion.a>
                     }
 
                     { isOpen && 
                     <motion.menu
-                        className={styles.toolbar__menu}
                         layout
+                        className={styles.toolbar__menu}
                     >
                         <motion.a
-                            layout tabindex={0}
+                            layout
+                            tabindex={0}
                             className={styles.toolbar__button}
                             onClick={() => setIsOpen(!isOpen)}
                             onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}

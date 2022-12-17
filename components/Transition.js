@@ -6,7 +6,7 @@ const variants = {
         opacity: 0,
         y: 15,
         transition: {
-            duration: 0.25
+            duration: 0.125
         }
     },
     in: {

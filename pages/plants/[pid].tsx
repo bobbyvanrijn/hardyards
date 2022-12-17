@@ -91,8 +91,7 @@ export function Plant(props: any) {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
             component: 'meta',
             attributes: {
-                'grid-x': '1/3',
-                'grid-y': '1a',
+                'grid-x': '1',
                 items: props.plant.meta.map(
                     (meta: { label: any; value: any; }) => {
                         return {
@@ -107,30 +106,24 @@ export function Plant(props: any) {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
             component: 'text',
             attributes: {
-                'grid-x': '2',
+                'grid-x': '2/3',
             },
             children: props.plant.body?.map(
-                (element: {
-                    type: string,
-                    props: Array<any>
-                }) =>
-                    React.createElement(
-                        'p',
-                        {
-                            ...element.props
-                        }
-                    )
+                (item: any, index: any) => <p key={index}>{item}</p>
             )
         }
     ]
+
+    const title = formatPlantName(props.plant);
+
     return (
         <>
             <Head>
-                <title>{ formatPlantName(props.plant) } | Hard Yards</title>
+                <title>{ title } | Hard Yards</title>
                 <meta name="description" content={props.plant.description} />
             </Head>
 
-            <GridLayout>
+            <GridLayout grid-enforce-rows='true'>
                 <Content blocks={hero} />
             </GridLayout>
 
@@ -143,8 +136,6 @@ export function Plant(props: any) {
 
 export default function Page(props: any) {
     return (
-        <>
-            <Plant pid={props.pid} plant={props.plant} />
-        </>
+        <Plant pid={props.pid} plant={props.plant} />
     )
 }

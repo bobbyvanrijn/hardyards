@@ -1,6 +1,6 @@
 .carousel {
     display: flex;
-    gap: var(--scale-9);
+    gap: var(--scale-10);
 
     list-style: none;
     margin-block: 0;
@@ -21,7 +21,7 @@
 
 .carousel__item {
     flex: 0 0 auto;
-    width: clamp(10rem, 20vw, 30rem);
+    width: clamp(10rem, 30vw, 30rem);
 
     position: relative;
     z-index: 1;
@@ -35,28 +35,16 @@
 }
 
 .carousel__item img {
+    display: block;
     object-fit: cover;
     object-position: center center;
     aspect-ratio: 3/4;
     width: 100%;
     height: auto;
-    border-radius: var(--scale-6);
+    border-radius: var(--scale-9);
 }
 
 .carousel__title {
-    margin-top: var(--type-xs);
     font-size: var(--type-sm);
     --leading-lineheight: var(--type-sm);
-    font-weight: var(--font-weight-normal);
-}
-
-.carousel__indicator {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    height: 3px;
-    width: 10rem;
-    background: rgb(var(--foreground) / var(--alpha-5));
 }

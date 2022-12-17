@@ -1,13 +1,13 @@
 .toolbar {
     font-family: var(--font-inter);
-    font-size: var(--type-xs);
-    line-height: var(--type-xs);
-    --leading-lineheight: var(--type-xs);
+    font-size: var(--scale-6);
+    line-height: var(--scale-6);
+    --leading-lineheight: var(--scale-6);
 
     position: fixed;
     z-index: 99;
-    bottom: var(--scale-6);
-    padding-inline: var(--scale-6);
+    bottom: var(--scale-5);
+    padding-inline: var(--scale-5);
     left: 0;
     right: 0;
     display: flex;
@@ -16,6 +16,8 @@
     font-weight: 280;
     text-transform: uppercase;
     letter-spacing: .025em;
+
+    pointer-events: none;
 }
 .toolbar__cap {
     display: block;
@@ -24,6 +26,8 @@
     width: var(--scale-6);
     background: rgb(var(--black));
     flex-shrink: 0;
+
+    pointer-events: all;
 }
 .toolbar__cap--left {
     border-top-left-radius: var(--scale-2);
@@ -45,6 +49,7 @@
     color: rgb(var(--white));
     mix-blend-mode: difference;
     /* border-radius: var(--scale-2); */
+    pointer-events: all;
 }
 
 .toolbar__inner {
@@ -56,6 +61,14 @@
 .toolbar a {
     display: inline-block;
     padding: var(--scale-8) 0;
+}
+
+.toolbar a:focus {
+    outline: 0;
+}
+
+.toolbar a:focus-visible {
+    text-decoration: underline;
 }
 
 a.toolbar__button {

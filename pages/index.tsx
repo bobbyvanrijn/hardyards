@@ -2,11 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import GridLayout from '../layouts/grid';
-
-import Hero from '../components/Hero';
 import Content from '../components/Content';
-import HeaderSpacer from '../components/HeaderSpacer';
-import Marquee from '../components/Marquee';
 
 import styles from '../styles/Home.module.css';
 
@@ -14,19 +10,18 @@ import { plants } from '../content/plants';
 
 const blocks = [
     {
-        _uid: '61f5c21d-93c6-4112-8040-29db5a9839a3',
         component: 'carousel',
         attributes: {
             'grid-x': '1/3',
-            'grid-y': '2b',
+            'grid-y': '2/3',
             items: plants
         }
     },
     {
-        _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
         component: 'text',
         attributes: {
-            'grid-x': '2/3'
+            'grid-x': '2/3',
+            'grid-y': '4'
         },
         children: [
             <p key='paragraph-1'>
@@ -41,29 +36,24 @@ const blocks = [
 
 export default function Home() {
     return (
-        <GridLayout>
-            <div
+        <GridLayout grid-enforce-rows='true'>
+            <h1
+                className='display-second trim-both'
+                grid-x='1/3'
+                grid-y='1a'
+            >
+                Index
+            </h1>
+
+            <h2
+                className='display-prime trim-both'
                 grid-x='1/3'
                 grid-y='1b'
             >
-                <h1
-                    className='display-second'
-                >
-                    Perennial
-                </h1>
-
-                <h2
-                    className='display-prime'
-                >
-                    Geranium Rozanne
-                </h2>
-            </div>
+            Hard Yards
+            </h2>
 
             <Content blocks={blocks} />
-
-            {/* <div className={'bleed-both'}>
-                <Marquee />
-            </div> */}
         </GridLayout>
     )
 }
