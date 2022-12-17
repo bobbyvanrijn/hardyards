@@ -326,14 +326,6 @@ figcaption {
     margin-bottom: calc(var(--leading-offset,-.25em) + var(--font-offset-end,0em));
 }
 
-.pill {
-    display: inline-block;
-    border-radius: var(--scale-5);
-    padding: var(--scale-7) var(--scale-6);
-    border: 1px solid rgb(var(--white) / .3);
-    color: rgb(var(--white));
-}
-
 .sr-only {
 	border: 0 !important;
 	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
@@ -346,4 +338,37 @@ figcaption {
 	position: absolute !important;
 	width: 1px !important;
 	white-space: nowrap !important;            /* 3 */
+}
+
+table {
+    width: 100%;
+    font-family: var(--font-inter);
+    font-size: var(--type-xxs);
+    border-collapse: collapse;
+    border-color: rgb(var(--foreground) / var(--alpha-4));
+    font-weight: var(--font-weight-normal);
+    line-height: var(--type-xs);
+    margin-top: var(--type-sm);
+}
+
+th {
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+}
+
+tfoot th {
+    border-top: .025em solid rgb(var(--foreground) / var(--alpha-7));
+    text-transform: uppercase;
+}
+
+thead th {
+    border-bottom: .025em solid rgb(var(--foreground) / var(--alpha-7));
+}
+
+td {
+    height: var(--type-sm);
+}
+
+td[data-active='true'] {
+    background: rgb(var(--sunflower));
 }

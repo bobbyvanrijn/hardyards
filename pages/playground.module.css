@@ -1,7 +1,5 @@
-.playgroundHero {
-}
-
-.playgroundHero .playgroundHero__Image {
-    grid-row: span 4;
-    height: 100%;
+.playground[data-background='sunflower'] {
+    background: rgb(var(--sunflower));
+    margin: 0;
+    padding: var(--scale-8);
 }

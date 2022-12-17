@@ -26,84 +26,53 @@ export default function Playground() {
 
     return (
         <GridLayout>
-            <ol
-                className='body-text trim-both trim-both--secondary'
+            <div
+                className={styles.playground}
                 grid-x='2/3'
             >
-                <li>Drift, group, border, flower meadow.</li>
-                <li>Praerie. Clump-forming ground cover.</li>
-                <li>Variegated foliage.</li>
-            </ol>
+                <ol className='body-text trim-both trim-both--secondary'>
+                    <li>Drift, group, border, flower meadow.</li>
+                    <li>Praerie. Clump-forming ground cover.</li>
+                    <li>Variegated foliage.</li>
+                </ol>
 
-            <ul
-                className='body-text trim-both trim-both--secondary'
-                grid-x='2/3'
-            >
-                <li>Drift, group, border, flower meadow.</li>
-                <li>Praerie. Clump-forming ground cover.</li>
-                <li>Variegated foliage.</li>
-            </ul>
+                <ul className='body-text trim-both trim-both--secondary'>
+                    <li>Drift, group, border, flower meadow.</li>
+                    <li>Praerie. Clump-forming ground cover.</li>
+                    <li>Variegated foliage.</li>
+                </ul>
 
-            <table
-                grid-x='2/3'
-                summary="Meaningless data, but table used to test TFOOT behavior in user agents"
-            >
-                <tfoot>
-                    <tr>
-                        <th>Rows</th>
-                        <th>Col 1</th>
-                        <th>Col 2</th>
-                        <th>Col 3</th>
-                        <th>Col 4</th>
-                        <th>Col 5</th>
-                        <th>Col 6</th>
-                        <th>Col 7</th>
-                        <th>Col 8</th>
-                        <th>Col 9</th>
-                    </tr>
-                </tfoot>
-
-                <tbody>
-                    <tr>
-                        <th>Row 1</th>
-                        <td>Y</td>
-                        <td>Z</td>
-                        <td>Z</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>X</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                    </tr>
-
-                    <tr>
-                        <th>Row 2</th>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                    </tr>
-
-                    <tr>
-                        <th>Row 3</th>
-                        <td>Z</td>
-                        <td>X</td>
-                        <td>Z</td>
-                        <td>X</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                        <td>Z</td>
-                        <td>Y</td>
-                        <td>Y</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table summary="Meaningless data, but table used to test TFOOT behavior in user agents">
+                    <tfoot>
+                        <tr>
+                            <th>Jan</th>
+                            <th>Feb</th>
+                            <th>Mar</th>
+                            <th>Apr</th>
+                            <th>Jun</th>
+                            <th>Jul</th>
+                            <th>Aug</th>
+                            <th>Sep</th>
+                            <th>Nov</th>
+                            <th>Dec</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td data-active='true'></td>
+                            <td data-active='true'></td>
+                            <td data-active='true'></td>
+                            <td data-active='true'></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </GridLayout>
     )
 }
