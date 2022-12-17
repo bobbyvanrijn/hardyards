@@ -36,15 +36,15 @@ const plants = [
                 value: '50-80 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'Yellow'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: '5-8'
             }
         ],
@@ -93,15 +93,15 @@ const plants = [
                 value: '60-90 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'Violet-blue'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Grey-green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: '5-10'
             }
         ],
@@ -139,16 +139,16 @@ const plants = [
                 description: ''
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'Pale pink',
                 description: ''
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Pale green',
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: 'May-August'
             },
         ],
@@ -171,15 +171,15 @@ const plants = [
                 value: '60-90 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'White'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: 'June-August'
             }
         ],
@@ -208,15 +208,15 @@ const plants = [
                 value: '20-30 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'Pink'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Grey-green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: 'May-September'
             }
         ],
@@ -248,15 +248,15 @@ const plants = [
                 value: '90 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'Purple'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: 'July-October'
             }
         ],
@@ -288,15 +288,15 @@ const plants = [
                 value: '75 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'White-Yellow'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: 'May-June'
             }
         ],
@@ -324,15 +324,15 @@ const plants = [
                 value: '75 cm'
             },
             {
-                label: 'Flower color',
+                label: 'Flowers',
                 value: 'White-Yellow'
             },
             {
-                label: 'Foliage color',
+                label: 'Foliage',
                 value: 'Green'
             },
             {
-                label: 'Seasons of interest',
+                label: 'Seasons',
                 value: 'May-June'
             }
         ],

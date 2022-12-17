@@ -59,7 +59,7 @@ export function Plant(props: any) {
             attributes: {
                 'grid-x': '1/3',
                 'grid-y': '2/3',
-                className: 'bleed-inline bleed-top',
+                className: 'bleed-inline bleed-block',
                 src: `/images/${ props.pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
                 blurDataURL: `/images/${ props.pid }-small.webp`,
@@ -107,9 +107,10 @@ export function Plant(props: any) {
             component: 'text',
             attributes: {
                 'grid-x': '2/3',
+                className: 'body-text'
             },
             children: props.plant.body?.map(
-                (item: any, index: any) => <p key={index}>{item}</p>
+                (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
             )
         }
     ]

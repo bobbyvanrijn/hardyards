@@ -178,17 +178,12 @@ figcaption {
     padding: 0 var(--scale-7);
 }
 
-.body-text {
-    /* font-family: 'Times New Roman', 'Times'; */
+.body-text p {
+    text-indent: 3ch;
     --leading-lineheight: var(--scale-5);
     line-height: var(--scale-5);
-    font-size: var(--scale-6);
 
-    letter-spacing: 0;
-    font-variation-settings: 'opsz' 50;
-
-    margin-bottom: 0;
-    opacity: var(--alpha-9);
+    margin-bottom: var(--scale-8);
 }
 
 .serif {
@@ -199,10 +194,6 @@ figcaption {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: -.015em;
-}
-
-.body-text p + p {
-    text-indent: 3ch;
 }
 
 /* Utilities */
