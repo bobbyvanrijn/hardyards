@@ -183,7 +183,7 @@ figcaption {
     --leading-lineheight: var(--scale-5);
     line-height: var(--scale-5);
 
-    margin-bottom: var(--scale-8);
+    margin-bottom: var(--scale-4);
 }
 
 .serif {
