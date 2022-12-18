@@ -1,16 +1,18 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './Carousel.module.css';
 
-import { shuffle } from '../helpers/shuffle';
-import { formatPlantName } from '../helpers/formatPlantName';
+import { formatPlantName } from 'helpers/formatPlantName';
+import { shuffle } from 'helpers/shuffle';
 
 export default function Carousel(props) {
-    const items = props.items;
+    const items = shuffle(props.items);
     function Items() {
 
-        return props.items.map(plant =>
+        return items.map(plant =>
             <Link
                 className={styles.carousel__item}
                 href={`/plants/${plant.slug}`}

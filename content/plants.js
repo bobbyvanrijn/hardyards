@@ -2,8 +2,8 @@ const plants = [
     // TODO: Add `lifecycle` prop (annual, biennial, perennial)
     // TODO: Add plants ↓
     // - Phlomis russeliana (cat: PROPAGATORS, SKELETALS)
-    // - Eupatorium maculata 'riegenschirm' (cat: UMBELLIFERS)
-    // - Angelica gigas (annual, cat: UMBELLIFERS)
+    // - Eupatorium maculatum 'riegenschirm' (cat: UMBELLIFERS)
+    // - Angelica gigas (annual, cat: UMBELLIFERS), picture credit: Paul van de Velde
     // - 
     // - Verbena bonariensis (cat: SELFSEEDERS)
     // - Verbena hastata (cat: SELFSEEDER)
@@ -48,7 +48,7 @@ const plants = [
                 value: '5-8'
             }
         ],
-        collection: [],
+        collections: [],
         body: [
             'This hardy and drought-tolerant perennial plant is an easy-to-care-for variety with lacy, silvery-grey foliage and bright yellow flowers that attract pollinators. It can be grown in borders, rock gardens, and containers, and prefers full sun and well-drained soil. It is hardy to zone 4 and can tolerate temperatures down to -34°C.'
         ]
@@ -63,7 +63,7 @@ const plants = [
         description: 'Velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
         images: ['images/alchemilla-mollis.webp'],
         meta: [],
-        collection: ['propagators'],
+        collections: ['propagators'],
         body: [
             'This perennial herbaceous plant is a popular choice for gardens and landscapes. It is native to Europe and grows in clumps up to 30 centimeters tall. The leaves are deeply divided into five to seven lobes, and they are covered in a soft, downy hair. The leaves are a bright, light green color.',
             'The flowers of this plant are small, star-shaped and yellow-green in color. They appear in clusters at the top of the stems and bloom from late spring to mid-summer. The flowers are followed by small, round, green seed-heads.',
@@ -105,7 +105,7 @@ const plants = [
                 value: '5-10'
             }
         ],
-        collection: [
+        collections: [
             'prime'
         ]
     },
@@ -117,7 +117,7 @@ const plants = [
         species: 'pallida',
         culticvar: '\‘Hulda Dancer\’',
         description: 'Spiky seedheads. Droopy pale pink petals.',
-        collection: [
+        collections: [
             'prime'
         ],
         body: [
@@ -188,7 +188,7 @@ const plants = [
             'It is a hardy plant, able to tolerate cold temperatures and requires minimal maintenance. It is drought tolerant and prefers full sun to partial shade. It blooms from mid-summer to early fall and attracts butterflies and other pollinators.',
             'This flower is easy to propagate, either by division or by seed. It can be grown in containers or in the ground, and is an excellent choice for rock gardens. It is a great addition to any garden, providing a striking contrast to other plants.'
         ],
-        collection: []
+        collections: []
     },
 
     {
@@ -225,7 +225,7 @@ const plants = [
             'This plant thrives in full sun, with well-drained soil. It is drought tolerant and can tolerate temperatures down to -23°C. It is best grown in a rock garden, or as a ground cover in a sunny border. It is also suitable for containers.',
             'To propagate, cuttings can be taken in spring or early summer. These can be rooted in a sandy compost. Alternatively, division of the plant can be done in spring or autumn. This plant is attractive to bees, butterflies and birds, making it a great addition to any garden.'
         ],
-        collection: [
+        collections: [
             'prime',
             'propagators'
         ]
@@ -267,7 +267,7 @@ const plants = [
 
             'This aster is a great choice for adding texture and color to the garden. It is easy to grow and maintain, and it will spread slowly by self-seeding. It is a good choice for naturalizing in meadows and woodland edges, and it can also be used in perennial borders and as a cut flower.'
         ],
-        collection: [
+        collections: [
             'prime'
         ]
     },
@@ -301,7 +301,7 @@ const plants = [
             }
         ],
         body: [],
-        collection: [
+        collections: [
             'native',
             'propagators'
         ]
@@ -337,9 +337,78 @@ const plants = [
             }
         ],
         body: [],
-        collection: [
+        collections: [
             'edging',
             'propagators'
+        ]
+    },
+    {
+        slug: 'phlomis-russeliana',
+        genus: 'Phlomis',
+        species: 'russeliana',
+        cultivar: null,
+        common: 'Turkish sage',
+        description: 'Pale yellow, tiered flowers along a vertical stem. Silver furry leaves. Impressive winter skeleton.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '30 cm'
+            },
+            {
+                label: 'Height',
+                value: '80 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Yellow'
+            },
+            {
+                label: 'Foliage',
+                value: 'Silver green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [
+            'skeletals',
+            'propagators'
+        ]
+    },
+    {
+        slug: 'eupatorium-maculatum',
+        genus: 'Eupatorium',
+        species: 'maculatum',
+        cultivar: '\‘Riegenschirm\’',
+        common: 'Joe pye weed',
+        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '80 cm'
+            },
+            {
+                label: 'Height',
+                value: '200 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pink'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [
+            'umbellifers'
         ]
     },
 ];

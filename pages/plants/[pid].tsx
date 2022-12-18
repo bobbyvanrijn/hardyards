@@ -112,7 +112,22 @@ export function Plant(props: any) {
             children: props.plant.body?.map(
                 (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
             )
+        },
+        {
+            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27514',
+            component: 'list',
+            attributes: {
+                'grid-x': '2/3',
+                items: props.plant.collections?.map(
+                    (collection: any) => {
+                        return {
+                            title: collection,
+                        }
+                    }
+                )
+            }
         }
+
     ]
 
     const title = formatPlantName(props.plant);
