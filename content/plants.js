@@ -111,10 +111,6 @@ const plants = [
             }
         ],
         collections: [
-            {
-                slug: 'prime',
-                title: 'Prime'
-            }
         ]
     },
 
@@ -126,10 +122,6 @@ const plants = [
         culticvar: '\‘Hulda Dancer\’',
         description: 'Spiky seedheads. Droopy pale pink petals.',
         collections: [
-            {
-                slug: 'prime',
-                title: 'Prime'
-            }
         ],
         body: [
             'This perennial herb is native to the United States and is found in the Great Plains and Midwest. It is a member of the daisy family and has a slender stem that can reach a height of up to 1 meter. The leaves are lance-shaped and have a silvery-green color. The flowers are pink or white and measure up to 5 centimeters in diameter. They have a cone-shaped center surrounded by petals.',
@@ -238,10 +230,6 @@ const plants = [
         ],
         collections: [
             {
-                slug: 'prime',
-                title: 'Prime'
-            },
-            {
                 slug: 'propagators',
                 title: 'Propagators'
             }
@@ -285,10 +273,6 @@ const plants = [
             'This aster is a great choice for adding texture and color to the garden. It is easy to grow and maintain, and it will spread slowly by self-seeding. It is a good choice for naturalizing in meadows and woodland edges, and it can also be used in perennial borders and as a cut flower.'
         ],
         collections: [
-            {
-                slug: 'prime',
-                title: 'Prime'
-            }
         ]
     },
     {
