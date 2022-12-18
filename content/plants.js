@@ -452,6 +452,154 @@ const plants = [
             }
         ]
     },
+    {
+        slug: 'angelica-gigas',
+        genus: 'Angelica',
+        species: 'gigas',
+        cultivar: null,
+        common: 'Giant angelica',
+        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '80 cm'
+            },
+            {
+                label: 'Height',
+                value: '200 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pink'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [
+            {
+                slug: 'umbellifers',
+                title: 'Umbellifers'
+            }
+        ]
+    },
+    {
+        slug: 'verbena-hastata',
+        genus: 'Verbena',
+        species: 'hastata',
+        cultivar: null,
+        common: 'Blue vervain',
+        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '80 cm'
+            },
+            {
+                label: 'Height',
+                value: '200 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pink'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [
+            {
+                slug: 'selfseeders',
+                title: 'Selfseeders'
+            }
+        ]
+    },
+    {
+        slug: 'verbena-bonariensis',
+        genus: 'Verbena',
+        species: 'bonariensis',
+        cultivar: null,
+        common: 'Argentinian vervain',
+        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '80 cm'
+            },
+            {
+                label: 'Height',
+                value: '200 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pink'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [
+            {
+                slug: 'selfseeders',
+                title: 'Selfseeders'
+            }
+        ]
+    },
+    {
+        slug: 'foeniculum-vulgare',
+        genus: 'Foeniculum',
+        species: 'vulgare',
+        cultivar: null,
+        common: 'Fennel',
+        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '80 cm'
+            },
+            {
+                label: 'Height',
+                value: '200 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pink'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [
+            {
+                slug: 'umbellifers',
+                title: 'Umbellifers'
+            }
+        ]
+    },
 ];
 
 export { plants };
