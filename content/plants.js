@@ -63,7 +63,12 @@ const plants = [
         description: 'Velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
         images: ['images/alchemilla-mollis.webp'],
         meta: [],
-        collections: ['propagators'],
+        collections: [
+            {
+                slug: 'propagators',
+                title: 'Propagators'
+            }
+        ],
         body: [
             'This perennial herbaceous plant is a popular choice for gardens and landscapes. It is native to Europe and grows in clumps up to 30 centimeters tall. The leaves are deeply divided into five to seven lobes, and they are covered in a soft, downy hair. The leaves are a bright, light green color.',
             'The flowers of this plant are small, star-shaped and yellow-green in color. They appear in clusters at the top of the stems and bloom from late spring to mid-summer. The flowers are followed by small, round, green seed-heads.',
@@ -106,7 +111,10 @@ const plants = [
             }
         ],
         collections: [
-            'prime'
+            {
+                slug: 'prime',
+                title: 'Prime'
+            }
         ]
     },
 
@@ -118,7 +126,10 @@ const plants = [
         culticvar: '\‘Hulda Dancer\’',
         description: 'Spiky seedheads. Droopy pale pink petals.',
         collections: [
-            'prime'
+            {
+                slug: 'prime',
+                title: 'Prime'
+            }
         ],
         body: [
             'This perennial herb is native to the United States and is found in the Great Plains and Midwest. It is a member of the daisy family and has a slender stem that can reach a height of up to 1 meter. The leaves are lance-shaped and have a silvery-green color. The flowers are pink or white and measure up to 5 centimeters in diameter. They have a cone-shaped center surrounded by petals.',
@@ -226,8 +237,14 @@ const plants = [
             'To propagate, cuttings can be taken in spring or early summer. These can be rooted in a sandy compost. Alternatively, division of the plant can be done in spring or autumn. This plant is attractive to bees, butterflies and birds, making it a great addition to any garden.'
         ],
         collections: [
-            'prime',
-            'propagators'
+            {
+                slug: 'prime',
+                title: 'Prime'
+            },
+            {
+                slug: 'propagators',
+                title: 'Propagators'
+            }
         ]
     },
 
@@ -268,7 +285,10 @@ const plants = [
             'This aster is a great choice for adding texture and color to the garden. It is easy to grow and maintain, and it will spread slowly by self-seeding. It is a good choice for naturalizing in meadows and woodland edges, and it can also be used in perennial borders and as a cut flower.'
         ],
         collections: [
-            'prime'
+            {
+                slug: 'prime',
+                title: 'Prime'
+            }
         ]
     },
     {
@@ -302,8 +322,14 @@ const plants = [
         ],
         body: [],
         collections: [
-            'native',
-            'propagators'
+            {
+                slug: 'native',
+                title: 'Native'
+            },
+            {
+                slug: 'propagators',
+                title: 'Propagators'
+            }
         ]
     },
 
@@ -338,8 +364,14 @@ const plants = [
         ],
         body: [],
         collections: [
-            'edging',
-            'propagators'
+            {
+                slug: 'edging',
+                title: 'Edging'
+            },
+            {
+                slug: 'propagators',
+                title: 'Propagators'
+            }
         ]
     },
     {
@@ -373,8 +405,14 @@ const plants = [
         ],
         body: [],
         collections: [
-            'skeletals',
-            'propagators'
+            {
+                slug: 'skeletals',
+                title: 'Skeletals'
+            },
+            {
+                slug: 'propagators',
+                title: 'Propagators'
+            }
         ]
     },
     {
@@ -408,7 +446,10 @@ const plants = [
         ],
         body: [],
         collections: [
-            'umbellifers'
+            {
+                slug: 'umbellifers',
+                title: 'Umbellifers'
+            }
         ]
     },
 ];

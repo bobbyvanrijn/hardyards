@@ -2,23 +2,38 @@ import Content from 'components/Content';
 import { plants } from 'content/plants';
 import GridLayout from 'layouts/grid';
 import { formatPlantName } from 'helpers/formatPlantName';
+import {uniqBy} from 'lodash';
+function getCollections() {
+    const allCollections = plants.flatMap(
+        (plant) => {
+            return plant.collections;
+        }
+    );
 
-function filterByFirstLetter(target: any, query: string) {
-    const regex = new RegExp(query);
+    return uniqBy(allCollections, 'slug');
+}
 
+function filterByCollection(target: any, collection: string) {
     return target.filter(
-        (item: { genus: string }) => {
-            return regex.test(item.genus);
+        (item: { collections: any }) => {
+            const tested = item.collections.filter(
+                (nestedItem: any) => {
+                    // console.log(nestedItem?.slug === collection);
+                    return nestedItem?.slug === collection;
+                }
+            );
+
+            return tested.length;
         }
     );
 }
 
-const categories = ['A-F', 'G-L', 'M-R', 'S-Z'];
+const collections = getCollections();
 
 export default function Plants() {
     const categoryBlocks = () => {
         const blocks: { _uid: number; component: string; attributes: { 'grid-x': string; items?: any; headingLevel?: number;}; children?: JSX.Element[]; }[] = [];
-        categories.map((category, index) => {
+        collections.map((collection, index) => {
             blocks.push(
                 {
                     _uid: index,
@@ -28,23 +43,15 @@ export default function Plants() {
                         headingLevel: 2
                     },
                     children: [
-                        <>{category}</>
+                        <>{collection.title}</>
                     ]
                 },
                 {
                     _uid: index * 1000,
-                    component: 'list',
+                    component: 'carousel',
                     attributes: {
                         'grid-x': '2/3',
-                        items: filterByFirstLetter(plants, `^[${category}]`)
-                        .map(
-                            (plant: any) => {
-                                return {
-                                    title: formatPlantName(plant),
-                                    link: `/plants/${plant.slug}`
-                                }
-                            }
-                        )
+                        items: filterByCollection(plants, collection.slug)
                     }
                 }
             )
@@ -59,7 +66,7 @@ export default function Plants() {
                 grid-x='1/3'
                 grid-y='1/2'
             >
-                Plants
+                Collections
             </h1>
 
             <Content blocks={categoryBlocks()} />

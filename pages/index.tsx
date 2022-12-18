@@ -48,7 +48,7 @@ export default function Home() {
             <h2
                 className='display-prime trim-both'
                 grid-x='1/3'
-                grid-y='1b'
+                grid-y='1a'
             >
             Hard Yards
             </h2>

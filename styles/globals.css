@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, .lead {
     letter-spacing: -.025em;
 }
 .display-prime {
-    text-align: center;
+    text-align: right;
     font-size: var(--type-lg);
     line-height: var(--type-lg);
     margin: 0;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, .lead {
 }
 
 .display-second {
-    text-align: center;
+    text-align: left;
     font-size: var(--type-lg);
     line-height: var(--type-lg);
     margin: 0;
