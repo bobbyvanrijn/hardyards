@@ -1,5 +1,14 @@
 .playground[data-background='sunflower'] {
     background: rgb(var(--sunflower));
-    margin: 0;
-    padding: var(--scale-8);
+}
+
+.playground[data-background='forest'] {
+    background: rgb(var(--forest));
+    color: rgb(var(--white));
+}
+
+.playground[data-background='black'] {
+    background: rgb(var(--black));
+    color: rgb(var(--white) / var(--alpha-8));
+    letter-spacing: .005em;
 }
