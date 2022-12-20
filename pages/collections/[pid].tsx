@@ -62,7 +62,6 @@ export function Plant(props: any) {
                 className: 'bleed-inline bleed-block',
                 src: `/images/${ props.pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-                blurDataURL: `/images/${ props.pid }-small.webp`,
                 width: 800,
                 height: 800,
             }

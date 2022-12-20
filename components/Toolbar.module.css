@@ -7,7 +7,7 @@
     position: fixed;
     z-index: 99;
     bottom: var(--scale-5);
-    padding-inline: var(--scale-5);
+    padding-inline: var(--scale-7);
     left: 0;
     right: 0;
     display: flex;
@@ -23,8 +23,8 @@
     display: block;
     content: '';
     height: auto;
-    width: var(--scale-6);
-    background: rgb(var(--black));
+    width: var(--scale-5);
+    background: rgb(var(--black) / .75);
     flex-shrink: 0;
 
     pointer-events: all;
@@ -47,20 +47,19 @@
     overflow: hidden;
     background: rgb(var(--black));
     color: rgb(var(--white));
-    mix-blend-mode: difference;
-    /* border-radius: var(--scale-2); */
+    border-radius: 9999px;
     pointer-events: all;
+    padding: .2em;
 }
 
 .toolbar__inner {
     display: flex;
-    gap: var(--type-xxs);
     align-items: center;
 }
 
 .toolbar a {
     display: inline-block;
-    padding: var(--scale-8) 0;
+    padding: var(--scale-9) var(--scale-8);
 }
 
 .toolbar a:focus {
@@ -87,12 +86,20 @@ a.toolbar__button svg {
 
 .toolbar__menu {
     display: flex;
-    gap: var(--type-xxs);
+    position: relative;
     list-style: none;
-    overflow-x: scroll;
     margin: 0;
     padding: 0;
     white-space: nowrap;
+
+    overflow-x: scroll;
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  
+}
+
+.toolbar__menu::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .toolbar__menu

@@ -5,27 +5,19 @@ import Image from 'next/image';
 import styles from './playground.module.css';
 
 import GridLayout from '../layouts/grid';
-import Meta from '../components/Meta';
+import ShadowPan from 'components/ShadowPan';
 
 export default function Playground() {
     const router = useRouter();
 
-    async function share(
-        sharable: {
-            title: string,
-            description: string,
-            url: string
-        }
-    ) {
-        try {
-            await navigator.share( sharable );
-        } catch (err) {
-            console.error(err);
-        }
-    }
-
     return (
         <GridLayout>
+            <ShadowPan>
+                <div data-active='true'>Foo</div>
+                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eos nulla fugit. Dignissimos, ipsum impedit cupiditate animi aliquam dolores commodi autem fugit quae porro, adipisci reiciendis magni sit! Numquam, laboriosam.</div>
+                <div>Baz</div>
+            </ShadowPan>
+            {/*
             <div
                 className={styles.playground}
                 grid-x='2/3'
@@ -73,6 +65,7 @@ export default function Playground() {
                     </tbody>
                 </table>
             </div>
+            */}
         </GridLayout>
     )
 }

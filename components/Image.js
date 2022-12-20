@@ -6,8 +6,6 @@ export default function Image(props) {
         <figure className={styles.imageWrapper} {...props}>
             <NextImage
                 className={styles.image}
-                placeholder='blur'
-                blurDataURL={`/images/${ props.src }-small.webp`}
                 src={props.src}
                 sizes={props.sizes}
                 height={props.height}

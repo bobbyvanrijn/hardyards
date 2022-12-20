@@ -11,6 +11,7 @@ import { plants } from '../content/plants';
 export default function Home() {
     const blocks = [
         {
+            _uid: '1',
             component: 'carousel',
             attributes: {
                 'grid-x': '1/3',
@@ -19,6 +20,7 @@ export default function Home() {
             }
         },
         {
+            _uid: '2',
             component: 'text',
             attributes: {
                 'grid-x': '2/3',

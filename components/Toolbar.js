@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import { OverflowMenuHorizontal, Close } from '@carbon/icons-react';
 
 import styles from './Toolbar.module.css';
+import ShadowPan from 'components/ShadowPan.js';
+import getPageName from 'helpers/getPageName.js';
 import { motion } from 'framer-motion';
 
 export default function Toolbar() {
@@ -11,9 +13,9 @@ export default function Toolbar() {
 
     const { asPath } = useRouter();
 
-    useEffect(() => {
-        setIsOpen(false);
-    }, [asPath]);
+    // useEffect(() => {
+    //     setIsOpen(false);
+    // }, [asPath]);
 
     const spring = {
         type: "spring",
@@ -25,10 +27,11 @@ export default function Toolbar() {
         <motion.div
             className={styles.toolbar}
             transition={spring}
-            data-isOpen={isOpen}
+            data-isopen={isOpen}
             layout
         >
-            <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--left']}`} />
+            {/* <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--left']}`} /> */}
+
             <motion.div layout className={styles.toolbar__wrapper}>
                 <motion.div
                     className={styles.toolbar__inner}
@@ -37,7 +40,7 @@ export default function Toolbar() {
                     { !isOpen && 
                         <motion.a
                             layout
-                            tabindex={0}
+                            tabIndex={0}
                             className={styles.toolbar__button}
                             onClick={() => setIsOpen(!isOpen)}
                             onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
@@ -49,7 +52,7 @@ export default function Toolbar() {
                                 className="trim-both--secondary"
                                 href={asPath}
                             >
-                                { asPath }
+                                { getPageName(asPath) }
                             </motion.div>
 
                             <OverflowMenuHorizontal size={24} />
@@ -61,62 +64,65 @@ export default function Toolbar() {
                         layout
                         className={styles.toolbar__menu}
                     >
+
+                        <ShadowPan>
+                            <motion.li layout >
+                                <Link
+                                    className="trim-both--secondary"
+                                    href='/'
+                                >
+                                    Index
+                                </Link>
+                            </motion.li>
+                            <motion.li layout >
+                                <Link
+                                    className="trim-both--secondary"
+                                    href='/plants'
+                                >
+                                    Plants
+                                </Link>
+                            </motion.li>
+                            <motion.li layout>
+                                <Link
+                                    className="trim-both--secondary"
+                                    href='/calendar'
+                                >
+                                    Calendar
+                                </Link>
+                            </motion.li>
+                            <motion.li layout>
+                                <Link
+                                    className="trim-both--secondary"
+                                    href='/collections'
+                                >
+                                    Collections
+                                </Link>
+                            </motion.li>
+
+                            <motion.li layout>
+                                <Link
+                                    className="trim-both--secondary"
+                                    href='/playground'
+                                >
+                                    Demo
+                                </Link>
+                            </motion.li>
+                        </ShadowPan>
+
                         <motion.a
                             layout
-                            tabindex={0}
+                            tabIndex={0}
                             className={styles.toolbar__button}
                             onClick={() => setIsOpen(!isOpen)}
                             onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
                         >
                             <Close size={24} /> 
                         </motion.a>
-
-                        <motion.li layout >
-                            <Link
-                                className="trim-both--secondary"
-                                href='/'
-                            >
-                                Index
-                            </Link>
-                        </motion.li>
-                        <motion.li layout >
-                            <Link
-                                className="trim-both--secondary"
-                                href='/plants'
-                            >
-                                Plants
-                            </Link>
-                        </motion.li>
-                        <motion.li layout>
-                            <Link
-                                className="trim-both--secondary"
-                                href='/calendar'
-                            >
-                                Calendar
-                            </Link>
-                        </motion.li>
-                        <motion.li layout>
-                            <Link
-                                className="trim-both--secondary"
-                                href='/collections'
-                            >
-                                Collections
-                            </Link>
-                        </motion.li>
-
-                        <motion.li layout>
-                            <Link
-                                className="trim-both--secondary"
-                                href='/playground'
-                            >
-                                Demo
-                            </Link>
-                        </motion.li>
                     </motion.menu>
                     }
                 </motion.div>
             </motion.div>
-            <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} />
+            {/* <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} /> */}
         </motion.div>
     );
 }

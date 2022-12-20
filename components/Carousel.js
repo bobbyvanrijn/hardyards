@@ -23,8 +23,6 @@ export default function Carousel(props) {
                     width={480}
                     height={640}
                     alt={ formatPlantName(plant) }
-                    placeholder='blur'
-                    blurDataURL={`/images/${ plant.slug}-small.webp`}
                 />
             </Link>
         );
