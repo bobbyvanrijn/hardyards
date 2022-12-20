@@ -4,8 +4,8 @@ export default function Meta(props) {
     return (
         <div
             { ...props }
-            className={styles.meta}
         >
+            <div className={styles.meta}>
             { 
                 props.items.map((item, index) =>
                     <div
@@ -13,14 +13,14 @@ export default function Meta(props) {
                         key={index}
                     >
                         {item.title !== undefined &&
-                            <>
-                                <div className='trim-both'>{ item.title }</div>
-                                <div className='trim-both'>{ item.value }</div>
-                            </>
+                            <div className='trim-both trim-both--secondary'>
+                                { item.value }
+                            </div>
                         }
                     </div>
                 )
             }
+            </div>
         </div>
     )
 }

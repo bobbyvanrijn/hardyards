@@ -78,7 +78,7 @@ export function Plant(props: any) {
                     <span className='uppercase'>
                         {formatPlantName(props.plant)}.&nbsp;
                     </span>
-                    {props.plant.common}.
+                    <span>{props.plant.common}.</span>
                 </h1>,
                 <p key={2} className='lead trim-both'>{props.plant.description}</p>
             ]
@@ -143,7 +143,7 @@ export function Plant(props: any) {
                 <Content blocks={hero} />
             </GridLayout>
 
-            <GridLayout>
+            <GridLayout grid-enforce-rows='true'>
                 <Content blocks={textImage} />
             </GridLayout>
         </>

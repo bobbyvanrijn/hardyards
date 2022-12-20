@@ -128,9 +128,9 @@ a {
 }
 
 h1, h2, h3, h4, h5, .lead {
+    --leading-lineheight: var(--type-md);
     font-size: var(--type-md);
     margin-top: 0;
-    --leading-lineheight: var(--type-md);
     margin-bottom: var(--type-md);
 
     font-weight: var(--font-weight-normal);
@@ -192,7 +192,6 @@ figcaption {
 }
 
 .uppercase {
-    display: inline-block;
     text-transform: uppercase;
     letter-spacing: -.015em;
 }
