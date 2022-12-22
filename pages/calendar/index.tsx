@@ -22,14 +22,14 @@ const blocks = [
             'grid-y': '1b'
         },
         children: [
-            <h1
+            <div
                 key='title'
-                className='display-second trim-both'
-                grid-x='1/3'
-                grid-y='1/2'
+                className='page-title'
             >
-                Calendar
-            </h1>
+                <h1 className='uppercase trim-both'>
+                    Calendar
+                </h1>
+            </div>
         ]
     },
     {

@@ -59,6 +59,7 @@ export function Plant(props: any) {
             attributes: {
                 'grid-x': '1/3',
                 'grid-y': '2/3',
+                'grid-y-sm': '1/2',
                 className: 'bleed-inline bleed-block',
                 src: `/images/${ props.pid }.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
@@ -72,6 +73,7 @@ export function Plant(props: any) {
             attributes: {
                 'grid-x': '1/2',
                 'grid-y': '1/2',
+                'grid-y-sm': '3'
             },
             children: [
                 <h1 className='trim-both' key={1}>
@@ -143,7 +145,7 @@ export function Plant(props: any) {
                 <Content blocks={hero} />
             </GridLayout>
 
-            <GridLayout grid-enforce-rows='true'>
+            <GridLayout>
                 <Content blocks={textImage} />
             </GridLayout>
         </>

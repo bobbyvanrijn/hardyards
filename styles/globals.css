@@ -73,7 +73,7 @@
     /* Responsive font-sizes: min, base, max */
     --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
     --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
-    --type-lg: clamp(var(--scale-5), 5vw, var(--scale-3));
+    --type-lg: clamp(var(--scale-4), 6vw, var(--scale-3));
     --type-md: clamp(var(--scale-5), 5vw, var(--scale-4));
     --type-sm: clamp(var(--scale-6), 3.5vw, var(--scale-5));
     --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
@@ -136,27 +136,18 @@ h1, h2, h3, h4, h5, .lead {
     font-weight: var(--font-weight-normal);
 }
 
-.display {
-    font-size: var(--type-xl);
-    text-align: center;
-    margin: auto;
-    letter-spacing: -.025em;
+.page-title {
+    display: flex;
+    justify-content: space-between;
 }
-.display-prime {
-    text-align: right;
+
+.page-title h1,
+.page-title h2,
+.page-title h3 {
     font-size: var(--type-lg);
     line-height: var(--type-lg);
     margin: 0;
     letter-spacing: -.025em;
-}
-
-.display-second {
-    text-align: left;
-    font-size: var(--type-lg);
-    line-height: var(--type-lg);
-    margin: 0;
-
-    text-transform: uppercase;
 }
 
 p {
@@ -199,37 +190,37 @@ figcaption {
 /* Utilities */
 .bleed-top,
 *[bleed='top'] {
-    margin-top: calc(0rem - var(--scale-7));
+    margin-top: calc(0rem - var(--type-xxs));
 }
 
 .bleed-right,
 *[bleed='right'] {
-    margin-right: calc(0rem - var(--scale-7));
-    width: calc(100% + var(--scale-7));
+    margin-right: calc(0rem - var(--type-xxs));
+    width: calc(100% + var(--type-xxs));
 }
 
 .bleed-bottom,
 *[bleed='bottom'] {
-    margin-bottom: calc(0rem - var(--scale-7));
+    margin-bottom: calc(0rem - var(--type-xxs));
 }
 
 .bleed-left,
 *[bleed='left'] {
-    margin-left: calc(0rem - var(--scale-7));
-    width: calc(100% + var(--scale-7));
+    margin-left: calc(0rem - var(--type-xxs));
+    width: calc(100% + var(--type-xxs));
 }
 
 .bleed-inline,
 *[bleed='inline'] {
-    margin-left: calc(0rem - var(--scale-7));
-    margin-right: calc(0rem - var(--scale-7));
-    width: calc(100% + var(--scale-7) + var(--scale-7));
+    margin-left: calc(0rem - var(--type-xxs));
+    margin-right: calc(0rem - var(--type-xxs));
+    width: calc(100% + var(--type-xxs) + var(--type-xxs));
 }
 
 .bleed-block,
 *[bleed='block'] {
-    margin-top: calc(0rem - var(--scale-7));
-    margin-bottom: calc(0rem - var(--scale-7));
+    margin-top: calc(0rem - var(--type-xxs));
+    margin-bottom: calc(0rem - var(--type-xxs));
 }
 
 /*

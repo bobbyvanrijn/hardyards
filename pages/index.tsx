@@ -16,6 +16,7 @@ export default function Home() {
             attributes: {
                 'grid-x': '1/3',
                 'grid-y': '2/3',
+                'grid-y-sm': '2/3',
                 items: plants
             }
         },
@@ -24,7 +25,8 @@ export default function Home() {
             component: 'text',
             attributes: {
                 'grid-x': '2/3',
-                'grid-y': '4'
+                'grid-y': '4',
+                'grid-y-sm': '4'
             },
             children: [
                 <p key='paragraph-1'>
@@ -39,21 +41,20 @@ export default function Home() {
 
     return (
         <GridLayout grid-enforce-rows='true'>
-            <h1
-                className='display-second trim-both'
+            <div
+                className='page-title'
                 grid-x='1/3'
                 grid-y='1a'
+                grid-y-sm='1a'
             >
-                Index
-            </h1>
+                <h1 className='uppercase trim-both'>
+                    Index
+                </h1>
 
-            <h2
-                className='display-prime trim-both'
-                grid-x='1/3'
-                grid-y='1a'
-            >
-            Hard Yards
-            </h2>
+                <h2 className='trim-both'>
+                Hard Yards
+                </h2>
+            </div>
 
             <Content blocks={blocks} />
         </GridLayout>

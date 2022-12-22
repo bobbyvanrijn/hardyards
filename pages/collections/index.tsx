@@ -61,13 +61,17 @@ export default function Plants() {
 
     return (
         <GridLayout>
-            <h1
-                className='display-second trim-both'
+            <div
+                className='page-title'
                 grid-x='1/3'
                 grid-y='1/2'
             >
-                Collections
-            </h1>
+                <h1
+                    className='uppercase trim-both'
+                >
+                    Collections
+                </h1>
+            </div>
 
             <Content blocks={categoryBlocks()} />
         </GridLayout>
