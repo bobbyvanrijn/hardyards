@@ -5,11 +5,11 @@
     letter-spacing: -.015em;
     overflow: hidden;
 
-    background: rgb(var(--black));
+    /*background: rgb(var(--black));
     color: rgb(var(--white));
     border-radius: var(--scale-10);
     padding: var(--scale-9) var(--scale-10);
-    font-weight: 300;
+    font-weight: 300;*/
 }
 
 .meta__container {
