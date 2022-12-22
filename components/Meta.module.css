@@ -4,6 +4,7 @@
     font-weight: 400;
     letter-spacing: -.015em;
     overflow-x: hidden;
+    overflow-y: visible;
 
     /*background: rgb(var(--black));
     color: rgb(var(--white));
