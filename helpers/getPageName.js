@@ -1,7 +1,16 @@
+import { plants } from 'content/plants';
+import { formatPlantName } from 'helpers/formatPlantName';
+
+function findPlantName(slug) {
+    const result = plants.find(plant => {
+        return plant.slug === slug;
+    });
+
+    return formatPlantName(result);
+}
+
 export default function getPageName(path) {
     let name = 'foo';
-
-    console.log(path, new RegExp('^/plants').test(path));
 
     switch (true) {
         case /^\/$/.test(path):
@@ -12,10 +21,20 @@ export default function getPageName(path) {
                 name = 'Plants'
                 break;
             }
-            name = 'Plant';
+
+            const match = path.match(/[^/]+(?=\/$|$)/);
+            const slug = match[0];
+
+            name = findPlantName(slug);
             break;
         case /^\/calendar/.test(path):
             name = 'Calendar'
+            break;
+        case /^\/collections/.test(path):
+            name = 'Collections'
+            break;
+        case /^\/playground/.test(path):
+            name = 'Demo'
             break;
     }
 

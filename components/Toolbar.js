@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { OverflowMenuHorizontal, Close } from '@carbon/icons-react';
 
 import styles from './Toolbar.module.css';
-import ShadowPan from 'components/ShadowPan.js';
 import getPageName from 'helpers/getPageName.js';
 import { motion } from 'framer-motion';
 
@@ -13,29 +12,35 @@ export default function Toolbar() {
 
     const { asPath } = useRouter();
 
-    // useEffect(() => {
-    //     setIsOpen(false);
-    // }, [asPath]);
+    useEffect(() => {
+        setIsOpen(false);
+    }, [asPath]);
 
-    const spring = {
-        type: "spring",
-        stiffness: 900,
-        damping: 60
-    };
+    const links = ['/', '/plants', '/calendar', '/collections', '/playground'];
 
     return (
-        <motion.div
+        <div
             className={styles.toolbar}
-            transition={spring}
             data-isopen={isOpen}
-            layout
         >
-            {/* <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--left']}`} /> */}
+            <motion.div
+                layout
+                className={`${styles.toolbar__cap}
+                ${styles['toolbar__cap--left']}`}
+            />
 
-            <motion.div layout className={styles.toolbar__wrapper}>
+            <motion.div
+                layout
+                className={styles.toolbar__wrapper}
+            >
                 <motion.div
-                    className={styles.toolbar__inner}
                     layout
+                    className={styles.toolbar__background}
+                />
+
+                <motion.div
+                    layout
+                    className={styles.toolbar__inner}
                 >
                     { !isOpen && 
                         <motion.a
@@ -50,7 +55,6 @@ export default function Toolbar() {
                             <motion.div
                                 layout
                                 className="trim-both--secondary"
-                                href={asPath}
                             >
                                 { getPageName(asPath) }
                             </motion.div>
@@ -64,50 +68,19 @@ export default function Toolbar() {
                         layout
                         className={styles.toolbar__menu}
                     >
-
-                        <ShadowPan>
-                            <motion.li layout >
+                        { links.map((link) =>
+                            <motion.li
+                                layout
+                                key={link}
+                            >
                                 <Link
                                     className="trim-both--secondary"
-                                    href='/'
+                                    href={link}
                                 >
-                                    Index
+                                    { getPageName(link) }
                                 </Link>
                             </motion.li>
-                            <motion.li layout >
-                                <Link
-                                    className="trim-both--secondary"
-                                    href='/plants'
-                                >
-                                    Plants
-                                </Link>
-                            </motion.li>
-                            <motion.li layout>
-                                <Link
-                                    className="trim-both--secondary"
-                                    href='/calendar'
-                                >
-                                    Calendar
-                                </Link>
-                            </motion.li>
-                            <motion.li layout>
-                                <Link
-                                    className="trim-both--secondary"
-                                    href='/collections'
-                                >
-                                    Collections
-                                </Link>
-                            </motion.li>
-
-                            <motion.li layout>
-                                <Link
-                                    className="trim-both--secondary"
-                                    href='/playground'
-                                >
-                                    Demo
-                                </Link>
-                            </motion.li>
-                        </ShadowPan>
+                        )}
 
                         <motion.a
                             layout
@@ -122,7 +95,7 @@ export default function Toolbar() {
                     }
                 </motion.div>
             </motion.div>
-            {/* <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} /> */}
-        </motion.div>
+            <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} />
+        </div>
     );
 }

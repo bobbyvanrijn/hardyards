@@ -72,12 +72,12 @@
 
     /* Responsive font-sizes: min, base, max */
     --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
-    --type-xl: clamp(var(--scale-3), 7vw, var(--scale-2));
-    --type-lg: clamp(var(--scale-4), 6vw, var(--scale-3));
-    --type-md: clamp(var(--scale-5), 5vw, var(--scale-4));
-    --type-sm: clamp(var(--scale-6), 3.5vw, var(--scale-5));
-    --type-xs: clamp(var(--scale-7), 3vw, var(--scale-6));
-    --type-xxs: clamp(var(--scale-8), 2.75vw, var(--scale-7));
+    --type-xl: clamp(var(--scale-3), 8vw, var(--scale-2));
+    --type-lg: clamp(var(--scale-4), 7vw, var(--scale-3));
+    --type-md: clamp(var(--scale-5), 6vw, var(--scale-4));
+    --type-sm: clamp(var(--scale-6), 5vw, var(--scale-5));
+    --type-xs: clamp(var(--scale-7), 4vw, var(--scale-6));
+    --type-xxs: clamp(var(--scale-8), 3vw, var(--scale-7));
     --type-xxxs: clamp(var(--scale-9), 2vw, var(--scale-8));
 
     --font-weight-normal: 300;

@@ -21,35 +21,45 @@
 }
 .toolbar__cap {
     display: block;
+    z-index: -1;
     content: '';
     height: auto;
     width: var(--scale-5);
-    background: rgb(var(--black) / .75);
+    background: rgb(var(--black));
     flex-shrink: 0;
 
     pointer-events: all;
 }
+
 .toolbar__cap--left {
     border-top-left-radius: var(--scale-2);
     border-bottom-left-radius: var(--scale-2);
-
-    margin-right: -.025em;
+    margin-right: calc(0px - var(--scale-5));
 }
 
 .toolbar__cap--right {
     border-top-right-radius: var(--scale-2);
     border-bottom-right-radius: var(--scale-2);
-
-    margin-left: -.025em;
+    margin-left: calc(0px - var(--scale-5));
 }
 
 .toolbar__wrapper {
-    overflow: hidden;
-    background: rgb(var(--black));
+    position: relative;
+
+    /* background: rgb(var(--black)); */
     color: rgb(var(--white));
-    border-radius: 9999px;
     pointer-events: all;
-    padding: .2em;
+}
+
+.toolbar__background {
+    position: absolute;
+    content: '';
+    z-index: -2;
+    top: 0;
+    left: var(--scale-5);
+    width: calc(100% - var(--scale-5) - var(--scale-5));
+    height: 100%;
+    background: rgb(var(--black));
 }
 
 .toolbar__inner {
@@ -59,7 +69,7 @@
 
 .toolbar a {
     display: inline-block;
-    padding: var(--scale-9) var(--scale-8);
+    padding: var(--scale-8);
 }
 
 .toolbar a:focus {
@@ -91,6 +101,7 @@ a.toolbar__button svg {
     margin: 0;
     padding: 0;
     white-space: nowrap;
+    max-width: calc(100vw - var(--scale-5) - var(--scale-5));
 
     overflow-x: scroll;
 
