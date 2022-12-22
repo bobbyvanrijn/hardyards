@@ -31,6 +31,8 @@ export default function App({ Component, pageProps }: AppProps) {
             <link rel="icon" href="/api/icon" />
             <link rel="apple-touch-icon" href="api/icon" />
             <link rel="apple-touch-startup-image" href="api/splash" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         </Head>
 
         <Transition>

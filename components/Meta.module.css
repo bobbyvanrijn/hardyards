@@ -36,8 +36,8 @@
 .meta__item:before {
     content: '';
     display: inline-block;
-    width: .3em;
-    height: .3em;
+    width: .25em;
+    height: .25em;
     background: currentColor;
     border-radius: 50%;
 }
