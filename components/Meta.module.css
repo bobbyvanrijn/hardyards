@@ -3,7 +3,7 @@
     font-size: var(--type-xs);
     font-weight: 400;
     letter-spacing: -.015em;
-    overflow: hidden;
+    overflow-x: hidden;
 
     /*background: rgb(var(--black));
     color: rgb(var(--white));
