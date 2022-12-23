@@ -26,14 +26,14 @@ const Transition = ({ children }) => {
 		<div className="effect-1">
             <AnimatePresence
                 initial={false}
-                exitBeforeEnter
+                mode='wait'
             >
                 <motion.div
                     key={asPath}
                     variants={!shouldReduceMotion ? variants : null}
-                    animate="in"
-                    initial="out"
-                    exit="out"
+                    animate='in'
+                    initial='out'
+                    exit='out'
                 >
                     {children}
                 </motion.div>

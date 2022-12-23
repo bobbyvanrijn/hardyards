@@ -34,13 +34,13 @@
 .toolbar__cap--left {
     border-top-left-radius: var(--scale-2);
     border-bottom-left-radius: var(--scale-2);
-    margin-right: calc(0px - var(--scale-5));
+    margin-right: calc(0px - var(--scale-5) - 1px);
 }
 
 .toolbar__cap--right {
     border-top-right-radius: var(--scale-2);
     border-bottom-right-radius: var(--scale-2);
-    margin-left: calc(0px - var(--scale-5));
+    margin-left: calc(0px - var(--scale-5) - 1px);
 }
 
 .toolbar__wrapper {
@@ -113,8 +113,18 @@ a.toolbar__button svg {
     display: none;  /* Safari and Chrome */
 }
 
-.toolbar__menu
 .toolbar__menu li {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+.toolbar__menu li {
+    flex: 0 0 0;
+    width: 0;
+}
+
+.toolbar__menu li[data-visible='true'] {
+    flex: 0 0 auto;
+    width: initial;
 }

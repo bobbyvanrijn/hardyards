@@ -24,13 +24,13 @@ export default function Toolbar() {
             data-isopen={isOpen}
         >
             <motion.div
-                layout
+                layout='position'
                 className={`${styles.toolbar__cap}
                 ${styles['toolbar__cap--left']}`}
             />
 
             <motion.div
-                layout
+                layout='size'
                 className={styles.toolbar__wrapper}
             >
                 <motion.div
@@ -42,60 +42,64 @@ export default function Toolbar() {
                     layout
                     className={styles.toolbar__inner}
                 >
-                    { !isOpen && 
-                        <motion.a
-                            layout
-                            tabIndex={0}
-                            className={styles.toolbar__button}
-                            onClick={() => setIsOpen(!isOpen)}
-                            onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
-                        >
-                            <div className='sr-only'>Open navigation</div>
-
-                            <motion.div
-                                layout
-                                className="trim-both--secondary"
-                            >
-                                { getPageName(asPath) }
-                            </motion.div>
-
-                            <OverflowMenuHorizontal size={24} />
-                        </motion.a>
-                    }
-
-                    { isOpen && 
                     <motion.menu
                         layout
                         className={styles.toolbar__menu}
                     >
+                        <motion.li
+                            layout='position'
+                            data-visible={ !isOpen && !links.includes(asPath) }
+                        >
+                            <motion.a
+                                layout='position'
+                                onClick={() => setIsOpen(!isOpen)}
+                                onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
+                                className="trim-both--secondary">
+                                { getPageName(asPath) }
+                            </motion.a>
+                        </motion.li>
                         { links.map((link) =>
                             <motion.li
                                 layout
                                 key={link}
+                                data-visible={ isOpen || (link === asPath === true) }
+                                layoutId={link === asPath ? 'active' : null}
                             >
-                                <Link
-                                    className="trim-both--secondary"
-                                    href={link}
-                                >
-                                    { getPageName(link) }
-                                </Link>
+                                <motion.div layout='position'>
+                                    <Link
+                                        className="trim-both--secondary"
+                                        href={link}
+                                        onClick={link === asPath ? () => setIsOpen(!isOpen) : null}
+                                        onKeyDown={link === asPath ?  (event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null : null}
+                                    >
+                                        { isOpen ? getPageName(link) : getPageName(asPath) }
+                                    </Link>
+                                </motion.div>
                             </motion.li>
                         )}
 
-                        <motion.a
-                            layout
-                            tabIndex={0}
-                            className={styles.toolbar__button}
-                            onClick={() => setIsOpen(!isOpen)}
-                            onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
+                        <motion.li
+                            layout='position'
+                            data-visible='true'
                         >
-                            <Close size={24} /> 
-                        </motion.a>
+                            <motion.a
+                                layout='position'
+                                tabIndex={0}
+                                className={styles.toolbar__button}
+                                onClick={() => setIsOpen(!isOpen)}
+                                onKeyDown={(event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null}
+                            >
+                                { isOpen ?
+                                    <Close size={24} /> :
+                                    <OverflowMenuHorizontal size={24} />
+                                } 
+                            </motion.a>
+                        </motion.li>
                     </motion.menu>
-                    }
                 </motion.div>
             </motion.div>
-            <motion.div layout className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} />
+
+            <motion.div layout='position' className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} />
         </div>
     );
 }
