@@ -62,6 +62,7 @@ export function Plant(props: any) {
                 'grid-y-sm': '1/2',
                 className: 'bleed-inline bleed-block',
                 src: `/images/${ props.pid }.webp`,
+                srcSmall: `/images/${ props.pid }-small.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
                 width: 800,
                 height: 800,

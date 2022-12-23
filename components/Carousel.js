@@ -20,9 +20,10 @@ export default function Carousel(props) {
             >
                 <Image
                     src={`/images/${ plant.slug }.webp`}
-                    width={480}
-                    height={640}
+                    blurDataURL={`/images/${ plant.slug }-small.webp`}
+                    fill
                     alt={ formatPlantName(plant) }
+                    placeholder='blur'
                 />
             </Link>
         );
