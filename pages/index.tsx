@@ -45,7 +45,7 @@ export default function Home() {
                 className='page-title'
                 grid-x='1/3'
                 grid-y='1a'
-                grid-y-sm='1a'
+                grid-y-sm='1b'
             >
                 <h1 className='uppercase trim-both'>
                     Index

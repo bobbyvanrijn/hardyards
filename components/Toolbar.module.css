@@ -69,7 +69,7 @@
 
 .toolbar a {
     display: inline-block;
-    padding: var(--scale-8);
+    padding: var(--scale-9);
 }
 
 .toolbar a:focus {
@@ -99,7 +99,7 @@ a.toolbar__button svg {
     position: relative;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 var(--scale-8);
     white-space: nowrap;
     max-width: calc(100vw - var(--scale-5) - var(--scale-5));
 

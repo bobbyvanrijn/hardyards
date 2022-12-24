@@ -1,6 +1,6 @@
 .carousel {
     display: flex;
-    gap: var(--scale-7);
+    gap: var(--scale-8);
 
     list-style: none;
     margin-block: 0;
@@ -37,6 +37,7 @@
 
 .carousel__item figure {
     position: relative;
+    z-index: 1;
     height: 100%;
     width: auto;
     aspect-ratio: 3/4;
