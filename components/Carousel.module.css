@@ -21,27 +21,35 @@
 
 .carousel__item {
     flex: 0 0 auto;
-    width: clamp(15rem, 40vw, 20rem);
+    height: 100%;
 
     position: relative;
     z-index: 1;
 
     display: block;
     overflow: hidden;
+    aspect-ratio: 3/4;
 }
 
 .carousel__item:first-child {
     margin-left: var(--scale-7);
 }
 
+.carousel__item figure {
+    position: relative;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 3/4;
+    border-radius: var(--scale-7);
+    overflow: hidden;
+}
+
 .carousel__item img {
     display: block;
     object-fit: cover;
     object-position: center center;
-    aspect-ratio: 3/4;
     width: 100%;
-    height: auto;
-    border-radius: var(--scale-7);
+    height: 100%;
 }
 
 .carousel__title {

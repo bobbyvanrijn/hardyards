@@ -51,7 +51,9 @@ const plants = [
         collections: [],
         body: [
             'This hardy and drought-tolerant perennial plant is an easy-to-care-for variety with lacy, silvery-grey foliage and bright yellow flowers that attract pollinators. It can be grown in borders, rock gardens, and containers, and prefers full sun and well-drained soil. It is hardy to zone 4 and can tolerate temperatures down to -34°C.'
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'LGFh,f${0TxC~MofNK-l0BjZ^vxr'
     },
 
     {
@@ -73,7 +75,9 @@ const plants = [
             'This perennial herbaceous plant is a popular choice for gardens and landscapes. It is native to Europe and grows in clumps up to 30 centimeters tall. The leaves are deeply divided into five to seven lobes, and they are covered in a soft, downy hair. The leaves are a bright, light green color.',
             'The flowers of this plant are small, star-shaped and yellow-green in color. They appear in clusters at the top of the stems and bloom from late spring to mid-summer. The flowers are followed by small, round, green seed-heads.',
             'This plant prefers moist, well-drained soil in full sun or partial shade. It is easy to maintain and will spread quickly to form a dense groundcover. It is also tolerant of drought and salt, making it an ideal choice for coastal areas.'
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L6An^-M#x@e@?;IDICy9.5RPt6Mz'
     },
 
     {
@@ -111,7 +115,9 @@ const plants = [
             }
         ],
         collections: [
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'LGA0^EsG4,NDR-kBt5ax9Wj:-txw'
     },
 
     {
@@ -155,6 +161,8 @@ const plants = [
                 value: 'May-August'
             },
         ],
+        'main-image': '',
+        blurhash: 'LJE{a;rJ9?Wn~qVa%3ozY3Mx,0SK'
     },
 
     {
@@ -191,7 +199,9 @@ const plants = [
             'It is a hardy plant, able to tolerate cold temperatures and requires minimal maintenance. It is drought tolerant and prefers full sun to partial shade. It blooms from mid-summer to early fall and attracts butterflies and other pollinators.',
             'This flower is easy to propagate, either by division or by seed. It can be grown in containers or in the ground, and is an excellent choice for rock gardens. It is a great addition to any garden, providing a striking contrast to other plants.'
         ],
-        collections: []
+        collections: [],
+        'main-image': '',
+        blurhash: 'L3ECU-rz9D0dqs~p9ENgw.9ERrEJ'
     },
 
     {
@@ -233,7 +243,9 @@ const plants = [
                 slug: 'propagators',
                 title: 'Propagators'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'LCCiQ]}[IotPIVEeELRk5jR*,]%1'
     },
 
     {
@@ -273,7 +285,9 @@ const plants = [
             'This aster is a great choice for adding texture and color to the garden. It is easy to grow and maintain, and it will spread slowly by self-seeding. It is a good choice for naturalizing in meadows and woodland edges, and it can also be used in perennial borders and as a cut flower.'
         ],
         collections: [
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L3ECU-rz9D0dqs~p9ENgw.9ERrEJ'
     },
     {
         slug: 'leucanthemum-vulgare',
@@ -314,7 +328,9 @@ const plants = [
                 slug: 'propagators',
                 title: 'Propagators'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L3ECU-rz9D0dqs~p9ENgw.9ERrEJ'
     },
 
     {
@@ -356,7 +372,9 @@ const plants = [
                 slug: 'propagators',
                 title: 'Propagators'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'LDCZ^8ae00x[I:WVe:oy00V]~qWB'
     },
     {
         slug: 'phlomis-russeliana',
@@ -397,7 +415,9 @@ const plants = [
                 slug: 'propagators',
                 title: 'Propagators'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L4F~Ag?*0kAovj=K0P%J02?XM|11'
     },
     {
         slug: 'eupatorium-maculatum',
@@ -434,7 +454,9 @@ const plants = [
                 slug: 'umbellifers',
                 title: 'Umbellifers'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L2EC8v051;@U0100G4~W0]+R}v~V'
     },
     {
         slug: 'angelica-gigas',
@@ -471,7 +493,9 @@ const plants = [
                 slug: 'umbellifers',
                 title: 'Umbellifers'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L67US600.7s.~X4nxvoM?I4o-;oc'
     },
     {
         slug: 'verbena-hastata',
@@ -508,7 +532,9 @@ const plants = [
                 slug: 'selfseeders',
                 title: 'Selfseeders'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L4GI.KD|5$DODI059%IDP=9btv0J'
     },
     {
         slug: 'verbena-bonariensis',
@@ -545,7 +571,9 @@ const plants = [
                 slug: 'selfseeders',
                 title: 'Selfseeders'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'LDEMdeo#Imi+?1%et6R*0JR7afR~'
     },
     {
         slug: 'foeniculum-vulgare',
@@ -582,7 +610,9 @@ const plants = [
                 slug: 'umbellifers',
                 title: 'Umbellifers'
             }
-        ]
+        ],
+        'main-image': '',
+        blurhash: 'L4A^{W8~04_KR5bYIXx=4YIBtQIX'
     },
 ];
 

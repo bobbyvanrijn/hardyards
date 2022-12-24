@@ -1,4 +1,5 @@
 import NextImage from 'next/image';
+import { BlurhashCanvas } from "react-blurhash";
 import styles from './Image.module.css';
 
 export default function Image(props) {
@@ -9,13 +10,22 @@ export default function Image(props) {
             grid-y={props['grid-y']}
             grid-y-sm={props['grid-y-sm']}
         >
+            { !!props.blurhash &&
+                <BlurhashCanvas
+                    className={styles.image__placeholder}
+                    hash={props.blurhash}
+                    punch={1}
+                    style={{
+                    }}
+                />
+            }
+
             <NextImage
                 className={styles.image}
                 src={props.src}
                 sizes={props.sizes}
                 fill
-                placeholder={props.srcSmall ? 'blur' : 'empty'}
-                blurDataURL={`${props.srcSmall}`}
+                placeholder='empty'
             />
         </figure>
     )

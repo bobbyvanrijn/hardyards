@@ -66,6 +66,7 @@ export function Plant(props: any) {
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
                 width: 800,
                 height: 800,
+                blurhash: props.plant?.blurhash
             }
         },
         {

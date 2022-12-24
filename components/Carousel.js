@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { BlurhashCanvas  } from 'react-blurhash';
 
 import styles from './Carousel.module.css';
 
@@ -18,13 +19,22 @@ export default function Carousel(props) {
                 href={`/plants/${plant.slug}`}
                 key={`plant-${plant.slug}`}
             >
-                <Image
-                    src={`/images/${ plant.slug }.webp`}
-                    blurDataURL={`/images/${ plant.slug }-small.webp`}
-                    fill
-                    alt={ formatPlantName(plant) }
-                    placeholder='blur'
-                />
+                <figure>
+                    { !!plant.blurhash &&
+                        <BlurhashCanvas
+                            className={styles.image__placeholder}
+                            hash={plant.blurhash}
+                            punch={1}
+                            style={{
+                            }}
+                        />
+                    }
+                    <Image
+                        src={`/images/${ plant.slug }.webp`}
+                        fill
+                        alt={ formatPlantName(plant) }
+                    />
+                </figure>
             </Link>
         );
     }
