@@ -23,6 +23,7 @@ export default function Image(props) {
             <NextImage
                 className={styles.image}
                 src={props.src}
+                alt=""
                 sizes={props.sizes}
                 fill
                 placeholder='empty'

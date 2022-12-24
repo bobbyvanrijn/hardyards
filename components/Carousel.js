@@ -22,7 +22,7 @@ export default function Carousel(props) {
                 <figure>
                     { !!plant.blurhash &&
                         <BlurhashCanvas
-                            className={styles.image__placeholder}
+                            className={styles.carousel__placeholder}
                             hash={plant.blurhash}
                             punch={1}
                             style={{
