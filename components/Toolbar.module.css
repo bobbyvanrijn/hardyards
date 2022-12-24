@@ -70,6 +70,7 @@
 .toolbar a {
     display: inline-block;
     padding: var(--scale-9);
+    background: rgb(var(--black));
 }
 
 .toolbar a:focus {
