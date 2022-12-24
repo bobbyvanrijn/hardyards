@@ -7,10 +7,9 @@ import { BlurhashCanvas  } from 'react-blurhash';
 import styles from './Carousel.module.css';
 
 import { formatPlantName } from 'helpers/formatPlantName';
-import { shuffle } from 'helpers/shuffle';
 
 export default function Carousel(props) {
-    const items = shuffle(props.items);
+    const items = props.items;
     function Items() {
 
         return items.map(plant =>
@@ -32,7 +31,7 @@ export default function Carousel(props) {
                     <Image
                         src={`/images/${ plant.slug }.webp`}
                         fill
-                        alt={ formatPlantName(plant) }
+                        alt=''
                     />
                 </figure>
             </Link>
