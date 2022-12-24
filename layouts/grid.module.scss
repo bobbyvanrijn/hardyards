@@ -27,6 +27,8 @@ GRID X+Y
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
+    grid-auto-rows: minmax(calc(var(--grid-unit) * 2), auto);
     gap: var(--grid-unit);
     
     line-height: var(--grid-unit);
@@ -53,6 +55,10 @@ $sub-rows:     1a, 1b, 2a, 2b, 3a, 3b, 4a, 4b;
 }
 
 @media screen and (min-width: 50rem) {
+    .grid {
+        grid-auto-rows: minmax(calc(var(--grid-unit) * 3), auto);
+    }
+
     .grid[grid-enforce-rows="true"] {
         grid-auto-rows: calc(var(--grid-unit) * 3);
     }
