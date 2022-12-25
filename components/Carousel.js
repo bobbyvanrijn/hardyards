@@ -32,6 +32,7 @@ export default function Carousel(props) {
                         src={`/images/${ plant.slug }.webp`}
                         fill
                         alt=''
+                        sizes='40w'
                     />
                 </figure>
             </Link>

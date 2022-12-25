@@ -6,9 +6,11 @@ import Content from '../components/Content';
 
 import styles from '../styles/Home.module.css';
 
-import { plants } from '../content/plants';
+import { getPlants } from '../content/plants';
 
 export default function Home() {
+    const plants = getPlants(8);
+
     const blocks = [
         {
             _uid: '1',
@@ -45,14 +47,14 @@ export default function Home() {
                 className='page-title'
                 grid-x='1/3'
                 grid-y='1a'
-                grid-y-sm='1b'
+                grid-y-sm='1a'
             >
                 <h1 className='uppercase trim-both'>
                     Index
                 </h1>
 
                 <h2 className='trim-both'>
-                Hard Yards
+                    Hard Yards
                 </h2>
             </div>
 

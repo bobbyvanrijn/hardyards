@@ -1,3 +1,5 @@
+import { shuffle } from 'lodash';
+
 const plants = [
     // TODO: Add `lifecycle` prop (annual, biennial, perennial)
     // TODO: Add plants ↓
@@ -616,4 +618,14 @@ const plants = [
     },
 ];
 
-export { plants };
+function getPlants(limit = 50, shuffleResults = false) {
+    let items = plants;
+
+    if (shuffleResults) {
+        items = shuffle(plants);
+    }
+
+    return items.slice(0, limit);
+}
+
+export { plants, getPlants };
