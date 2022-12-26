@@ -22,7 +22,7 @@ GRID X+Y
 @use "sass:list";
 
 .grid {
-    --grid-unit: var(--scale-4);
+    --grid-unit: var(--type-md);
     --leading-lineheight: var(--grid-unit);
 
     display: grid;
@@ -30,7 +30,7 @@ GRID X+Y
 
     grid-auto-rows: minmax(calc(var(--grid-unit) * 2), auto);
     gap: var(--grid-unit);
-    
+
     line-height: var(--grid-unit);
     padding: var(--type-xxs);
 

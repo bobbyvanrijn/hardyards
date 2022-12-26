@@ -58,6 +58,7 @@ export function Plant(props: any) {
             component: 'image',
             attributes: {
                 'grid-x': '1/3',
+                'grid-x-sm': '1/3',
                 'grid-y': '2/3',
                 'grid-y-sm': '1/2',
                 className: 'bleed-inline bleed-block',
