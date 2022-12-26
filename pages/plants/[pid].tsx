@@ -76,7 +76,7 @@ export function Plant(props: any) {
             attributes: {
                 'grid-x': '1/2',
                 'grid-y': '1/2',
-                'grid-y-sm': '3'
+                'grid-y-sm': '3/4a'
             },
             children: [
                 <h1 className='trim-both' key={1}>
@@ -95,7 +95,8 @@ export function Plant(props: any) {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
             component: 'meta',
             attributes: {
-                'grid-x': '1',
+                'grid-x': '2/3',
+                'grid-y': '1a',
                 items: props.plant.meta.map(
                     (meta: { label: any; value: any; }) => {
                         return {

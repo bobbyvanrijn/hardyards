@@ -27,6 +27,9 @@ export default function Toolbar() {
                 layout='position'
                 className={`${styles.toolbar__cap}
                 ${styles['toolbar__cap--left']}`}
+                transition={{
+                    layout: { ease: 'linear', duration: 0.25 }
+                }}
             />
 
             <motion.div
@@ -36,6 +39,9 @@ export default function Toolbar() {
                 <motion.div
                     layout
                     className={styles.toolbar__background}
+                    transition={{
+                        layout: { ease: 'linear', duration: 0.25 }
+                    }}
                 />
 
                 <motion.div
@@ -47,15 +53,14 @@ export default function Toolbar() {
                         className={styles.toolbar__menu}
                     >
                         <motion.a
-                                layout='position'
-                                tabIndex={0}
-                                className={styles.toolbar__button}
-                                onClick={() => router.back()}
-                                onKeyDown={(event) => event.key === 'Enter' ? () => router.back() : null}
-                            >
-                                <Undo size={24} />
-                            </motion.a>
-                        <a ></a>
+                            layout='position'
+                            tabIndex={0}
+                            className={styles.toolbar__button}
+                            onClick={() => router.back()}
+                            onKeyDown={(event) => event.key === 'Enter' ? () => router.back() : null}
+                        >
+                            <Undo size={24} />
+                        </motion.a>
                         <motion.li
                             layout='position'
                             data-visible={ !isOpen && !links.includes(router.asPath) }
@@ -109,7 +114,13 @@ export default function Toolbar() {
                 </motion.div>
             </motion.div>
 
-            <motion.div layout='position' className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`} />
+            <motion.div
+                layout='position'
+                className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`}
+                transition={{
+                    layout: { ease: 'linear', duration: 0.25 }
+                }}
+                />
         </div>
     );
 }

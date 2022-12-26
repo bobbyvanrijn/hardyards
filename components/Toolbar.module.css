@@ -14,9 +14,6 @@
     justify-content: center;
 
     font-weight: 280;
-    text-transform: uppercase;
-    letter-spacing: .025em;
-
     pointer-events: none;
 }
 .toolbar__cap {
@@ -60,6 +57,7 @@
     width: calc(100% - var(--scale-5) - var(--scale-5));
     height: 100%;
     background: rgb(var(--black));
+    transform: translateZ(0);
 }
 
 .toolbar__inner {

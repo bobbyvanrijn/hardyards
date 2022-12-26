@@ -57,7 +57,7 @@ export default function Plants() {
             <div
                 className='page-title'
                 grid-x='1/3'
-                grid-y='1/2'
+                grid-y='1a'
             >
                 <h1
                     className='uppercase trim-both'
