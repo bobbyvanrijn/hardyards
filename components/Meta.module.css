@@ -1,7 +1,7 @@
 .meta {
     font-family: var(--font-inter);
-    font-size: var(--type-xs);
-    font-weight: 400;
+    font-size: var(--scale-5);
+    font-weight: 320;
     letter-spacing: -.015em;
     overflow-x: hidden;
     overflow-y: visible;
@@ -16,10 +16,10 @@
 .meta__container {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--scale-9);
+    gap: var(--scale-10);
     padding: .075em .075em .25em;
 
-    margin-left: calc(0px - (.3em + var(--scale-9)));
+    margin-left: calc(0px - (.3em + var(--scale-10)));
 }
 
 .meta__item {
@@ -27,7 +27,7 @@
     line-height: var(--type-xxs);
     display: flex;
     align-items: center;
-    gap: var(--scale-9);
+    gap: var(--scale-10);
     white-space: nowrap;
 }
 
@@ -38,8 +38,8 @@
 .meta__item:before {
     content: '';
     display: inline-block;
-    width: .2em;
-    height: .2em;
+    width: .2rem;
+    height: .2rem;
     background: currentColor;
     border-radius: 50%;
     margin-bottom: -.1em;

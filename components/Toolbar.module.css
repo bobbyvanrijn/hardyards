@@ -7,7 +7,7 @@
     position: fixed;
     z-index: 99;
     bottom: var(--scale-5);
-    padding-inline: var(--scale-5);
+    padding-inline: var(--scale-7);
     left: 0;
     right: 0;
     display: flex;
@@ -67,7 +67,7 @@
 
 .toolbar a {
     display: inline-block;
-    padding: var(--scale-7) var(--scale-10);
+    padding: var(--scale-8) var(--scale-10);
 }
 
 .toolbar a:focus {
