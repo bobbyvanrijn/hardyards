@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { OverflowMenuHorizontal, Close, Undo } from '@carbon/icons-react';
+
+import ShadowPan from './ShadowPan';
 
 import styles from './Toolbar.module.css';
 import getPageName from 'helpers/getPageName.js';
 import { motion } from 'framer-motion';
 
 export default function Toolbar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const router = useRouter();
 
-    useEffect(() => {
-        setIsOpen(false);
-    }, [router.asPath]);
+    // useEffect(() => {
+    //     setIsOpen(false);
+    // }, [router.asPath]);
 
     const links = ['/', '/plants', '/calendar', '/collections', '/playground'];
 
@@ -24,26 +25,9 @@ export default function Toolbar() {
             data-isopen={isOpen}
         >
             <motion.div
-                layout='position'
-                className={`${styles.toolbar__cap}
-                ${styles['toolbar__cap--left']}`}
-                transition={{
-                    layout: { ease: 'linear', duration: 0.25 }
-                }}
-            />
-
-            <motion.div
                 layout='size'
                 className={styles.toolbar__wrapper}
             >
-                <motion.div
-                    layout
-                    className={styles.toolbar__background}
-                    transition={{
-                        layout: { ease: 'linear', duration: 0.25 }
-                    }}
-                />
-
                 <motion.div
                     layout
                     className={styles.toolbar__inner}
@@ -52,7 +36,7 @@ export default function Toolbar() {
                         layout
                         className={styles.toolbar__menu}
                     >
-                        <motion.a
+                        {/* <motion.a
                             layout='position'
                             tabIndex={0}
                             className={styles.toolbar__button}
@@ -60,7 +44,8 @@ export default function Toolbar() {
                             onKeyDown={(event) => event.key === 'Enter' ? () => router.back() : null}
                         >
                             <Undo size={24} />
-                        </motion.a>
+                        </motion.a> */}
+
                         <motion.li
                             layout='position'
                             data-visible={ !isOpen && !links.includes(router.asPath) }
@@ -73,6 +58,7 @@ export default function Toolbar() {
                                 { getPageName(router.asPath) }
                             </motion.a>
                         </motion.li>
+                        <ShadowPan>
                         { links.map((link) =>
                             <motion.li
                                 layout
@@ -82,17 +68,16 @@ export default function Toolbar() {
                             >
                                 <motion.div layout='position'>
                                     <Link
-                                        className="trim-both--secondary"
+                                        className={`${styles.toolbar__link}  trim-both--secondary`}
                                         href={link}
-                                        onClick={link === router.asPath ? () => setIsOpen(!isOpen) : null}
-                                        onKeyDown={link === router.asPath ?  (event) => event.key === 'Enter' ? setIsOpen(!isOpen) : null : null}
                                     >
                                         { isOpen ? getPageName(link) : getPageName(router.asPath) }
                                     </Link>
                                 </motion.div>
                             </motion.li>
                         )}
-
+                        </ShadowPan>
+{/* 
                         <motion.li
                             layout='position'
                             data-visible='true'
@@ -109,18 +94,10 @@ export default function Toolbar() {
                                     <OverflowMenuHorizontal size={24} />
                                 } 
                             </motion.a>
-                        </motion.li>
+                        </motion.li> */}
                     </motion.menu>
                 </motion.div>
             </motion.div>
-
-            <motion.div
-                layout='position'
-                className={`${styles.toolbar__cap} ${styles['toolbar__cap--right']}`}
-                transition={{
-                    layout: { ease: 'linear', duration: 0.25 }
-                }}
-                />
         </div>
     );
 }

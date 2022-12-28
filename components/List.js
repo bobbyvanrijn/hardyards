@@ -13,13 +13,12 @@ export default function List(props) {
         };
 
         return (
-            <li className={styles.list__item}>
+            <li className={styles.list__item} key={item.title}>
                 {/* If item is link: */}
                 { item.link &&
                     <Link
                         className={styles.list__itemWrapper}
                         href={item.link}
-                        prefetch={true}
                     >
                         <div className={`${styles.list__itemTitle} trim-both`}>
                             {item.title}
@@ -46,7 +45,7 @@ export default function List(props) {
         <ul className={styles.list} {...props}>
             { props.items.map((item, index) =>
                 <ListItem
-                    key={index}
+                    key={`item-${item.title.slice(0,5)}-${index}`}
                     item={item}
                 />
             ) }

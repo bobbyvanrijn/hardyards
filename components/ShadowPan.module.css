@@ -11,5 +11,6 @@
     background: rgba(var(--white));
     border-radius: var(--scale-4);
     mix-blend-mode: difference;
-    height: 100%;
+    height: calc(100% - var(--scale-10));
+    pointer-events: none;
 }

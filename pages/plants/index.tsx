@@ -16,41 +16,38 @@ function filterByFirstLetter(target: any, query: string) {
 const categories = ['A-F', 'G-L', 'M-R', 'S-Z'];
 
 export default function Plants() {
-    const categoryBlocks = () => {
-        const blocks: { _uid: number; component: string; attributes: { 'grid-x': string; items?: any; headingLevel?: number;}; children?: JSX.Element[]; }[] = [];
-        categories.map((category, index) => {
-            blocks.push(
-                {
-                    _uid: index,
-                    component: 'title',
-                    attributes: {
-                        'grid-x': '1',
-                        headingLevel: 2
-                    },
-                    children: [
-                        <>{category}</>
-                    ]
+    const blocks: { _uid: string; component: string; attributes: { 'grid-x': string; items?: any; headingLevel?: number;}; children?: JSX.Element[]; }[] = [];
+
+    categories.map((category, index) => {
+        blocks.push(
+            {
+                _uid: `title-${category}`,
+                component: 'text',
+                attributes: {
+                    'grid-x': '1',
                 },
-                {
-                    _uid: index * 1000,
-                    component: 'list',
-                    attributes: {
-                        'grid-x': '2/3',
-                        items: filterByFirstLetter(getPlants(), `^[${category}]`)
-                        .map(
-                            (plant: any) => {
-                                return {
-                                    title: formatPlantName(plant),
-                                    link: `/plants/${plant.slug}`
-                                }
+                children: [
+                    <h2 key={`heading-${category}`}>{category}</h2>
+                ]
+            },
+            {
+                _uid: `list-${category}`,
+                component: 'list',
+                attributes: {
+                    'grid-x': '2/3',
+                    items: filterByFirstLetter(getPlants(), `^[${category}]`)
+                    .map(
+                        (plant: any) => {
+                            return {
+                                title: formatPlantName(plant),
+                                link: `/plants/${plant.slug}`
                             }
-                        )
-                    }
+                        }
+                    )
                 }
-            )
-        });
-        return blocks;
-    }
+            }
+        )
+    });
 
     return (
         <GridLayout>
@@ -59,14 +56,12 @@ export default function Plants() {
                 grid-x='1/3'
                 grid-y='1a'
             >
-                <h1
-                    className='uppercase trim-both'
-                >
+                <h1 className='uppercase trim-both'>
                     Plants
                 </h1>
             </div>
 
-            <Content blocks={categoryBlocks()} />
+            <Content blocks={blocks} />
         </GridLayout>
     )
 }

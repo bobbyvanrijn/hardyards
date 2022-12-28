@@ -1,6 +1,6 @@
 .toolbar {
     font-family: var(--font-inter);
-    font-size: var(--scale-6);
+    font-size: var(--scale-7);
     line-height: var(--scale-6);
     --leading-lineheight: var(--scale-6);
 
@@ -13,9 +13,10 @@
     display: flex;
     justify-content: center;
 
-    font-weight: 280;
+    font-weight: 350;
     pointer-events: none;
 }
+
 .toolbar__cap {
     display: block;
     z-index: -1;
@@ -43,7 +44,6 @@
 .toolbar__wrapper {
     position: relative;
 
-    /* background: rgb(var(--black)); */
     color: rgb(var(--white));
     pointer-events: all;
 }
@@ -63,11 +63,14 @@
 .toolbar__inner {
     display: flex;
     align-items: center;
+    background: rgb(var(--black) / var(--alpha-5));
+    backdrop-filter: blur(5px);
+    border-radius: var(--scale-4);
 }
 
-.toolbar a {
+.toolbar__link {
     display: inline-block;
-    padding: var(--scale-8) var(--scale-10);
+    padding: var(--scale-10);
 }
 
 .toolbar a:focus {
@@ -78,33 +81,19 @@
     text-decoration: underline;
 }
 
-a.toolbar__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--type-xxs);
-    height: 100%;
-    cursor: pointer;
-}
-
-a.toolbar__button svg {
-    opacity: .5;
-    height: 1em;
-}
-
 .toolbar__menu {
     display: flex;
     position: relative;
     list-style: none;
     margin: 0;
-    padding: 0 var(--scale-8);
+    padding: calc(var(--scale-10) / 2);
     white-space: nowrap;
     max-width: calc(100vw - var(--scale-5) - var(--scale-5));
 
     overflow-x: scroll;
 
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  
+    scrollbar-width: none; 
 }
 
 .toolbar__menu::-webkit-scrollbar { 

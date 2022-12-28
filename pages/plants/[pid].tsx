@@ -79,13 +79,13 @@ export function Plant(props: any) {
                 'grid-y-sm': '3/4a'
             },
             children: [
-                <h1 className='trim-both' key={1}>
+                <h1 className='trim-both' key={`${props.plant.slug}--title`}>
                     <span className='uppercase'>
                         {formatPlantName(props.plant)}.&nbsp;
                     </span>
                     <span>{props.plant.common}.</span>
                 </h1>,
-                <p key={2} className='lead trim-both'>{props.plant.description}</p>
+                <p key={`${props.plant.slug}--description`} className='lead trim-both'>{props.plant.description}</p>
             ]
         },
         {
