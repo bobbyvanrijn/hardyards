@@ -608,7 +608,6 @@ const plants = [
 
 const grasses = [
     // *Grasses:*
-    // • Nasella tenuissima (cat: SELFSEEDERS)
     // • Deschampsia cespitosa
     // • Pennisetum (choose cultivar)
     // • Sporobolus heterolepis
@@ -640,12 +639,42 @@ const grasses = [
         collections: [],
         body: [],
         'main-image': '',
-        blurhash: 'LGFh,f${0TxC~MofNK-l0BjZ^vxr'
+        blurhash: 'LCA^m?NEM|j^?dahITV[noRjobWA'
     },
+    {
+        slug: 'deschampsia-cespitosa',
+        genus: 'Deschampsia',
+        species: 'cespistosa',
+        cultivar: '\‘Goldtau\’',
+        common: 'Tufted hairgrass',
+        description: 'Emergent tufts. Relatively inconspicuous foliage.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '40 cm'
+            },
+            {
+                label: 'Height',
+                value: '150 cm'
+            },
+            {
+                label: 'Foliage',
+                value: 'Gold'
+            },
+            {
+                label: 'Seasons',
+                value: '5-8'
+            }
+        ],
+        collections: [],
+        body: [],
+        'main-image': '',
+        blurhash: 'LCCjI0-;XAoz~D-;ohxb07x]-:xu'
+    }
 ]
 
 function getPlants(limit = 50, filter, sortBy = 'slug') {
-    let items = plants;
+    let items = [ ...plants, ...grasses ];
 
     items.sort((a, b) => {
         if (a[sortBy] < b[sortBy]) {

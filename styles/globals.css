@@ -200,39 +200,95 @@ figcaption {
 }
 
 /* Utilities */
-.bleed-top,
-*[bleed='top'] {
+.bleed-top{
     margin-top: calc(0rem - var(--type-xxxs));
 }
 
-.bleed-right,
-*[bleed='right'] {
+.bleed-right {
     margin-right: calc(0rem - var(--type-xxxs));
     width: calc(100% + var(--type-xxs));
 }
 
-.bleed-bottom,
-*[bleed='bottom'] {
+.bleed-bottom {
     margin-bottom: calc(0rem - var(--type-xxxs));
 }
 
-.bleed-left,
-*[bleed='left'] {
+.bleed-left {
     margin-left: calc(0rem - var(--type-xxxs));
-    width: calc(100% + var(--type-xxs));
+    width: calc(100% + var(--type-xxxs));
 }
 
-.bleed-inline,
-*[bleed='inline'] {
+.bleed-inline {
     margin-left: calc(0rem - var(--type-xxxs));
     margin-right: calc(0rem - var(--type-xxxs));
     width: calc(100% + var(--type-xxxs) + var(--type-xxxs));
 }
 
-.bleed-block,
-*[bleed='block'] {
+.bleed-block {
     margin-top: calc(0rem - var(--type-xxxs));
     margin-bottom: calc(0rem - var(--type-xxxs));
+}
+
+@media (max-width: calc(50rem - 1px)) {
+    .bleed-top-sm {
+        margin-top: calc(0rem - var(--type-xxxs));
+    }
+
+    .bleed-right-sm {
+        margin-right: calc(0rem - var(--type-xxxs));
+        width: calc(100% + var(--type-xxs));
+    }
+
+    .bleed-bottom-sm {
+        margin-bottom: calc(0rem - var(--type-xxxs));
+    }
+
+    .bleed-left-sm {
+        margin-left: calc(0rem - var(--type-xxxs));
+        width: calc(100% + var(--type-xxxs));
+    }
+
+    .bleed-inline-sm {
+        margin-left: calc(0rem - var(--type-xxxs));
+        margin-right: calc(0rem - var(--type-xxxs));
+        width: calc(100% + var(--type-xxxs) + var(--type-xxxs));
+    }
+
+    .bleed-block-sm {
+        margin-top: calc(0rem - var(--type-xxxs));
+        margin-bottom: calc(0rem - var(--type-xxxs));
+    }
+}
+
+@media (min-width: 50rem) {
+    .bleed-top-lg {
+        margin-top: calc(0rem - var(--type-xxxs));
+    }
+
+    .bleed-right-lg {
+        margin-right: calc(0rem - var(--type-xxxs));
+        width: calc(100% + var(--type-xxxs));
+    }
+
+    .bleed-bottom-lg {
+        margin-bottom: calc(0rem - var(--type-xxxs));
+    }
+
+    .bleed-left-lg {
+        margin-left: calc(0rem - var(--type-xxxs));
+        width: calc(100% + var(--type-xxs));
+    }
+
+    .bleed-inline-lg {
+        margin-left: calc(0rem - var(--type-xxxs));
+        margin-right: calc(0rem - var(--type-xxxs));
+        width: calc(100% + var(--type-xxxs) + var(--type-xxxs));
+    }
+
+    .bleed-block-lg {
+        margin-top: calc(0rem - var(--type-xxxs));
+        margin-bottom: calc(0rem - var(--type-xxxs));
+    }
 }
 
 /*

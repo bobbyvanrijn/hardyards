@@ -7,7 +7,7 @@ import GridLayout from 'layouts/grid';
 import Content from 'components/Content';
 
 import { formatPlantName } from 'helpers/formatPlantName';
-import { plants } from 'content/plants';
+import { getPlants } from 'content/plants';
 
 const fetcher = async (url: string) => {
     const res = await fetch(url)
@@ -23,6 +23,8 @@ const fetcher = async (url: string) => {
 type Data = {};
 
 export async function getStaticPaths() {
+    const plants = getPlants();
+
     return {
         paths: plants.map((plant => { 
             return {
@@ -34,6 +36,8 @@ export async function getStaticPaths() {
 }
 
 async function getPlantFromApi(slug: any) {
+    const plants = getPlants();
+
     const plant = plants.find((plant: any) => plant.slug === slug) || null;
     return plant;
 }
@@ -61,7 +65,7 @@ export function Plant(props: any) {
                 'grid-x-sm': '1/3',
                 'grid-y': '1/3',
                 'grid-y-sm': '1/2',
-                className: 'bleed-inline bleed-block',
+                className: 'bleed-top-lg bleed-right-lg bleed-inline-sm bleed-block-sm',
                 src: `/images/${ props.pid }.webp`,
                 srcSmall: `/images/${ props.pid }-small.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
@@ -74,7 +78,7 @@ export function Plant(props: any) {
             _uid: '4397c42f-f205-49cb-a875-1cac86f512cb',
             component: 'text',
             attributes: {
-                'grid-x': '1',
+                'grid-x': '1a/2a',
                 'grid-y': '1',
                 'grid-y-sm': '3/4a'
             },

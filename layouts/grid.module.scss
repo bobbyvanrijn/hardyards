@@ -29,7 +29,7 @@ GRID X+Y
     grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr;
 
     grid-auto-rows: minmax(calc(var(--grid-unit) * 2), auto);
-    gap: var(--grid-unit);
+    gap: var(--grid-unit) var(--type-xxxs);
 
     line-height: var(--grid-unit);
     padding: var(--type-xxxs);
