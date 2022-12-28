@@ -1,8 +1,8 @@
 .toolbar {
     font-family: var(--font-inter);
     font-size: var(--scale-7);
-    line-height: var(--scale-6);
-    --leading-lineheight: var(--scale-6);
+    line-height: var(--scale-7);
+    --leading-lineheight: var(--scale-7);
 
     position: fixed;
     z-index: 99;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
 
-    font-weight: 350;
+    font-weight: 375;
     pointer-events: none;
 }
 
@@ -63,7 +63,7 @@
 .toolbar__inner {
     display: flex;
     align-items: center;
-    background: rgb(var(--black) / var(--alpha-5));
+    background: rgb(0 0 0 / .65);
     backdrop-filter: blur(5px);
     border-radius: var(--scale-4);
 }
