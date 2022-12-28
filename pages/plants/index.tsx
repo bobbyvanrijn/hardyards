@@ -1,5 +1,5 @@
 import Content from 'components/Content';
-import { plants } from 'content/plants';
+import { getPlants } from 'content/plants';
 import GridLayout from 'layouts/grid';
 import { formatPlantName } from 'helpers/formatPlantName';
 
@@ -36,7 +36,7 @@ export default function Plants() {
                     component: 'list',
                     attributes: {
                         'grid-x': '2/3',
-                        items: filterByFirstLetter(plants, `^[${category}]`)
+                        items: filterByFirstLetter(getPlants(), `^[${category}]`)
                         .map(
                             (plant: any) => {
                                 return {

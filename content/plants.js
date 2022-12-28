@@ -3,24 +3,12 @@ import { shuffle } from 'lodash';
 const plants = [
     // TODO: Add `lifecycle` prop (annual, biennial, perennial)
     // TODO: Add plants ↓
-    // - Phlomis russeliana (cat: PROPAGATORS, SKELETALS)
-    // - Eupatorium maculatum 'riegenschirm' (cat: UMBELLIFERS)
-    // - Angelica gigas (annual, cat: UMBELLIFERS), picture credit: Paul van de Velde
-    // - 
-    // - Verbena bonariensis (cat: SELFSEEDERS)
-    // - Verbena hastata (cat: SELFSEEDER)
     // - Agastache 'black adder' / 'blue fortune'
     // - Veronica(strum)
     // - Nepeta faassenii 'Walker's Low' (cat: LUMPY GUYS)
     // - Rudbeckia (cat: PROPAGATORS, SKELETALS)
     // - Actaea 'Chocoholic'
     // - Gaura lindheimerii 'Whirling butterflies' (biennial, cat: FILLERS)
-    // 
-    // *Grasses:*
-    // • Nasella tenuissima (cat: SELFSEEDERS)
-    // • Deschampsia cespitosa
-    // • Pennisetum (choose cultivar)
-    // • Sporobolus heterolepis
     {
         slug: 'achillea-moonshine',
         genus: 'Achillea',
@@ -618,12 +606,58 @@ const plants = [
     },
 ];
 
-function getPlants(limit = 50, shuffleResults = false) {
+const grasses = [
+    // *Grasses:*
+    // • Nasella tenuissima (cat: SELFSEEDERS)
+    // • Deschampsia cespitosa
+    // • Pennisetum (choose cultivar)
+    // • Sporobolus heterolepis
+    {
+        slug: 'nasella-tenuissima',
+        genus: 'Nasella',
+        species: 'tenuissima',
+        cultivar: '\‘Pony tails\’',
+        common: 'Mexican feathergrass',
+        description: 'Whispy tufts. Vigorous selfseeder.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '60-90 cm'
+            },
+            {
+                label: 'Height',
+                value: '50-80 cm'
+            },
+            {
+                label: 'Foliage',
+                value: 'Green-Gold'
+            },
+            {
+                label: 'Seasons',
+                value: '5-8'
+            }
+        ],
+        collections: [],
+        body: [],
+        'main-image': '',
+        blurhash: 'LGFh,f${0TxC~MofNK-l0BjZ^vxr'
+    },
+]
+
+function getPlants(limit = 50, filter, sortBy = 'slug') {
     let items = plants;
 
-    if (shuffleResults) {
-        items = shuffle(plants);
-    }
+    items.sort((a, b) => {
+        if (a[sortBy] < b[sortBy]) {
+            return -1;
+        }
+
+        if (a[sortBy] > b[sortBy]) {
+            return 1;
+        }
+
+        return 0;
+    });
 
     return items.slice(0, limit);
 }

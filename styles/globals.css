@@ -59,7 +59,7 @@
     --scale-10: 0.317rem;
 
     /* Scale, major second */
-    /* --scale-1: 1.802rem;
+    --scale-1: 1.802rem;
     --scale-2: 1.602rem;
     --scale-3: 1.424rem;
     --scale-4: 1.266rem;
@@ -68,7 +68,19 @@
     --scale-7: 0.889rem;
     --scale-8: 0.79rem;
     --scale-9: 0.702rem;
-    --scale-10: 0.624rem; */
+    --scale-10: 0.624rem;
+
+    /* Scale, minor third */
+    --scale-1: 2.488rem;
+    --scale-2: 2.074rem;
+    --scale-3: 1.728rem;
+    --scale-4: 1.44rem;
+    --scale-5: 1.2rem;
+    --scale-6: 1rem;
+    --scale-7: 0.833rem;
+    --scale-8: 0.694rem;
+    --scale-9: 0.579rem;
+    --scale-10: 0.482rem;
 
     /* Responsive font-sizes: min, base, max */
     --type-xxl: clamp(var(--scale-2), 9vw, var(--scale-1));
@@ -128,10 +140,10 @@ a {
 }
 
 h1, h2, h3, h4, h5, .lead {
-    --leading-lineheight: var(--type-md);
-    font-size: var(--type-md);
+    --leading-lineheight: var(--type-lg);
+    font-size: var(--type-lg);
     margin-top: 0;
-    margin-bottom: var(--type-md);
+    margin-bottom: var(--type-lg);
 
     font-weight: var(--font-weight-normal);
 }
@@ -144,8 +156,8 @@ h1, h2, h3, h4, h5, .lead {
 .page-title h1,
 .page-title h2,
 .page-title h3 {
-    font-size: var(--type-lg);
-    line-height: var(--type-lg);
+    font-size: var(--type-xl);
+    line-height: var(--type-xl);
     margin: 0;
     letter-spacing: -.025em;
 }
@@ -172,8 +184,8 @@ figcaption {
 
 .body-text p {
     text-indent: 3ch;
-    --leading-lineheight: var(--scale-5);
-    line-height: var(--scale-5);
+    --leading-lineheight: var(--scale-4);
+    line-height: var(--scale-4);
 
     margin-bottom: var(--scale-4);
 }

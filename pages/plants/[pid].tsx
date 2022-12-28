@@ -57,9 +57,9 @@ export function Plant(props: any) {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
             component: 'image',
             attributes: {
-                'grid-x': '1/3',
+                'grid-x': '2b/3b',
                 'grid-x-sm': '1/3',
-                'grid-y': '2/3',
+                'grid-y': '1/3',
                 'grid-y-sm': '1/2',
                 className: 'bleed-inline bleed-block',
                 src: `/images/${ props.pid }.webp`,
@@ -74,8 +74,8 @@ export function Plant(props: any) {
             _uid: '4397c42f-f205-49cb-a875-1cac86f512cb',
             component: 'text',
             attributes: {
-                'grid-x': '1/2',
-                'grid-y': '1/2',
+                'grid-x': '1',
+                'grid-y': '1',
                 'grid-y-sm': '3/4a'
             },
             children: [
@@ -87,16 +87,12 @@ export function Plant(props: any) {
                 </h1>,
                 <p key={2} className='lead trim-both'>{props.plant.description}</p>
             ]
-        }
-    ];
-
-    const textImage = [
+        },
         {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
             component: 'meta',
             attributes: {
-                'grid-x': '2/3',
-                'grid-y': '1a',
+                'grid-x': '1',
                 items: props.plant.meta.map(
                     (meta: { label: any; value: any; }) => {
                         return {
@@ -108,21 +104,10 @@ export function Plant(props: any) {
             }
         },
         {
-            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
-            component: 'text',
-            attributes: {
-                'grid-x': '2/3',
-                className: 'body-text'
-            },
-            children: props.plant.body?.map(
-                (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
-            )
-        },
-        {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27514',
             component: 'list',
             attributes: {
-                'grid-x': '2/3',
+                'grid-x': '1',
                 items: props.plant.collections?.map(
                     (collection: any) => {
                         return {
@@ -132,6 +117,17 @@ export function Plant(props: any) {
                     }
                 )
             }
+        },
+        {
+            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
+            component: 'text',
+            attributes: {
+                'grid-x': '1/2',
+                className: 'body-text'
+            },
+            children: props.plant.body?.map(
+                (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
+            )
         }
 
     ]
@@ -147,10 +143,6 @@ export function Plant(props: any) {
 
             <GridLayout grid-enforce-rows='true'>
                 <Content blocks={hero} />
-            </GridLayout>
-
-            <GridLayout>
-                <Content blocks={textImage} />
             </GridLayout>
         </>
     );
