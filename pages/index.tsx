@@ -1,15 +1,18 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 import GridLayout from '../layouts/grid';
 import Content from '../components/Content';
 
-import styles from '../styles/Home.module.css';
-
 import { getPlants } from '../content/plants';
 
-export default function Home() {
-    const plants = getPlants(8);
+export function getStaticProps() {
+    return {
+        props: {
+            plants: getPlants(8)
+        }
+    }
+}
+
+export default function Home(props: any) {
+    const plants = props.plants;
 
     const blocks = [
         {

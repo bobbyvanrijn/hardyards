@@ -4,7 +4,7 @@ import 'styles/transitions.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Toolbar } from 'components';
+import { Toolbar, Footer } from 'components';
 import Transition from 'components/Transition';
 
 import localFont from '@next/font/local';
@@ -39,6 +39,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <Transition>
             <Component {...pageProps} />
+
+            <Footer />
         </Transition>
 
         <Toolbar />

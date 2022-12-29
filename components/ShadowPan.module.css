@@ -1,6 +1,7 @@
 .shadow-pan {
     position: relative;
-    z-index: 2;
+    z-index: 10;
+    transform: translateZ(0);
 }
 
 .shadow-pan__panner {
@@ -8,9 +9,9 @@
     content: '';
     position: absolute;
     z-index: 0;
-    background: rgba(var(--white));
+    background: rgba(255 255 255 / .2);
     border-radius: var(--scale-4);
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     height: calc(100% - var(--scale-10));
     pointer-events: none;
 }

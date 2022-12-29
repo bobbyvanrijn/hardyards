@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useEventListener, useIsClient, useIsomorphicLayoutEffect } from 'usehooks-ts';
 
 import { motion } from 'framer-motion';
@@ -9,6 +9,10 @@ export default function ShadowPan(props) {
     const [elementDimensions, setElementDimensions] = useState([]);
 
     const keys = Object.keys(props.children);
+
+    useEffect(() => {
+        setActiveElement(props.activeChild);
+    }, [props.activeChild]);
 
     const dimensionHandler = () => {
         let dimensions = [];
@@ -53,9 +57,7 @@ export default function ShadowPan(props) {
             className={styles['shadow-pan__panner']}
             style={{
                 left: elementDimensions[activeElement]?.x,
-                // top: elementDimensions[activeElement]?.y,
                 width: elementDimensions[activeElement]?.width,
-                // height: elementDimensions[activeElement]?.height,
             }}
         />
     </>

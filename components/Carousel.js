@@ -6,12 +6,10 @@ import { BlurhashCanvas  } from 'react-blurhash';
 
 import styles from './Carousel.module.css';
 
-import { formatPlantName } from 'helpers/formatPlantName';
-
 export default function Carousel(props) {
     const items = props.items;
-    function Items() {
 
+    function Items() {
         return items.map(plant =>
             <Link
                 className={styles.carousel__item}
