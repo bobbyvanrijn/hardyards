@@ -45,12 +45,7 @@ export default function Toolbar() {
                     <menu className={styles.toolbar__menu}>
                         <ShadowPan activeChild={getActiveMenuItem()}>
                         { links.map((link) =>
-                            <li
-                                key={link}
-                                shadowId={link}
-                                data-visible={ isOpen || (link === router.asPath === true) }
-                                layoutId={link === router.asPath ? 'active' : null}
-                            >
+                            <li key={link}>
                                 <Link
                                     className={`${styles.toolbar__link}  trim-both--secondary`}
                                     href={link}
