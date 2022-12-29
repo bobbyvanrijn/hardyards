@@ -35,27 +35,26 @@ export async function getStaticPaths() {
     }
 }
 
-async function getPlantFromApi(slug: any) {
-    const plants = getPlants();
-
-    const plant = plants.find((plant: any) => plant.slug === slug) || null;
-    return plant;
+function getPlantFromApi(slug: any) {
+    return getPlants()
+        .find((plant: any) => plant.slug === slug) || null;
 }
 
-export async function getStaticProps(context: any) {
+export function getStaticProps(context: any) {
     const { params } = context;
 
-    const plant = await getPlantFromApi(params.pid);
+    const plant = getPlantFromApi(params.pid);
 
     return {
         props: {
             pid: params.pid,
-            plant
+            plant,
+            title: formatPlantName(plant)
         }
     }
 }
 
-export function Plant(props: any) {
+export default function Page(props: any) {
     const hero = [
         {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
@@ -136,12 +135,10 @@ export function Plant(props: any) {
 
     ]
 
-    const title = formatPlantName(props.plant);
-
     return (
         <>
             <Head>
-                <title>{ title } | Hard Yards</title>
+                <title>{`${props.title} | Hard Yards`}</title>
                 <meta name="description" content={props.plant.description} />
             </Head>
 
@@ -150,10 +147,4 @@ export function Plant(props: any) {
             </GridLayout>
         </>
     );
-}
-
-export default function Page(props: any) {
-    return (
-        <Plant pid={props.pid} plant={props.plant} />
-    )
 }
