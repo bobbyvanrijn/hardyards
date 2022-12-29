@@ -63,7 +63,7 @@ export default function Page(props: any) {
                 'grid-x': '2b/3b',
                 'grid-x-sm': '1/3',
                 'grid-y': '1/3',
-                'grid-y-sm': '1/2',
+                'grid-y-sm': '1a/3a',
                 className: 'bleed-top-lg bleed-right-lg bleed-inline-sm bleed-block-sm',
                 src: `/images/${ props.pid }.webp`,
                 srcSmall: `/images/${ props.pid }-small.webp`,
@@ -79,7 +79,7 @@ export default function Page(props: any) {
             attributes: {
                 'grid-x': '1a/2a',
                 'grid-y': '1',
-                'grid-y-sm': '3/4a'
+                'grid-y-sm': '3b/4a'
             },
             children: [
                 <h1 className='trim-both' key={`${props.plant.slug}--title`}>
