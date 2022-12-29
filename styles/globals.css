@@ -119,9 +119,9 @@ body {
 }
 
 main {
-    /* font-family: var(--font-inter); */
     font-family: var(--font-serif), 'Times', serif;
-    padding-bottom: var(--scale-1);
+    /* font-family: var(--font-inter); */
+    /* padding-bottom: var(--scale-1); */
 }
 
 a {
