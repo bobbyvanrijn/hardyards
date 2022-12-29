@@ -64,7 +64,7 @@ export default function Page(props: any) {
                 'grid-x-sm': '1/3',
                 'grid-y': '1/3',
                 'grid-y-sm': '1a/3a',
-                className: 'bleed-top-lg bleed-right-lg bleed-inline-sm bleed-block-sm',
+                className: 'bleed-top-lg bleed-bottom-lg bleed-right-lg bleed-inline-sm bleed-block-sm',
                 src: `/images/${ props.pid }.webp`,
                 srcSmall: `/images/${ props.pid }-small.webp`,
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
@@ -121,17 +121,17 @@ export default function Page(props: any) {
                 )
             }
         },
-        {
-            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
-            component: 'text',
-            attributes: {
-                'grid-x': '1/2',
-                className: 'body-text'
-            },
-            children: props.plant.body?.map(
-                (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
-            )
-        }
+        // {
+        //     _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
+        //     component: 'text',
+        //     attributes: {
+        //         'grid-x': '1/2',
+        //         className: 'body-text'
+        //     },
+        //     children: props.plant.body?.map(
+        //         (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
+        //     )
+        // }
 
     ]
 
