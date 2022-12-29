@@ -24,7 +24,6 @@ export default function Toolbar() {
             let regex = new RegExp('^' + links[i]);
             
             if (regex.test(router.asPath)) {
-                console.log(i);
                 return i;
             }
         }
