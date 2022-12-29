@@ -22,3 +22,31 @@
 .image[grid-y] {
     height: 100%;
 }
+
+.image__caption {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: .3em;
+
+    bottom: var(--type-xxxs);
+    right: var(--type-xxxs);
+    line-height: var(--type-xxxs);
+
+    font-family: var(--font-inter);
+    font-size: var(--type-xxxs);
+    color: rgb(var(--white));
+    opacity: var(--alpha-8);
+}
+
+.image__caption:before {
+    content: '';
+    display: block;
+    height: .8em;
+    width: .8em;
+    /* margin-bottom: -.05em; */
+    border-radius: 50%;
+    background: currentColor;
+    opacity: var(--alpha-7);
+}

@@ -1,6 +1,4 @@
 import React from 'react';
-import { GetStaticProps } from 'next'
-import useSWR, { SWRConfig, unstable_serialize } from 'swr';
 import Head from 'next/head';
 
 import GridLayout from 'layouts/grid';
@@ -8,19 +6,6 @@ import Content from 'components/Content';
 
 import { formatPlantName } from 'helpers/formatPlantName';
 import { getPlants } from 'content/plants';
-
-const fetcher = async (url: string) => {
-    const res = await fetch(url)
-    const data = await res.json()
-
-    if (res.status !== 200) {
-        throw new Error(data.message)
-    }
-
-    return data
-}
-
-type Data = {};
 
 export async function getStaticPaths() {
     const plants = getPlants();
@@ -55,6 +40,23 @@ export function getStaticProps(context: any) {
 }
 
 export default function Page(props: any) {
+    const meta = [
+        {
+            _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
+            component: 'meta',
+            attributes: {
+                items: props.plant.meta.map(
+                    (meta: { label: any; value: any; }) => {
+                        return {
+                            title: meta.label,
+                            value: meta.value,
+                        };
+                    }
+                ),
+            }
+        }
+    ];
+
     const hero = [
         {
             _uid: '92d40a2e-5f03-4396-a44f-daf7d3aca6f4',
@@ -70,7 +72,8 @@ export default function Page(props: any) {
                 size: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
                 width: 800,
                 height: 800,
-                blurhash: props.plant?.blurhash
+                blurhash: props.plant?.blurhash,
+                attribution: props.plant['image-credit']
             }
         },
         {
@@ -92,19 +95,16 @@ export default function Page(props: any) {
             ]
         },
         {
-            _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
-            component: 'meta',
+            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d275a14',
+            component: 'list',
             attributes: {
-                'grid-x': '1',
-                items: props.plant.meta.map(
-                    (meta: { label: any; value: any; }) => {
-                        return {
-                            title: meta.label,
-                            value: meta.value,
-                        };
-                    }
-                ),
-            }
+                'grid-x': '1a/2a',
+                'grid-y': '2a/3b',
+                'grid-align': 'bottom'
+            },
+            children: [
+                <Content key={1} blocks={meta} />
+            ]
         },
         {
             _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27514',

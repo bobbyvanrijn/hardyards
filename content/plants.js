@@ -47,6 +47,42 @@ const plants = [
     },
 
     {
+        slug: 'agastache-foeniculum',
+        genus: 'Agastache',
+        species: 'foeniculum',
+        cultivar: '\‘Blackadder\’',
+        common: 'Hyssop',
+        description: 'Nettle like leaves, deep purple spires.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '60-90 cm'
+            },
+            {
+                label: 'Height',
+                value: '50-80 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Yellow'
+            },
+            {
+                label: 'Foliage',
+                value: 'Green'
+            },
+            {
+                label: 'Seasons',
+                value: '5-8'
+            }
+        ],
+        collections: [],
+        body: [],
+        'main-image': '',
+        'image-credit': '',
+        blurhash: 'LOFP86R8M{a#^nImRiRi%dM_V]WB'
+    },
+
+    {
         slug: 'alchemilla-mollis',
         genus: 'Alchemilla',
         species: 'mollis',
@@ -485,6 +521,7 @@ const plants = [
             }
         ],
         'main-image': '',
+        'image-credit': 'Paul van de Velde',
         blurhash: 'L67US600.7s.~X4nxvoM?I4o-;oc'
     },
     {
@@ -525,6 +562,41 @@ const plants = [
         ],
         'main-image': '',
         blurhash: 'L4GI.KD|5$DODI059%IDP=9btv0J'
+    },
+    {
+        slug: 'gaura-lindheimeri',
+        genus: 'Gaura',
+        species: 'lindheimeri',
+        cultivar: '\‘Siskyou Pink\’',
+        common: 'Beeblossom',
+        description: 'Butterfly-like flowers on thin stalks. Shortlived perennial.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '30 cm'
+            },
+            {
+                label: 'Height',
+                value: '120 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pink'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            },
+            {
+                label: 'Seasons',
+                value: 'May-September'
+            }
+        ],
+        body: [],
+        collections: [],
+        'main-image': '',
+        'image-credit': 'Agnes Monkelbaan',
+        blurhash: 'L6CF-p=~s+%%tR-rx^Na00oy-?ic'
     },
     {
         slug: 'verbena-bonariensis',

@@ -28,6 +28,12 @@ export default function Image(props) {
                 fill
                 placeholder='empty'
             />
+
+            { !!props.attribution &&
+                <figcaption className={styles.image__caption}>
+                    { props.attribution }
+                </figcaption>
+            }
         </figure>
     )
 }
