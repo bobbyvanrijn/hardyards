@@ -1,5 +1,6 @@
 .footer {
     position: relative;
-    color: rgb(var(--white));
-    background-color: rgb(var(--black));
+    padding-bottom: var(--type-xxxs);
+    /* color: rgb(var(--white)); */
+    /* background-color: rgb(var(--black)); */
 }

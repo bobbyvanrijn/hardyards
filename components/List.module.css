@@ -17,7 +17,7 @@
 
     gap: var(--scale-6);
     padding-block: var(--type-xxxs) var(--type-xs);
-    border-top: .025em solid rgb(var(--foreground) / var(--alpha-8))
+    border-top: .0125em solid rgb(var(--foreground) / var(--alpha-8))
 }
 
 .list__linkText {
