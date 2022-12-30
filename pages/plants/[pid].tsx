@@ -142,9 +142,35 @@ export default function Page(props: any) {
                 <meta name="description" content={props.plant.description} />
             </Head>
 
-            <GridLayout grid-enforce-rows='true'>
+            <GridLayout>
                 <Content blocks={hero} />
             </GridLayout>
+            <section>
+                <GridLayout>
+                    <div grid-x='1/3'>
+                        <table summary="Plant progress through the year">
+                            <thead>
+                                <tr>
+                                    <th scope='row'>Calendar</th>
+                                    <th scope='col'>Spring</th>
+                                    <th scope='col'>Summer</th>
+                                    <th scope='col'>Fall</th>
+                                    <th scope='col'>Winter</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope='row'></th>
+                                    <td>Foliage</td>
+                                    <td>Foliage and foliage</td>
+                                    <td>Foliage and silhouette</td>
+                                    <td>Skeleton</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </GridLayout>
+            </section>
         </>
     );
 }

@@ -392,17 +392,18 @@ figcaption {
 }
 
 table {
+    table-layout: fixed;
     width: 100%;
     font-family: var(--font-inter);
     font-size: var(--type-xxs);
     border-collapse: collapse;
     border-color: rgb(var(--foreground) / var(--alpha-4));
     font-weight: var(--font-weight-normal);
-    line-height: var(--type-xs);
-    margin-top: var(--type-sm);
+    line-height: var(--type-xxs);
 }
 
 th {
+    padding: 0;
     text-align: left;
     font-weight: var(--font-weight-bold);
 }
@@ -418,6 +419,7 @@ thead th {
 
 td {
     height: var(--type-sm);
+    padding: 0 var(--type-xxxs) 0 0;
 }
 
 td[data-active='true'] {
