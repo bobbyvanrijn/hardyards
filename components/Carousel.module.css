@@ -4,7 +4,7 @@
 
     list-style: none;
     margin-block: 0;
-    padding: 0 var(--scale-7) 0 0;
+    padding: 0 var(--type-xxxs) 0 0;
 
     position: relative;
     z-index: 1;
@@ -32,7 +32,7 @@
 }
 
 .carousel__item:first-child {
-    margin-left: var(--scale-7);
+    margin-left: var(--type-xxxs);
 }
 
 .carousel__item figure {

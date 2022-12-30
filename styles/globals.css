@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, .lead {
     margin-bottom: var(--type-lg);
 
     font-weight: var(--font-weight-normal);
+    letter-spacing: -.01em;
 }
 
 .page-title {
