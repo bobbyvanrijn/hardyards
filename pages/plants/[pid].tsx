@@ -82,7 +82,7 @@ export default function Page(props: any) {
             attributes: {
                 'grid-x': '1a/2a',
                 'grid-y': '1',
-                'grid-y-sm': '3b/4a'
+                'grid-y-sm': '3b/4b'
             },
             children: [
                 <h1 className='trim-both' key={`${props.plant.slug}--title`}>

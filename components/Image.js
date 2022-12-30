@@ -31,7 +31,7 @@ export default function Image(props) {
 
             { !!props.attribution &&
                 <figcaption className={styles.image__caption}>
-                    { props.attribution }
+                    Photo by { props.attribution }
                 </figcaption>
             }
         </figure>

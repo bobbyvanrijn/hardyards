@@ -29,6 +29,15 @@ function Title(props) {
     );
 }
 
+function filterEmptyBlocks(blocks) {
+    return blocks.filter((block) => {
+        const hasChildren = block.attributes.items?.length > 0 || block.children?.length > 0;
+        const shouldHaveChildren = ['text', 'list', 'meta', 'carousel'].includes(block.component);
+
+        return shouldHaveChildren ? hasChildren : true;
+    });
+}
+
 const Components = {
   image: Image,
   carousel: Carousel,
@@ -55,9 +64,11 @@ export function Block(block) {
 }
 
 export default function Content(props) {
+    const blocks = filterEmptyBlocks(props.blocks);
+
     return (
         <>
-            { props.blocks.map(block => Block(block)) }
+            { blocks.map(block => Block(block)) }
         </>
     );
 }

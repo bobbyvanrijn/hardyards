@@ -83,6 +83,38 @@ const plants = [
     },
 
     {
+        slug: 'nepeta-faassenii',
+        genus: 'Nepeta',
+        species: '× faassenii',
+        cultivar: '\‘Walker\'s low\’',
+        common: 'Catmint',
+        description: 'Bushy mounds of gray leaves. Flowers vigouroursly with small purple florets.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '40 cm'
+            },
+            {
+                label: 'Height',
+                value: '50 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Purple'
+            },
+            {
+                label: 'Foliage',
+                value: 'Gray-Green'
+            }
+        ],
+        collections: [],
+        body: [],
+        'main-image': '',
+        'image-credit': 'David J. Stang',
+        blurhash: 'LDC?ZMD,~U%2~CRS-.jED$s=V{Ri'
+    },
+
+    {
         slug: 'alchemilla-mollis',
         genus: 'Alchemilla',
         species: 'mollis',
@@ -227,7 +259,7 @@ const plants = [
         ],
         collections: [],
         'main-image': '',
-        blurhash: 'L3ECU-rz9D0dqs~p9ENgw.9ERrEJ'
+        blurhash: 'L7A,:w~q004o01IURkIU9GWBs;M{'
     },
 
     {
@@ -356,7 +388,7 @@ const plants = [
             }
         ],
         'main-image': '',
-        blurhash: 'L3ECU-rz9D0dqs~p9ENgw.9ERrEJ'
+        blurhash: 'L9FiPo-;9F~qn~_3WBRj4.t7%LM{'
     },
 
     {

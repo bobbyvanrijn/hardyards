@@ -51,16 +51,6 @@ export default function Plants() {
 
     return (
         <GridLayout>
-            <div
-                className='page-title'
-                grid-x='1/3'
-                grid-y='1a'
-            >
-                <h1 className='uppercase trim-both'>
-                    Plants
-                </h1>
-            </div>
-
             <Content blocks={blocks} />
         </GridLayout>
     )

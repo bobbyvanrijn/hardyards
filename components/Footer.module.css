@@ -2,5 +2,4 @@
     position: relative;
     color: rgb(var(--white));
     background-color: rgb(var(--black));
-    z-index: 999;
 }
