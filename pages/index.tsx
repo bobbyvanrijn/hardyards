@@ -21,7 +21,7 @@ export default function Home(props: any) {
             attributes: {
                 'grid-x': '1/3',
                 'grid-y': '2/3',
-                'grid-y-sm': '2/3',
+                'grid-y-sm': '2/4',
                 items: plants
             }
         },
