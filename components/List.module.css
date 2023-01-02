@@ -17,14 +17,14 @@
 
     gap: var(--scale-6);
     padding-block: var(--type-xxxs) var(--type-xs);
-    border-top: .0125em solid rgb(var(--foreground) / var(--alpha-8))
+    border-top: .01em solid rgb(var(--foreground) / var(--alpha-3))
 }
 
 .list__linkText {
     font-family: var(--font-inter);
     font-size: var(--type-xs);
     font-weight: 300;
-    opacity: var(--alpha-8);
+    opacity: var(--alpha-6);
     text-transform: uppercase;
 }
 

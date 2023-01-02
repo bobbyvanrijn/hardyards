@@ -154,6 +154,12 @@ h1, h2, h3, h4, h5, .lead {
     justify-content: space-between;
 }
 
+@media (max-width: 50rem) {
+    .page-title {
+        margin-top: 44px;
+    }
+}
+
 .page-title h1,
 .page-title h2,
 .page-title h3 {

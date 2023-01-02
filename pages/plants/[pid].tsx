@@ -64,7 +64,7 @@ export default function Page(props: any) {
             attributes: {
                 'grid-x': '2b/3b',
                 'grid-x-sm': '1/3',
-                'grid-y': '1/3',
+                'grid-y': '1a/3a',
                 'grid-y-sm': '1a/3a',
                 className: 'bleed-top-lg bleed-bottom-lg bleed-right-lg bleed-inline-sm bleed-block-sm',
                 src: `/images/${ props.pid }.webp`,
@@ -99,7 +99,7 @@ export default function Page(props: any) {
             component: 'list',
             attributes: {
                 'grid-x': '1a/2a',
-                'grid-y': '2a/3b',
+                'grid-y': '2a/3a',
                 'grid-align': 'bottom'
             },
             children: [
