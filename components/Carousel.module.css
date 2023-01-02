@@ -42,7 +42,7 @@
     z-index: 1;
     height: 100%;
     width: auto;
-    aspect-ratio: 3/4;
+    aspect-ratio: 9/16;
     overflow: hidden;
     /* border-radius: var(--scale-8); */
     border-radius: var(--scale-10);
