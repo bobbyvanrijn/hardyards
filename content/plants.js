@@ -435,6 +435,40 @@ const plants = [
         blurhash: 'LDCZ^8ae00x[I:WVe:oy00V]~qWB'
     },
     {
+        slug: 'liatris-spicata',
+        genus: 'Liatris',
+        species: 'spicata',
+        cultivar: null,
+        common: 'Prairie feather',
+        description: 'Spires of pink flowers. Narrow leaves flank the stem.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '20 cm'
+            },
+            {
+                label: 'Height',
+                value: '60 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Magenta'
+            },
+            {
+                label: 'Foliage',
+                value: 'Green'
+            },
+            {
+                label: 'Seasons',
+                value: 'July-August'
+            }
+        ],
+        body: [],
+        collections: [],
+        'main-image': '',
+        blurhash: 'L5G8v44py3%.0JE9_Ktu2hMDVxM+'
+    },
+    {
         slug: 'phlomis-russeliana',
         genus: 'Phlomis',
         species: 'russeliana',
