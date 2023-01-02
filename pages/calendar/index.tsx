@@ -26,7 +26,7 @@ const blocks = [
                 key='title'
                 className='page-title'
             >
-                <h1 className='uppercase trim-both'>
+                <h1 className='uppercase trim-both trim-both--secondary'>
                     Calendar
                 </h1>
             </div>

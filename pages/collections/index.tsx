@@ -67,7 +67,7 @@ export default function Plants() {
                 grid-y='1/2'
             >
                 <h1
-                    className='uppercase trim-both'
+                    className='uppercase trim-both trim-both--secondary'
                 >
                     Collections
                 </h1>

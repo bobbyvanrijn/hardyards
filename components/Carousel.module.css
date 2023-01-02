@@ -23,10 +23,12 @@
     flex: 0 0 auto;
     height: 100%;
 
+
     position: relative;
     z-index: 1;
 
-    display: block;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     aspect-ratio: 3/4;
 }
@@ -41,8 +43,9 @@
     height: 100%;
     width: auto;
     aspect-ratio: 3/4;
-    border-radius: var(--scale-8);
     overflow: hidden;
+    /* border-radius: var(--scale-8); */
+    border-radius: var(--scale-10);
 }
 
 .carousel__item img {
@@ -64,4 +67,20 @@
 .carousel__title {
     font-size: var(--type-sm);
     --leading-lineheight: var(--type-sm);
+}
+.carousel__text {
+    --leading-lineheight: var(--type-xs);
+    line-height: var(--type-sm);
+    font-size: var(--type-xs);
+}
+
+.carousel__text h4 {
+    font-size: var(--type-sm);
+    margin-bottom: var(--type-sm);
+    text-transform: uppercase;
+}
+
+.carousel__text p {
+    font-family: var(--font-inter);
+    font-weight: 425;
 }

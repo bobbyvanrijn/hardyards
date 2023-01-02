@@ -52,11 +52,11 @@ export default function Home(props: any) {
                 grid-y='1a'
                 grid-y-sm='1a'
             >
-                <h1 className='uppercase trim-both'>
+                <h1 className='uppercase trim-both trim-both--secondary'>
                     Index
                 </h1>
 
-                <h2 className='trim-both'>
+                <h2 className='trim-both trim-both--secondary'>
                     Hard Yards
                 </h2>
             </div>

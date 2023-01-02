@@ -8,8 +8,8 @@
 
     --red: 226 68 32;
 
-    --foreground: var(--black);
-    --background: var(--white);
+    --foreground: var(--white);
+    --background: var(--black);
 
     --alpha-05: .05;
     --alpha-1: .1;
@@ -157,10 +157,13 @@ h1, h2, h3, h4, h5, .lead {
 .page-title h1,
 .page-title h2,
 .page-title h3 {
-    font-size: var(--type-xl);
-    line-height: var(--type-xl);
+    font-family: var(--font-inter);
+    font-size: var(--type-xs);
+    line-height: var(--type-xs);
+    --leading-lineheight: var(--type-xs);
     margin: 0;
     letter-spacing: -.025em;
+    font-weight: 400;
 }
 
 p {

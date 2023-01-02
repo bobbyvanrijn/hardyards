@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlurhashCanvas  } from 'react-blurhash';
+import { formatPlantName } from 'helpers/formatPlantName';
 
 import styles from './Carousel.module.css';
 
@@ -16,6 +17,11 @@ export default function Carousel(props) {
                 href={`/plants/${plant.slug}`}
                 key={`plant-${plant.slug}`}
             >
+                <div className={styles.carousel__text}>
+                    <h4>
+                        { formatPlantName(plant) }
+                    </h4>
+                </div>
                 <figure>
                     { !!plant.blurhash &&
                         <BlurhashCanvas
