@@ -45,14 +45,20 @@ export default function Page(props: any) {
             _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
             component: 'meta',
             attributes: {
-                items: props.plant.meta.map(
-                    (meta: { label: any; value: any; }) => {
-                        return {
-                            title: meta.label,
-                            value: meta.value,
-                        };
-                    }
-                ),
+                items: [
+                    {
+                        title: 'foo',
+                        value: 'bar'
+                    },
+                    ...props.plant.meta.map(
+                        (meta: { label: any; value: any; }) => {
+                            return {
+                                title: meta.label,
+                                value: meta.value,
+                            };
+                        }
+                    )
+                ],
             }
         }
     ];
@@ -145,7 +151,7 @@ export default function Page(props: any) {
             <GridLayout>
                 <Content blocks={hero} />
             </GridLayout>
-            <section>
+            <section data-background='negative'>
                 <GridLayout>
                     <div grid-x='1/3'>
                         <table summary="Plant progress through the year">

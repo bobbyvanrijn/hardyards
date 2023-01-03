@@ -404,7 +404,7 @@ table {
     table-layout: fixed;
     width: 100%;
     font-family: var(--font-inter);
-    font-size: var(--type-xxs);
+    font-size: var(--type-xs);
     border-collapse: collapse;
     border-color: rgb(var(--foreground) / var(--alpha-4));
     font-weight: var(--font-weight-normal);
@@ -433,4 +433,9 @@ td {
 
 td[data-active='true'] {
     background: rgb(var(--sunflower));
+}
+
+section[data-background='negative'] {
+    background: rgb(var(--foreground));
+    color: rgb(var(--background));
 }

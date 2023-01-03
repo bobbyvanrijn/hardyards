@@ -1,6 +1,6 @@
 .meta {
     font-family: var(--font-inter);
-    font-size: var(--scale-5);
+    font-size: var(--type-xs);
     font-weight: 320;
     letter-spacing: -.015em;
     overflow-x: hidden;
