@@ -46,41 +46,41 @@ const plants = [
         blurhash: 'LGFh,f${0TxC~MofNK-l0BjZ^vxr'
     },
 
-    {
-        slug: 'agastache-foeniculum',
-        genus: 'Agastache',
-        species: 'foeniculum',
-        cultivar: '\‘Blackadder\’',
-        common: 'Hyssop',
-        description: 'Nettle like leaves, deep purple spires.',
-        meta: [
-            {
-                label: 'Spread',
-                value: '60-90 cm'
-            },
-            {
-                label: 'Height',
-                value: '50-80 cm'
-            },
-            {
-                label: 'Flowers',
-                value: 'Yellow'
-            },
-            {
-                label: 'Foliage',
-                value: 'Green'
-            },
-            {
-                label: 'Seasons',
-                value: '5-8'
-            }
-        ],
-        collections: [],
-        body: [],
-        'main-image': '',
-        'image-credit': '',
-        blurhash: 'LOFP86R8M{a#^nImRiRi%dM_V]WB'
-    },
+    // {
+    //     slug: 'agastache-foeniculum',
+    //     genus: 'Agastache',
+    //     species: 'foeniculum',
+    //     cultivar: '\‘Blackadder\’',
+    //     common: 'Hyssop',
+    //     description: 'Nettle like leaves, deep purple spires.',
+    //     meta: [
+    //         {
+    //             label: 'Spread',
+    //             value: '60-90 cm'
+    //         },
+    //         {
+    //             label: 'Height',
+    //             value: '50-80 cm'
+    //         },
+    //         {
+    //             label: 'Flowers',
+    //             value: 'Yellow'
+    //         },
+    //         {
+    //             label: 'Foliage',
+    //             value: 'Green'
+    //         },
+    //         {
+    //             label: 'Seasons',
+    //             value: '5-8'
+    //         }
+    //     ],
+    //     collections: [],
+    //     body: [],
+    //     'main-image': '',
+    //     'image-credit': '',
+    //     blurhash: 'LOFP86R8M{a#^nImRiRi%dM_V]WB'
+    // },
 
     {
         slug: 'nepeta-faassenii',
@@ -220,7 +220,7 @@ const plants = [
             },
         ],
         'main-image': '',
-        blurhash: 'LJE{a;rJ9?Wn~qVa%3ozY3Mx,0SK'
+        blurhash: 'L3Hy1_^m00oqD6Q:W9=}00D}^-j3'
     },
 
     {
@@ -259,7 +259,7 @@ const plants = [
         ],
         collections: [],
         'main-image': '',
-        blurhash: 'L7A,:w~q004o01IURkIU9GWBs;M{'
+        blurhash: 'L8EfZraeMfMx00oMIoM{00Rj~qxu'
     },
 
     {
@@ -432,7 +432,7 @@ const plants = [
             }
         ],
         'main-image': '',
-        blurhash: 'LDCZ^8ae00x[I:WVe:oy00V]~qWB'
+        blurhash: 'LACsQ#=}oyD%~B-:kCoyRQWUxtog'
     },
     {
         slug: 'liatris-spicata',
@@ -741,6 +741,42 @@ const plants = [
         ],
         'main-image': '',
         blurhash: 'L4A^{W8~04_KR5bYIXx=4YIBtQIX'
+    },
+    {
+        slug: 'rudbeckia-fulgida',
+        genus: 'Rudbeckia',
+        species: 'fulgida',
+        cultivar: null,
+        common: 'Coneflower',
+        description: 'Many black seedheads with bright yellow petals. Spreads quickly through rhizomes.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '30 cm'
+            },
+            {
+                label: 'Height',
+                value: '60 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Yellow'
+            },
+            {
+                label: 'Foliage',
+                value: 'Dark green'
+            }
+        ],
+        body: [],
+        collections: [
+            {
+                slug: 'propagators',
+                title: 'Propagators'
+            }
+        ],
+        'main-image': '',
+        'additional-images': ['rudbeckia-fulgida-seedheads'],
+        blurhash: 'LMD9hAtSbcs+~Tx]WZRkI_-:t7Rk'
     },
 ];
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import GridLayout from 'layouts/grid';
 import Content from 'components/Content';
@@ -112,21 +113,21 @@ export default function Page(props: any) {
                 <Content key={1} blocks={meta} />
             ]
         },
-        {
-            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27514',
-            component: 'list',
-            attributes: {
-                'grid-x': '1',
-                items: props.plant.collections?.map(
-                    (collection: any) => {
-                        return {
-                            title: collection.title,
-                            link: `/collections/${collection.slug}`
-                        }
-                    }
-                )
-            }
-        },
+        // {
+        //     _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27514',
+        //     component: 'list',
+        //     attributes: {
+        //         'grid-x': '1',
+        //         items: props.plant.collections?.map(
+        //             (collection: any) => {
+        //                 return {
+        //                     title: collection.title,
+        //                     link: `/collections/${collection.slug}`
+        //                 }
+        //             }
+        //         )
+        //     }
+        // },
         // {
         //     _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27513',
         //     component: 'text',
@@ -175,6 +176,22 @@ export default function Page(props: any) {
                             </tbody>
                         </table>
                     </div>
+                    { props.plant['additional-images']?.length > 0 &&
+                        <div grid-x='1'>
+                        {
+                        props.plant['additional-images'].map((image: String) =>
+                                <figure style={{ position: 'relative', aspectRatio: '4/3' }} key={`${image}`}>
+                                    <Image
+                                        src={`/images/${ image }.webp`}
+                                        fill
+                                        alt=''
+                                        sizes='40w'
+                                    />
+                                </figure>
+                            )
+                        }
+                        </div>
+                    }
                 </GridLayout>
             </section>
         </>

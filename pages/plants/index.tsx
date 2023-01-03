@@ -67,10 +67,9 @@ export default function Plants(props: any) {
     const gallery = [
         {
             _uid: 'foo',
-            component: 'carousel',
+            component: 'gallery',
             attributes: {
                 'grid-x': '1/3',
-                'grid-y': '1',
                 items: props.plants
             }
         }
