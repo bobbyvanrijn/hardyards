@@ -1,15 +1,26 @@
 :root {
     /* Colors, warm tint */
-    --black: 18 18 17;
-    --white: 247 245 242;
-    /* --white: 255 255 255; */
-    --sunflower: 218 151 19;
-    --forest: 60 77 25;
+    --mono-12: 247 247 242;
+    --mono-11: 226 226 221;
+    --mono-10: 205 205 200;
+    --mono-9: 185 185 179;
+    --mono-8: 164 164 158;
+    --mono-7: 143 143 138;
+    --mono-6: 122 122 117;
+    --mono-5: 101 101 97;
+    --mono-4: 80 80 77;
+    --mono-3: 60 60 57;
+    --mono-2: 39 39 37;
+    --mono-1: 18 18 17;
+
+    --black: var(--mono-1);
+    --white: var(--mono-12);
 
     --red: 226 68 32;
 
     --foreground: var(--white);
     --background: var(--black);
+
 
     --alpha-05: .05;
     --alpha-1: .1;

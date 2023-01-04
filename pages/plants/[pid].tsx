@@ -139,7 +139,23 @@ export default function Page(props: any) {
         //         (item: any, index: any) => <p className='trim-both' key={index}>{item}</p>
         //     )
         // }
+    ]
 
+    const carousel = [
+        {
+            _uid: '1',
+            component: 'carousel',
+            attributes: {
+                'grid-x': '1/3',
+                'grid-y': '1/2',
+                'grid-y-sm': '1/2',
+                items: props.plant['additional-images']?.map((image: String) => {
+                    return {
+                        key: image
+                    }
+                })
+            }
+        }
     ]
 
     return (
@@ -176,24 +192,13 @@ export default function Page(props: any) {
                             </tbody>
                         </table>
                     </div>
-                    { props.plant['additional-images']?.length > 0 &&
-                        <div grid-x='1'>
-                        {
-                        props.plant['additional-images'].map((image: String) =>
-                                <figure style={{ position: 'relative', aspectRatio: '4/3' }} key={`${image}`}>
-                                    <Image
-                                        src={`/images/${ image }.webp`}
-                                        fill
-                                        alt=''
-                                        sizes='40w'
-                                    />
-                                </figure>
-                            )
-                        }
-                        </div>
-                    }
                 </GridLayout>
             </section>
+            <GridLayout>
+                { props.plant['additional-images']?.length > 0 &&
+                    <Content blocks={carousel} />
+                }
+            </GridLayout>
         </>
     );
 }

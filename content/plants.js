@@ -135,7 +135,8 @@ const plants = [
             'This plant prefers moist, well-drained soil in full sun or partial shade. It is easy to maintain and will spread quickly to form a dense groundcover. It is also tolerant of drought and salt, making it an ideal choice for coastal areas.'
         ],
         'main-image': '',
-        blurhash: 'L6An^-M#x@e@?;IDICy9.5RPt6Mz'
+        blurhash: 'L6An^-M#x@e@?;IDICy9.5RPt6Mz',
+        'additional-images': ['alchemilla-mollis-001', 'alchemilla-mollis-002'],
     },
 
     {

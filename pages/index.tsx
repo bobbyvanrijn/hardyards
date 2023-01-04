@@ -2,18 +2,24 @@ import GridLayout from '../layouts/grid';
 import Content from '../components/Content';
 
 import { getPlants } from '../content/plants';
+import { formatPlantName } from 'helpers/formatPlantName';
 
 export function getStaticProps() {
     return {
         props: {
-            plants: getPlants(8)
+            carouselItems: getPlants(8).map(plant => {
+                return {
+                    key: plant.slug,
+                    title: formatPlantName(plant),
+                    link: `/plants/${plant.slug}`,
+                    blurhash: plant.blurhash
+                }
+            })
         }
     }
 }
 
 export default function Home(props: any) {
-    const plants = props.plants;
-
     const blocks = [
         {
             _uid: '1',
@@ -22,7 +28,7 @@ export default function Home(props: any) {
                 'grid-x': '1/3',
                 'grid-y': '2/3',
                 'grid-y-sm': '2/4',
-                items: plants
+                items: props.carouselItems
             }
         },
         {

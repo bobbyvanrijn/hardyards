@@ -24,7 +24,7 @@
     font-family: var(--font-inter);
     font-size: var(--type-xs);
     font-weight: 300;
-    opacity: var(--alpha-6);
+    color: rgb(var(--mono-8));
     text-transform: uppercase;
 }
 
