@@ -1,6 +1,66 @@
 import { shuffle } from 'lodash';
+const bulbs = [
+    {
+        slug: 'allium-christophii',
+        genus: 'Allium',
+        species: 'christophii',
+        cultivar: null,
+        common: 'Star of persia',
+        description: 'Ball of very fine, starshaped flowers.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '10 cm'
+            },
+            {
+                label: 'Height',
+                value: '15-60 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Silvery purple'
+            },
+            {
+                label: 'Foliage',
+                value: 'Green'
+            }
+        ],
+        collections: [],
+        body: [],
+        blurhash: 'LAGRrM%fTv4n^S_MsrDjX3kW?I-='
+    },
+    {
+        slug: 'camassia-leichtinii',
+        genus: 'Camassia',
+        species: 'leichtinii',
+        cultivar: '\‘Caerulia\’',
+        common: 'Quamash',
+        description: 'Tall stem with a spike-like cluster of flowers. Bulb is eaten as a crop by Native Americans.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '20 cm'
+            },
+            {
+                label: 'Height',
+                value: '60-120 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Pale purple/blue'
+            },
+            {
+                label: 'Foliage',
+                value: 'Green'
+            }
+        ],
+        collections: [],
+        body: [],
+        blurhash: 'LhFPHQ-;Ria^~qx]WVj??axva$fP'
+    },
+]
 
-const plants = [
+const herbaceousPerennials = [
     // TODO: Add `lifecycle` prop (annual, biennial, perennial)
     // TODO: Add plants ↓
     // - Agastache 'black adder' / 'blue fortune'
@@ -134,8 +194,7 @@ const plants = [
             'The flowers of this plant are small, star-shaped and yellow-green in color. They appear in clusters at the top of the stems and bloom from late spring to mid-summer. The flowers are followed by small, round, green seed-heads.',
             'This plant prefers moist, well-drained soil in full sun or partial shade. It is easy to maintain and will spread quickly to form a dense groundcover. It is also tolerant of drought and salt, making it an ideal choice for coastal areas.'
         ],
-        'main-image': '',
-        blurhash: 'L6An^-M#x@e@?;IDICy9.5RPt6Mz',
+        blurhash: 'L39*b$_K8|9H_LD*IBt7V[.7MzIB',
         'additional-images': ['alchemilla-mollis-001', 'alchemilla-mollis-002'],
     },
 
@@ -467,7 +526,8 @@ const plants = [
         body: [],
         collections: [],
         'main-image': '',
-        blurhash: 'L5G8v44py3%.0JE9_Ktu2hMDVxM+'
+        blurhash: 'L5G8v44py3%.0JE9_Ktu2hMDVxM+',
+        'additional-images': ['liatris-spicata-001']
     },
     {
         slug: 'phlomis-russeliana',
@@ -849,7 +909,7 @@ const grasses = [
 ]
 
 function getPlants(limit = 50, filter, sortBy = 'slug') {
-    let items = [ ...plants, ...grasses ];
+    let items = [ ...herbaceousPerennials, ...bulbs, ...grasses ];
 
     items.sort((a, b) => {
         if (a[sortBy] < b[sortBy]) {
@@ -866,4 +926,4 @@ function getPlants(limit = 50, filter, sortBy = 'slug') {
     return items.slice(0, limit);
 }
 
-export { plants, getPlants };
+export { herbaceousPerennials as plants, getPlants };

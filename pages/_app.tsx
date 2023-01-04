@@ -37,13 +37,13 @@ export default function App({ Component, pageProps }: AppProps) {
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         </Head>
 
+        <Toolbar />
+
         <Transition>
             <Component {...pageProps} />
 
             <Footer />
         </Transition>
-
-        <Toolbar />
     </main>
   );
 }

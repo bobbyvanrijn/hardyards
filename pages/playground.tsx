@@ -94,6 +94,18 @@ export default function Playground() {
                     >
                         <p>Terra preta is a type of very dark, fertile anthropogenic soil (anthrosol) found in the Amazon Basin. It is also known as &ldquo;Amazonian dark earth&rdquo; or &ldquo;Indian black earth&rdquo;. In Portuguese its full name is terra preta do índio or terra preta de índio (&ldquo;black soil of the Indian&rdquo;, &ldquo;Indians&apos; black earth&rdquo;). Terra mulata (&ldquo;mulatto earth&rdquo;) is lighter or brownish in color.</p>
                     </div>
+
+                    <div grid-x='2/3'>
+                        <figure style={{ borderRadius: 'var(--scale-8)', width: '200px', aspectRatio: '2/3', position: 'relative', background: 'rgb(var(--mono-2) / .5)'}}>
+                            <Image
+                                src={`/images/secateurs.png`}
+                                fill
+                                alt=''
+                                style={{ objectFit: 'contain', objectPosition: 'center' }}
+                                sizes='40w'
+                            />
+                        </figure>
+                    </div>
                 </GridLayout>
             </div>
         </>

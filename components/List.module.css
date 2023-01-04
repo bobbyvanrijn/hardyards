@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     line-height: 1.125;
+
+    border-top: .01em solid rgb(var(--foreground) / var(--alpha-3))
 }
 
 .list__item {
@@ -16,13 +18,15 @@
     align-items: baseline;
 
     gap: var(--scale-6);
-    padding-block: var(--type-xxxs) var(--type-xs);
-    border-top: .01em solid rgb(var(--foreground) / var(--alpha-3))
+    margin-top: var(--type-xs);
+    /* border-top: .01em solid rgb(var(--foreground) / var(--alpha-3)) */
 }
 
 .list__linkText {
+    --leading-lineheight: var(--type-xxxs);
     font-family: var(--font-inter);
     font-size: var(--type-xs);
+    line-height: var(--type-xxxs);
     font-weight: 300;
     color: rgb(var(--mono-8));
     text-transform: uppercase;

@@ -18,7 +18,7 @@ export default function Navigation() {
                     <Link className='trim-both' href='/calendar'>Calendar</Link>
                 </li>
                 <li>
-                    <Link className='trim-both' href='/plants/collections'>Collections</Link>
+                    <Link className='trim-both' href='/collections'>Collections</Link>
                 </li>
                 <li>
                     <Link className='trim-both' href='/guides'>Guides<sup>{guides.length}</sup></Link>

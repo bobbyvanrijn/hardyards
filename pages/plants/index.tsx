@@ -50,7 +50,7 @@ export default function Plants(props: any) {
                     'grid-x': '1',
                 },
                 children: [
-                    <h2 key={`heading-${category.key}`}>{category.key}</h2>
+                    <h3 key={`heading-${category.key}`}>{category.key}</h3>
                 ]
             },
             {
