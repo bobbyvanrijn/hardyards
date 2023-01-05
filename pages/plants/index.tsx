@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Content from 'components/Content';
 import { getPlants } from 'content/plants';
 import GridLayout from 'layouts/grid';
@@ -39,6 +41,8 @@ export function getStaticProps() {
 }
 
 export default function Plants(props: any) {
+    const [layout, setLayout] = useState('list');
+
     const blocks: { _uid: string; component: string; attributes: { 'grid-x': string; items?: any; headingLevel?: number;}; children?: JSX.Element[]; }[] = [];
 
     props.categories.map((category: any, index: any) => {
@@ -92,13 +96,30 @@ export default function Plants(props: any) {
                         Hard Yards
                     </h2>
                 </div>
-
-                <Content blocks={blocks} />
+                <ul grid-x='2a' style={{ fontFamily: 'var(--font-inter)' }} className='font-sans'>
+                    <li>
+                        <a onClick={() => setLayout('grid')}>
+                            { layout === 'grid' ? '●' : '○'} Grid
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick={() => setLayout('list')}>
+                            { layout === 'list' ? '●' : '○'} List
+                        </a>
+                    </li>
+                </ul>
             </GridLayout>
-
-            <GridLayout grid-enforce-row='true'>
-                <Content blocks={gallery} />
-            </GridLayout>
+            { layout === 'list' &&
+                <GridLayout>
+                    
+                    <Content blocks={blocks} />
+                </GridLayout>
+            }
+            { layout === 'grid' &&
+                <GridLayout grid-enforce-row='true'>
+                    <Content blocks={gallery} />
+                </GridLayout>
+            }
         </>
     )
 }

@@ -7,11 +7,53 @@ import styles from './playground.module.css';
 import GridLayout from '../layouts/grid';
 import ShadowPan from 'components/ShadowPan';
 
-export default function Playground() {
+import { generatePolygon } from 'helpers/generatePolygon';
+
+export function getStaticProps() {
+    return {
+        props: {
+            pathD: generatePolygon()
+        }
+    }
+}
+
+export default function Playground({ pathD }: any){
     const router = useRouter();
 
     return (
         <>
+            <svg
+                viewBox="0 0 480 480"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{
+                    position: 'fixed',
+                    maxHeight: '100vh',
+                    zIndex: 0,
+                    top: 0,
+                    left: 0,
+                    transform: 'scaleY(.8)',
+                    opacity: '.025'
+                }}
+            >
+                <defs>
+                    <filter id="gooify" width="400%" x="-150%" height="400%" y="-150%">
+                    <feGaussianBlur id="blurElement" in="SourceGraphic" stdDeviation="5" result="blur" />
+                        <feColorMatrix
+                            in="blur"
+                            mode="matrix" 
+                            values="
+                                1 0 0 0 0
+                                0 1 0 0 0
+                                0 0 1 0 0
+                                0 0 0 255 -153
+                            "
+                        />
+                    </filter>
+                </defs>
+                <g filter="url(#gooify)">
+                    <path fill='rgb(255 255 255)' d={pathD} />
+                </g>
+            </svg>
             <GridLayout grid-enforce-rows='true'>
                 <div
                     className='trim-both'

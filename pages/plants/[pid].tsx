@@ -94,11 +94,16 @@ export default function Page(props: any) {
             children: [
                 <h1 className='trim-both' key={`${props.plant.slug}--title`}>
                     <span className='uppercase'>
-                        {formatPlantName(props.plant)}.&nbsp;
+                        {`${formatPlantName(props.plant)} `}
                     </span>
-                    <span>{props.plant.common}.</span>
+                    <span>
+                        {`(${props.plant.common}). `}
+                    </span>
+                    <span>
+                        {props.plant.description}
+                    </span>
                 </h1>,
-                <p key={`${props.plant.slug}--description`} className='lead trim-both'>{props.plant.description}</p>
+                <p key={`${props.plant.slug}--description`} className='lead trim-both'></p>
             ]
         },
         {
