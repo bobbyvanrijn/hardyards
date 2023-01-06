@@ -97,7 +97,7 @@ export default function Page(props: any) {
                         {`${formatPlantName(props.plant)} `}
                     </span>
                     <span>
-                        {`(${props.plant.common}). `}
+                        {`(${props.plant.common}) `}
                     </span>
                     <span>
                         {props.plant.description}
