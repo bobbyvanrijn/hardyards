@@ -35,7 +35,7 @@ const bulbs = [
         species: 'leichtinii',
         cultivar: '\‘Caerulia\’',
         common: 'Quamash',
-        description: 'Tall stem with a spike-like cluster of flowers. Bulb is eaten as a crop by Native Americans.',
+        description: 'has a all stem with a spike-like cluster of flowers. Bulb is eaten as a crop by Native Americans.',
         meta: [
             {
                 label: 'Spread',
@@ -75,7 +75,7 @@ const herbaceousPerennials = [
         species: null,
         cultivar: '\‘Moonshine\’',
         common: 'Yarrow',
-        description: 'Matte silver foliage, sulphur yellow umbels.',
+        description: 'has matte silver foliage, sulphur yellow umbels.',
         meta: [
             {
                 label: 'Spread',
@@ -148,7 +148,7 @@ const herbaceousPerennials = [
         species: '× faassenii',
         cultivar: '\‘Walker\'s low\’',
         common: 'Catmint',
-        description: 'Bushy mounds of gray leaves. Flowers vigouroursly with small purple florets.',
+        description: 'has bushy mounds of gray leaves. Flowers vigouroursly with small purple florets.',
         meta: [
             {
                 label: 'Spread',
@@ -180,7 +180,7 @@ const herbaceousPerennials = [
         species: 'mollis',
         cultivar: null,
         common: 'Lady\'s mantle',
-        description: 'Velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
+        description: 'has velvet leaves that catch droplets of water. Bunches of green-yellow flowers.',
         images: ['images/alchemilla-mollis.webp'],
         meta: [],
         collections: [
@@ -204,7 +204,7 @@ const herbaceousPerennials = [
         genus: 'Geranium',
         species: null,
         cultivar: '\‘Rozanne\’',
-        description: 'Hybrid of Geranium himalayense and Geranium wallichianum \‘Buxton\'s variety\’.',
+        description: 'is a hybrid of Geranium himalayense and Geranium wallichianum \‘Buxton\'s variety\’.',
         body: [
             'This perennial is a standout in the garden. Its deep blue-purple, saucer-shaped blooms with white eyes appear in late spring and last until fall, creating a stunning display of color. The foliage is an attractive, deep green with a mounding habit. It is an excellent choice for adding texture and color to the garden.',
             'This plant is low-maintenance and easy to care for. It prefers full sun and well-drained soil, and is drought tolerant once established. It is also deer resistant, making it a great choice for gardens in areas with heavy deer populations.',
@@ -244,7 +244,7 @@ const herbaceousPerennials = [
         genus: 'Echinacea',
         species: 'pallida',
         culticvar: '\‘Hulda Dancer\’',
-        description: 'Spiky seedheads. Droopy pale pink petals.',
+        description: 'has spiky seedheads. Droopy pale pink petals.',
         collections: [
         ],
         body: [
@@ -289,7 +289,7 @@ const herbaceousPerennials = [
         species: 'purpurea',
         cultivar: '\‘White Swan\’',
         common: 'Coneflower',
-        description: 'Loads of flowers. Spiky seedheads and white petals.',
+        description: 'has loads of flowers. Spiky seedheads and white petals.',
         meta: [
             {
                 label: 'Spread',
@@ -328,7 +328,7 @@ const herbaceousPerennials = [
         common: 'Stonecrop',
         species: null,
         cultivar: '\‘Matrona\’',
-        description: 'Meaty grey-purple leaves. Faded pink flowers.',
+        description: 'has meaty grey-purple leaves. Faded pink flowers.',
         meta: [
             {
                 label: 'Spread',
@@ -372,7 +372,7 @@ const herbaceousPerennials = [
         species: null,
         cultivar: '\‘Little Carlow\’',
         common: 'Aster',
-        description: 'Hybrid of A. cordifolius and A. novi-belgii. Mounds of fine petalled violet blue flowers.',
+        description: 'is a hybrid of A. cordifolius and A. novi-belgii. Mounds of fine petalled violet blue flowers.',
         meta: [
             {
                 label: 'Spread',
@@ -413,7 +413,7 @@ const herbaceousPerennials = [
         species: 'vulgare',
         cultivar: null,
         common: 'Oxeye daisy',
-        description: 'Delicate white petals surrounding a yellow center. Pinnate foliage. Spreads using rhizomes.',
+        description: 'has delicate white petals surrounding a yellow center. Pinnate foliage. Spreads using rhizomes.',
         meta: [
             {
                 label: 'Spread',
@@ -457,7 +457,7 @@ const herbaceousPerennials = [
         species: 'karvinskianus',
         cultivar: null,
         common: 'Mexican fleabane',
-        description: 'Delicate white petals surrounding a yellow center. Pinnate foliage. Spreads using rhizomes.',
+        description: 'has delicate white petals surrounding a yellow center. Pinnate foliage. Spreads using rhizomes.',
         meta: [
             {
                 label: 'Spread',
@@ -500,7 +500,7 @@ const herbaceousPerennials = [
         species: 'spicata',
         cultivar: null,
         common: 'Prairie feather',
-        description: 'Spires of pink flowers. Narrow leaves flank the stem.',
+        description: 'has spires of pink flowers. Narrow leaves flank the stem.',
         meta: [
             {
                 label: 'Spread',
@@ -535,7 +535,7 @@ const herbaceousPerennials = [
         species: 'russeliana',
         cultivar: null,
         common: 'Turkish sage',
-        description: 'Pale yellow, tiered flowers along a vertical stem. Silver furry leaves. Impressive winter skeleton.',
+        description: 'has pale yellow, tiered flowers along a vertical stem. Silver furry leaves. Impressive winter skeleton.',
         meta: [
             {
                 label: 'Spread',
@@ -578,7 +578,7 @@ const herbaceousPerennials = [
         species: 'maculatum',
         cultivar: '\‘Riegenschirm\’',
         common: 'Joe pye weed',
-        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        description: 'is a very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
         meta: [
             {
                 label: 'Spread',
@@ -617,7 +617,7 @@ const herbaceousPerennials = [
         species: 'gigas',
         cultivar: null,
         common: 'Giant angelica',
-        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        description: 'is a very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
         meta: [
             {
                 label: 'Spread',
@@ -657,7 +657,7 @@ const herbaceousPerennials = [
         species: 'hastata',
         cultivar: null,
         common: 'Blue vervain',
-        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        description: 'is a very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
         meta: [
             {
                 label: 'Spread',
@@ -696,7 +696,7 @@ const herbaceousPerennials = [
         species: 'lindheimeri',
         cultivar: '\‘Siskyou Pink\’',
         common: 'Beeblossom',
-        description: 'Butterfly-like flowers on thin stalks. Shortlived perennial.',
+        description: 'has butterfly-like flowers on thin stalks. Shortlived perennial.',
         meta: [
             {
                 label: 'Spread',
@@ -731,7 +731,7 @@ const herbaceousPerennials = [
         species: 'bonariensis',
         cultivar: null,
         common: 'Argentinian vervain',
-        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        description: 'is a very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
         meta: [
             {
                 label: 'Spread',
@@ -770,7 +770,7 @@ const herbaceousPerennials = [
         species: 'vulgare',
         cultivar: null,
         common: 'Fennel',
-        description: 'Very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
+        description: 'is a very tall plant. Wide pink flowers grow on stems up to 2 meters in length. Forms dense clumps.',
         meta: [
             {
                 label: 'Spread',
@@ -809,7 +809,7 @@ const herbaceousPerennials = [
         species: 'fulgida',
         cultivar: null,
         common: 'Coneflower',
-        description: 'Many black seedheads with bright yellow petals. Spreads quickly through rhizomes.',
+        description: 'has many black seedheads with bright yellow petals. Spreads quickly through rhizomes.',
         meta: [
             {
                 label: 'Spread',
