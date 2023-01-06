@@ -158,11 +158,11 @@ a {
 }
 
 h1, h2, h3, h4, h5, .lead {
-    --leading-lineheight: var(--type-lg);
-    font-size: var(--type-md);
-    line-height: var(--type-md);
+    --leading-lineheight: var(--type-md);
+    font-size: var(--type-sm);
+    line-height: var(--type-sm);
     margin-top: 0;
-    margin-bottom: var(--type-md);
+    margin-bottom: var(--type-sm);
 
     font-weight: var(--font-weight-normal);
     font-feature-settings: 'case' on;
