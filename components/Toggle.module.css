@@ -1,0 +1,21 @@
+.toggle {
+    font-family: var(--font-inter);
+    --leading-lineheight: var(--type-xs);
+    line-height: var(--type-xs);
+
+    list-style: none;
+    padding-left: 0;
+    margin-block: 0;
+}
+
+.toggle__item {
+    display: flex;
+    align-items: baseline;
+    gap: .25em;
+}
+.toggle__indicator {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: inherit;
+    font-size: var(--type-md);
+}

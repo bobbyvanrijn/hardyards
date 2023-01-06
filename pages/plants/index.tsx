@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Content from 'components/Content';
+import { Toggle } from 'components';
 import { getPlants } from 'content/plants';
 import GridLayout from 'layouts/grid';
 import { formatPlantName } from 'helpers/formatPlantName';
@@ -96,22 +97,26 @@ export default function Plants(props: any) {
                         Hard Yards
                     </h2>
                 </div>
-                <ul grid-x='2a' style={{ fontFamily: 'var(--font-inter)' }} className='font-sans'>
-                    <li>
-                        <a onClick={() => setLayout('grid')}>
-                            { layout === 'grid' ? '●' : '○'} Grid
-                        </a>
-                    </li>
-                    <li>
-                        <a onClick={() => setLayout('list')}>
-                            { layout === 'list' ? '●' : '○'} List
-                        </a>
-                    </li>
-                </ul>
+                <Toggle
+                    grid-x='2a'
+                    active={layout}
+                    items={[
+                        {
+                            key: 'grid',
+                            label: 'Grid',
+                            fn: () => setLayout('grid')
+                        },
+                        {
+                            key: 'list',
+                            label: 'List',
+                            fn: () => setLayout('list')
+                        }
+                    ]}
+                />
             </GridLayout>
+
             { layout === 'list' &&
                 <GridLayout>
-                    
                     <Content blocks={blocks} />
                 </GridLayout>
             }
