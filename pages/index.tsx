@@ -1,5 +1,6 @@
 import GridLayout from '../layouts/grid';
 import Content from '../components/Content';
+import Link from 'next/link';
 
 import { getPlants } from '../content/plants';
 import { formatPlantName } from 'helpers/formatPlantName';
@@ -51,23 +52,38 @@ export default function Home(props: any) {
     ];
 
     return (
-        <GridLayout grid-enforce-rows='true'>
-            <div
-                className='page-title'
-                grid-x='1/3'
-                grid-y='1a'
-                grid-y-sm='1a'
-            >
-                <h1 className='uppercase trim-both trim-both--secondary'>
-                    Index
-                </h1>
+        <>
+            <GridLayout grid-enforce-rows='true'>
+                <div
+                    className='page-title'
+                    grid-x='1/3'
+                    grid-y='1a'
+                    grid-y-sm='1a'
+                >
+                    <h1 className='uppercase trim-both trim-both--secondary'>
+                        Index
+                    </h1>
 
-                <h2 className='trim-both trim-both--secondary'>
-                    Hard Yards
-                </h2>
-            </div>
+                    <h2 className='trim-both trim-both--secondary'>
+                        Hard Yards
+                    </h2>
+                </div>
 
-            <Content blocks={blocks} />
-        </GridLayout>
+                <Content blocks={blocks} />
+            </GridLayout>
+
+            <GridLayout grid-enforce-rows='true'>
+                <div>
+                    <Link className='button' href='/plants'>
+                        <div className='trim-both trim-both--secondary'>
+                            Go to plant directory
+                        </div>
+                        <div className='button__icon'>
+                            +
+                        </div>
+                    </Link>
+                </div>
+            </GridLayout>
+        </>
     )
 }

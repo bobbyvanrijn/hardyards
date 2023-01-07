@@ -394,7 +394,7 @@ figcaption {
     content: '';
     display: block;
 
-    margin-top: calc(var(--leading-offset,-.25em) + var(--font-offset-start,0em));
+    margin-top: calc(var(--leading-offset,-.25em) - var(--font-offset-start,0em));
 }
 
 .trim-end:after,
@@ -457,4 +457,37 @@ td[data-active='true'] {
 section[data-background='negative'] {
     background: rgb(var(--foreground));
     color: rgb(var(--background));
+}
+
+.button {
+    display: inline-flex;
+    gap: var(--scale-10);
+    font-size: var(--type-xs);
+    vertical-align: center;
+
+    font-family: var(--font-inter);
+
+    line-height: var(--type-xxxs);
+    --leading-lineheight: var(--type-xxxs);
+    padding: var(--scale-9) var(--scale-8);
+    border-radius: 40px;
+    background: rgb(var(--mono-2));
+    /* border: .075rem solid rgb(var(--mono-4)); */
+
+    font-feature-settings: 'case' on;
+
+    transition: transform .25s ease-in-out;
+}
+
+.button:active {
+    transform: scale(.9725);
+}
+
+.button__icon {
+    font-size: var(--type-lg);
+    line-height: var(--type-xxxs);
+    font-weight: 200;
+    color: rgb(var(--mono-7));
+    margin-top: -.0275em;
+    margin-inline: -.125em;
 }
