@@ -73,7 +73,7 @@ export default function Home(props: any) {
             </GridLayout>
 
             <GridLayout grid-enforce-rows='true'>
-                <div>
+                <div grid-x='1'>
                     <Link className='button' href='/plants'>
                         <div className='trim-both trim-both--secondary'>
                             Go to plant directory

@@ -460,16 +460,17 @@ section[data-background='negative'] {
 }
 
 .button {
-    display: inline-flex;
+    display: flex;
     gap: var(--scale-10);
     font-size: var(--type-xs);
     vertical-align: center;
+    justify-content: center;
 
     font-family: var(--font-inter);
 
     line-height: var(--type-xxxs);
     --leading-lineheight: var(--type-xxxs);
-    padding: var(--scale-9) var(--scale-8);
+    padding: var(--scale-8) var(--scale-8);
     border-radius: 40px;
     background: rgb(var(--mono-2));
     /* border: .075rem solid rgb(var(--mono-4)); */
