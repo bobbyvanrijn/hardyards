@@ -1,0 +1,20 @@
+.directory {
+}
+
+.directory__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--type-xxs);
+}
+
+.directory__item {
+    border-top: .05em solid rgb(var(--foreground) / var(--alpha-2));
+    margin-bottom: var(--type-xs);
+}
+
+.directory__link {
+    --leading-lineheight: var(--type-sm);
+    line-height: var(--type-sm);
+    display: flex;
+    justify-content: space-between;
+}

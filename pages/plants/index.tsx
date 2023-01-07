@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Content from 'components/Content';
+import Directory from 'components/Directory';
 import { Toggle } from 'components';
 import { getPlants } from 'content/plants';
 import GridLayout from 'layouts/grid';
@@ -102,23 +103,21 @@ export default function Plants(props: any) {
                     active={layout}
                     items={[
                         {
-                            key: 'grid',
-                            label: 'Grid',
-                            fn: () => setLayout('grid')
-                        },
-                        {
                             key: 'list',
                             label: 'List',
                             fn: () => setLayout('list')
+                        },
+                        {
+                            key: 'grid',
+                            label: 'Grid',
+                            fn: () => setLayout('grid')
                         }
                     ]}
                 />
             </GridLayout>
 
             { layout === 'list' &&
-                <GridLayout>
-                    <Content blocks={blocks} />
-                </GridLayout>
+                <Directory directory-title='Plants' directory-categories={props.categories} />
             }
             { layout === 'grid' &&
                 <GridLayout grid-enforce-row='true'>
