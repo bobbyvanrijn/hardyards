@@ -47,10 +47,6 @@ export default function Page(props: any) {
             component: 'meta',
             attributes: {
                 items: [
-                    {
-                        title: 'foo',
-                        value: 'bar'
-                    },
                     ...props.plant.meta.map(
                         (meta: { label: any; value: any; }) => {
                             return {
@@ -111,8 +107,8 @@ export default function Page(props: any) {
             component: 'list',
             attributes: {
                 'grid-x': '1a/2a',
-                'grid-y': '2a/3a',
-                'grid-align': 'bottom'
+                'grid-y': '2a',
+                // 'grid-align': 'bottom'
             },
             children: [
                 <Content key={1} blocks={meta} />
