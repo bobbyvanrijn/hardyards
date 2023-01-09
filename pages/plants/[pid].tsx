@@ -83,9 +83,9 @@ export default function Page(props: any) {
             _uid: '4397c42f-f205-49cb-a875-1cac86f512cb',
             component: 'text',
             attributes: {
-                'grid-x': '1a/2a',
+                'grid-x': '1',
                 'grid-y': '1',
-                'grid-y-sm': '3b/4b'
+                'grid-y-sm': '3b/3b'
             },
             children: [
                 <h1 className='trim-both' key={`${props.plant.slug}--title`}>
@@ -103,16 +103,27 @@ export default function Page(props: any) {
             ]
         },
         {
-            _uid: '0220f0fd-9d8e-45aa-899b-b96d11d275a14',
-            component: 'list',
+            _uid: '97ebdf5b-761e-4fa9-8774-763e7ca7e76e',
+            component: 'meta',
             attributes: {
-                'grid-x': '1a/2a',
-                'grid-y': '2a',
-                // 'grid-align': 'bottom'
-            },
-            children: [
-                <Content key={1} blocks={meta} />
-            ]
+                'grid-x': '1',
+                'grid-y': '3a',
+                'grid-align': 'bottom',
+                items: [
+                    {
+                        title: 'main',
+                        value: 'Herbaceous perennial'
+                    },
+                    ...props.plant.meta.map(
+                        (meta: { label: any; value: any; }) => {
+                            return {
+                                title: meta.label,
+                                value: meta.value,
+                            };
+                        }
+                    )
+                ],
+            }
         },
         // {
         //     _uid: '0220f0fd-9d8e-45aa-899b-b96d11d27514',
@@ -159,6 +170,20 @@ export default function Page(props: any) {
         }
     ]
 
+    const calendar = [
+        {
+            _uid: '11123',
+            component: 'calendar',
+            attributes: {
+                'grid-x': '2a/3b',
+                'grid-y': '1a',
+            },
+            children: [
+                <>Foo</>
+            ]
+        }
+    ]
+
     return (
         <>
             <Head>
@@ -171,6 +196,7 @@ export default function Page(props: any) {
             </GridLayout>
             <section data-background='negative'>
                 <GridLayout>
+                    <Content blocks={calendar} />
                     <div grid-x='1/3'>
                         <table summary="Plant progress through the year">
                             <thead>

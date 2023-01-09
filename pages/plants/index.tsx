@@ -86,7 +86,7 @@ export default function Plants(props: any) {
             <GridLayout>
                 <div
                     className='page-title'
-                    grid-x='1/3'
+                    grid-x='1   '
                     grid-y='1a'
                     grid-y-sm='1a'
                 >

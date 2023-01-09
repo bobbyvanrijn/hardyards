@@ -2,6 +2,7 @@ import React from 'react';
 
 import Image from './Image';
 import Carousel from './Carousel';
+import Calendar from './Calendar';
 import Gallery from './Gallery';
 import List from './List';
 import Lead from './Lead';
@@ -42,6 +43,7 @@ function filterEmptyBlocks(blocks) {
 const Components = {
   image: Image,
   carousel: Carousel,
+  calendar: Calendar,
   gallery: Gallery,
   list: List,
   meta: Meta,

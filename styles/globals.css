@@ -103,7 +103,7 @@
     --type-xxs: clamp(var(--scale-8), 3vw, var(--scale-7));
     --type-xxxs: clamp(var(--scale-9), 2vw, var(--scale-8));
 
-    --font-weight-normal: 300;
+    --font-weight-normal: 400;
     --font-weight-bold: 475;
 
     --leading-lineheight: var(--scale-6);
@@ -138,7 +138,7 @@ body {
 
 main {
     font-family: var(--font-serif), 'Times', serif;
-    /* font-family: var(--font-inter); */
+    /* font-family: var(--font-sans); */
     /* padding-bottom: var(--scale-1); */
 }
 
@@ -170,7 +170,8 @@ h1, h2, h3, h4, h5, .lead {
 
 .page-title {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: var(--scale-10);
 }
 
 @media (max-width: 50rem) {
@@ -182,12 +183,11 @@ h1, h2, h3, h4, h5, .lead {
 .page-title h1,
 .page-title h2,
 .page-title h3 {
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
     font-size: var(--type-xs);
     line-height: var(--type-xs);
     --leading-lineheight: var(--type-xs);
     margin: 0;
-    letter-spacing: -.025em;
     font-weight: 400;
 }
 
@@ -387,6 +387,12 @@ figcaption {
     --descent: -680;
     --unitsPerEm: 2816;
     --capHeight: 2048;
+
+    /* General Sans font metrics */
+    --ascent: 1010;
+    --descent: -240;
+    --unitsPerEm: 1000;
+    --capHeight: 716;
 }
 
 .trim-start:before,
@@ -422,7 +428,7 @@ figcaption {
 table {
     table-layout: fixed;
     width: 100%;
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
     font-size: var(--type-xs);
     border-collapse: collapse;
     border-color: rgb(var(--foreground) / var(--alpha-4));
@@ -466,7 +472,7 @@ section[data-background='negative'] {
     vertical-align: center;
     justify-content: center;
 
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
 
     line-height: var(--type-xxxs);
     --leading-lineheight: var(--type-xxxs);

@@ -12,3 +12,11 @@
     color: rgb(var(--white) / var(--alpha-8));
     letter-spacing: .005em;
 }
+
+.playground h1 {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: var(--type-xs);
+    letter-spacing: .125em;
+    color: rgb(var(--mono-6));
+}

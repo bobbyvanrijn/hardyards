@@ -8,20 +8,19 @@ import { Toolbar, Footer } from 'components';
 import Transition from 'components/Transition';
 
 import localFont from '@next/font/local';
-import { Inter } from '@next/font/google';
 
 const serif = localFont({
     src: '../public/fonts/serif.otf',
     variable: '--font-serif'
 });
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter'
-});
+const sans = localFont({
+    src: '../public/fonts/GeneralSans-Variable.ttf',
+    variable: '--font-sans'
+})
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${inter.variable} ${serif.variable}`}>
+    <main className={`${sans.variable} ${serif.variable}`}>
         <Head>
             <title>Hard Yards</title>
             <meta name="description" content="Gardening tool." />

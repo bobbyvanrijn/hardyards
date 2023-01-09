@@ -19,7 +19,7 @@ export default function Carousel(props) {
             >
                 { item.title !== undefined &&
                     <div className={styles.carousel__text}>
-                        <h4>
+                        <h4 className='trim-both'>
                             { item.title }
                         </h4>
                     </div>
@@ -48,7 +48,7 @@ export default function Carousel(props) {
             >
                 { item.title !== undefined &&
                     <div className={styles.carousel__text}>
-                        <h4>
+                        <h4 className='trim-both'>
                             { item.title }
                         </h4>
                     </div>

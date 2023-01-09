@@ -1,5 +1,5 @@
 .toolbar {
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
     font-size: var(--scale-7);
     line-height: var(--scale-7);
     --leading-lineheight: var(--scale-7);
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
 
-    font-weight: 325;
+    font-weight: 400;
     pointer-events: none;
 }
 
@@ -59,7 +59,7 @@
 .toolbar__link {
     display: inline-block;
     padding: var(--scale-10);
-    letter-spacing: -.02em;
+    /* letter-spacing: -.02em; */
 }
 
 .toolbar a:focus {

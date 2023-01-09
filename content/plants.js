@@ -210,6 +210,12 @@ const herbaceousPerennials = [
             'This plant is low-maintenance and easy to care for. It prefers full sun and well-drained soil, and is drought tolerant once established. It is also deer resistant, making it a great choice for gardens in areas with heavy deer populations.',
             'This plant is a great choice for edging beds, walkways, and containers. It is also a great cut flower and can be used in floral arrangements. It is a great addition to any garden for its long season of bloom and its low-maintenance care requirements.'
         ],
+        lifecycle: {
+            spring: 'Foliage interest',
+            summer: 'Flowers',
+            fall: 'Flowers',
+            winter: 'Foliage interest'
+        },
         meta: [
             {
                 label: 'Spread',

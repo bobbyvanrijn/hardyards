@@ -8,7 +8,7 @@ export default function Meta(props) {
                 {
                     props.items.map((item, index) =>
                         <div
-                            className={styles.meta__item}
+                            className={`${styles.meta__item} ${item.title === 'main' ? styles['meta__item--featured'] : null}`}
                             key={index}
                         >
                             {item.title !== undefined &&

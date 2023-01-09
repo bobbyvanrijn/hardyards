@@ -1,5 +1,5 @@
 .navigation {
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
 }
 
 .navigation menu {
@@ -10,13 +10,13 @@
     margin: 0;
     padding: 0;
 
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
     font-size: var(--type-xs);
     line-height: var(--type-xs);
     --leading-lineheight: var(--type-xs);
     margin: 0;
-    letter-spacing: -.025em;
-    font-weight: 425;
+    /* letter-spacing: -.025em; */
+    font-weight: 400;
 }
 
 .navigation .body-text {

@@ -74,6 +74,13 @@ export default function Playground({ pathD }: any){
                         className='body-text trim-both'
                         grid-x='2/3'
                     >
+                        <h1>
+                            Lorem ipsum
+                        </h1>
+
+                        <h2>
+                            Title
+                        </h2>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates a architecto aliquid distinctio laboriosam, id blanditiis deserunt quibusdam ducimus cumque nihil neque quaerat fugiat provident, dicta possimus, illum consectetur quidem?</p>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates a architecto aliquid distinctio laboriosam, id blanditiis deserunt quibusdam ducimus cumque nihil neque quaerat fugiat provident, dicta possimus, illum consectetur quidem?</p>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates a architecto aliquid distinctio laboriosam, id blanditiis deserunt quibusdam ducimus cumque nihil neque quaerat fugiat provident, dicta possimus, illum consectetur quidem?</p>
