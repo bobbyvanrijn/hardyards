@@ -175,12 +175,10 @@ export default function Page(props: any) {
             _uid: '11123',
             component: 'calendar',
             attributes: {
-                'grid-x': '2a/3b',
+                'grid-x': '1/3',
                 'grid-y': '1a',
-            },
-            children: [
-                <>Foo</>
-            ]
+                lifecycle: props.plant.lifecycle
+            }
         }
     ]
 
@@ -195,31 +193,7 @@ export default function Page(props: any) {
                 <Content blocks={hero} />
             </GridLayout>
             <section data-background='negative'>
-                <GridLayout>
-                    <Content blocks={calendar} />
-                    <div grid-x='1/3'>
-                        <table summary="Plant progress through the year">
-                            <thead>
-                                <tr>
-                                    <th scope='row'>Calendar</th>
-                                    <th scope='col'>Spring</th>
-                                    <th scope='col'>Summer</th>
-                                    <th scope='col'>Fall</th>
-                                    <th scope='col'>Winter</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope='row'></th>
-                                    <td>Foliage</td>
-                                    <td>Foliage and foliage</td>
-                                    <td>Foliage and silhouette</td>
-                                    <td>Skeleton</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </GridLayout>
+                <Content blocks={calendar} />
             </section>
             <GridLayout>
                 { props.plant['additional-images']?.length > 0 &&

@@ -468,7 +468,7 @@ section[data-background='negative'] {
 .button {
     display: flex;
     gap: var(--scale-10);
-    font-size: var(--type-xxs);
+    font-size: var(--type-xs);
     vertical-align: center;
     justify-content: center;
 

@@ -63,12 +63,40 @@ const bulbs = [
 const herbaceousPerennials = [
     // TODO: Add `lifecycle` prop (annual, biennial, perennial)
     // TODO: Add plants ↓
+    // - Acanthus mollis
     // - Agastache 'black adder' / 'blue fortune'
     // - Veronica(strum)
-    // - Nepeta faassenii 'Walker's Low' (cat: LUMPY GUYS)
-    // - Rudbeckia (cat: PROPAGATORS, SKELETALS)
     // - Actaea 'Chocoholic'
-    // - Gaura lindheimerii 'Whirling butterflies' (biennial, cat: FILLERS)
+    {
+        slug: 'acanthus-mollis',
+        genus: 'Acanthus',
+        species: 'mollis',
+        cultivar: null,
+        common: 'Bear\'s breeches',
+        description: 'has broad, spiky leaves. Spires with small white flowers.',
+        meta: [
+            {
+                label: 'Spread',
+                value: '60-90 cm'
+            },
+            {
+                label: 'Height',
+                value: '50-80 cm'
+            },
+            {
+                label: 'Flowers',
+                value: 'Yellow'
+            },
+            {
+                label: 'Foliage',
+                value: 'Green'
+            }
+        ],
+        collections: [],
+        'main-image': '',
+        'additional-images': ['acanthus-mollis-foliage'],
+        blurhash: 'L4AwSAsR*D9rIC9FD%tRR7RC%LR+'
+    },
     {
         slug: 'achillea-moonshine',
         genus: 'Achillea',
@@ -211,10 +239,8 @@ const herbaceousPerennials = [
             'This plant is a great choice for edging beds, walkways, and containers. It is also a great cut flower and can be used in floral arrangements. It is a great addition to any garden for its long season of bloom and its low-maintenance care requirements.'
         ],
         lifecycle: {
-            spring: 'Foliage interest',
-            summer: 'Flowers',
-            fall: 'Flowers',
-            winter: 'Foliage interest'
+            foliage: [0, 1, 1, 1],
+            flowers: [0, 1, 1, 0]
         },
         meta: [
             {
@@ -232,10 +258,6 @@ const herbaceousPerennials = [
             {
                 label: 'Foliage',
                 value: 'Grey-green'
-            },
-            {
-                label: 'Seasons',
-                value: '5-10'
             }
         ],
         collections: [

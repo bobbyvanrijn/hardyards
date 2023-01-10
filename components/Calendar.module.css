@@ -1,3 +1,37 @@
 .calendar {
-    
+    display: flex;
+    flex-direction: column;
+    gap: .05rem;
+
+    font-family: var(--font-sans);
+    font-weight: 450;
+    font-size: var(--type-xs);
+}
+
+.calendar__grid {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.calendar__row {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: repeat(4, 1fr);
+    gap: inherit;
+}
+
+.calendar__row--header {
+    height: var(--type-xl);
+}
+
+.calendar__indicator {
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+    text-transform: uppercase;
+    font-size: var(--type-xxs);
+    letter-spacing: .1em;
+    padding: var(--scale-10);
+    --leading-lineheight: var(--type-xs);
+    border-radius: 4rem;
 }
